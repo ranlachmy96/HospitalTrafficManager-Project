@@ -12,9 +12,11 @@ section,
 div {
     display: block;
 }
-body{
+
+body {
     font-family: 'Rubik', 'Aerial';
 }
+
 header {
     width: 100%;
     height: 116px;
@@ -37,6 +39,7 @@ header {
     align-items: center;
     height: inherit;
 }
+
 nav {
     display: flex;
     align-items: flex-end;
@@ -44,28 +47,45 @@ nav {
     justify-self: flex-end;
     margin-left: auto;
 }
-a{
+
+ul.nav.nav-tabs {
+    --bs-nav-tabs-border-width: none;
+    --bs-nav-tabs-border-color: none;
+    --bs-nav-tabs-border-radius: none;
+    --bs-nav-tabs-link-hover-border-color: none;
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+    --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+    border-bottom: none;
+}
+
+a {
     text-decoration: none;
 }
+
 header>nav>ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-end;  
+    align-items: flex-end;
 }
 
- a.nav-link { 
+a.nav-link {
     color: #000000;
     text-decoration: none;
     font-weight: 500;
-    border: 0;
+    border: none;
+    outline: none;
 }
-a.nav-link:hover{
-    border: 0;
+
+a.nav-link:hover {
+    border: none;
+    outline: none;
 }
-a.nav-link.active{
- position: relative;
+
+a.nav-link.active {
+    position: relative;
     height: 100%;
     top: 0;
     left: 0;
@@ -74,6 +94,5 @@ a.nav-link.active{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     outline-offset: -2px;
-    border: 0;
- }
-
+    border: none;
+}
