@@ -59,6 +59,7 @@ header>nav>ul {
     color: #000000;
     text-decoration: none;
     font-weight: 500;
+    border: 0;
 }
 a.nav-link:hover{
     border: 0;
@@ -70,34 +71,9 @@ a.nav-link.active{
     left: 0;
     transition-duration: 0.6s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     outline-offset: -2px;
+    border: 0;
  }
-
- .hori-selector {
-    position: absolute;
-    left: 86%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.hori-selector .left,
-.hori-selector .right {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #000000;
-}
-
-.hori-selector .left {
-    right: -25px;
-}
-
-.hori-selector .right {
-    left: -25px;
-}
 
