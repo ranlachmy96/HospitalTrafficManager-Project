@@ -27,11 +27,12 @@ header {
 
 #logo {
     display: block;
-    background: url("../images/Logo.png");
+    background: url("../images/logo_n.png");
     background-repeat: no-repeat;
     width: 254px;
     height: 73px;
-    margin-top: auto;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .logo-con {
