@@ -97,3 +97,25 @@ a.nav-link.active {
     outline-offset: -2px;
     border: none;
 }
+
+
+/* list-design */
+
+#view_real_time{
+    position: flex;
+    width: 1320px;
+    height: 180px;
+    margin-left:62px;
+    margin-top: 65px;
+    background: #BFE8F4;
+    border-radius: 6px;
+}
+
+.blue{
+width: 220px;
+height: 100px;
+/* left: 416px;
+top: 241px; */
+background: #82BEDD;
+border-radius: 6px;
+}
