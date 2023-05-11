@@ -90,10 +90,21 @@ a.nav-link.active {
     height: 100%;
     top: 0;
     left: 0;
-    transition-duration: 0.6s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     outline-offset: -2px;
     border: none;
+}
+.dropdown-menu{
+    --bs-dropdown-border-color: none;
+    --bs-dropdown-border-radius: none;
+    --bs-dropdown-border-width: none;
+    border-radius: none;
+    border: none;
+}
+.dropdown-item{
+    text-align: end;
+}
+.dropdown-toggle::after{
+    content: none;
 }
