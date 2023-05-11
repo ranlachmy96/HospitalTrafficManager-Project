@@ -12,7 +12,9 @@ section,
 div {
     display: block;
 }
-
+body{
+    font-family: 'Rubik', 'Aerial';
+}
 header {
     width: 100%;
     height: 116px;
@@ -23,58 +25,79 @@ header {
 
 #logo {
     display: block;
-    background: url("../images/logo_new.png");
+    background: url("../images/Logo.png");
     background-repeat: no-repeat;
     width: 254px;
     height: 73px;
-    
+    margin-top: auto;
 }
 
 .logo-con {
     display: flex;
     align-items: center;
     height: inherit;
-
 }
 nav {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     justify-self: flex-end;
+    margin-left: auto;
 }
-
+a{
+    text-decoration: none;
+}
 header>nav>ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    gap: 42px;
-    /* padding-top: 10px; */
+    justify-content: flex-end;
+    align-items: flex-end;  
 }
 
-header>nav>ul>li {
-    /* padding-right: 42px; */
-    
-}
-
-#fifthNav {
-    background-color: #fff;
-}
-
-.standardTab {
-    font-family: 'Rubik', 'Aerial';
-    font-size: 24px;
-    background-color: #7BCCE4;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px;
-    /* padding: 5px; */
+ a.nav-link { 
     color: #000000;
     text-decoration: none;
     font-weight: 500;
 }
-
-.standardTab:hover {
-    background-color: #fff;
+a.nav-link:hover{
+    border: 0;
 }
+a.nav-link.active{
+ position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline-offset: -2px;
+ }
+
+ .hori-selector {
+    position: absolute;
+    left: 86%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hori-selector .left,
+.hori-selector .right {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.hori-selector .left {
+    right: -25px;
+}
+
+.hori-selector .right {
+    left: -25px;
+}
+
