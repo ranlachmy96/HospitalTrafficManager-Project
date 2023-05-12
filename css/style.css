@@ -96,7 +96,6 @@ a.nav-link.active {
     border: none;
 }
 
-
 /* list-design */
 
 #view_real_time {
@@ -134,8 +133,228 @@ top: 241px; */
     content: none;
 }
 
-/* --------------------------------appointment-------------------------------------- */
+/*----------------------------------- list-design -----------------------------------------*/
 
+#view_real_time {
+    display: flex;
+    width: 90%;
+    height: 180px;
+    margin-left: 62px;
+    margin-top: 65px;
+    background: #BFE8F4;
+    border-radius: 6px;
+    flex-flow: column;
+
+}
+
+
+.blue-view {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 72px;
+    width: 90%;
+    height: 180px;
+    margin-left: 62px;
+}
+
+.blue {
+    display: flex;
+    flex-flow: column;
+    width: 220px;
+    height: 100px;
+    margin-left: 20px;
+    background: #82BEDD;
+    border-radius: 6px;
+    align-items: center;
+
+}
+
+.text-blue {
+    display: flex;
+    flex-flow: column;
+    margin-top: 21px;
+    justify-content: end;
+    align-items: end;
+
+}
+
+
+.text-blue>h6 {
+    font-family: 'Rubik', 'Aerial';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text-aside {
+    display: flex;
+    flex-flow: column;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 55px;
+}
+
+.all-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.title-text h6 {
+    font-size: 24px;
+}
+
+#search-list {
+    width: 592px;
+}
+
+.form-control {
+    background-color: #BFE8F4;
+
+
+}
+
+.form-control::placeholder {
+    text-align: center;
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+}
+
+
+.center-form-search {
+    display: flex;
+    justify-content: center;
+}
+
+.form_container {
+    justify-content: center;
+}
+
+.plus {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-left: 66px;
+    flex-direction: column;
+    align-items: center;
+    top: 410px;
+    color: #82BEDD
+}
+
+.plus>p {
+    color: #115A83
+}
+
+.list-Wrapper-table {
+    max-width: 90%;
+    align-items: center;
+    margin-left: 62px;
+}
+
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    text-align: center;
+}
+
+th {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Rubik', 'Aerial';
+}
+
+td {
+    color: #575555;
+    font-size: 18px;
+    font-family: 'Rubik', 'Aerial';
+}
+
+.table thead {
+    background-color: #BFE8F4;
+}
+
+
+/* border-radius */
+.table thead tr:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.table thead tr:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.table thead tr th:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.table thead tr th:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+/* row */
+.table tbody tr:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.table tbody tr:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.table tbody tr td:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.table tbody tr td:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* color-table */
+
+.table tbody tr:nth-child(1) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(2) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(3) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(4) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(5) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(6) {
+    background-color: #DAEEF4;
+}
+
+.table tbody tr:nth-child(7) {
+    background-color: #DAEEF4;
+}
+
+
+
+
+/* --------------------------------appointment-------------------------------------- */
 #appointmentWrapper {
     display: flex;
     flex-flow: column;
@@ -193,7 +412,7 @@ top: 241px; */
     display: flex;
     flex-flow: row-reverse;
     gap: 10px;
-    
+
 }
 
 #appointment-down-side-wrapper {
@@ -213,9 +432,11 @@ top: 241px; */
     flex-flow: column;
     direction: rtl;
 }
-#appointment-left-side-label{
+
+#appointment-left-side-label {
     padding-right: 15%;
 }
+
 /* #appointment-third-wrapper-label{
     padding-left: %;
 } */
@@ -225,6 +446,7 @@ top: 241px; */
     height: 0.1px;
     opacity: 0;
 }
+
 .upload_label {
     width: 25vw;
     height: 58vh;
@@ -251,25 +473,95 @@ top: 241px; */
     font-size: 20px;
     line-height: 24px;
 }
-.drag_text > span{
-    color: #2E6E92;;
+
+.drag_text>span {
+    color: #2E6E92;
+    ;
 }
-.form-control{
+
+.form-control {
     direction: rtl;
 }
+
 .form-label {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
+
 #appointment-submit-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 8%;
     border-radius: 50%;
 }
-#submit-button{
+
+#submit-button {
     border-radius: 20px 20px 20px 20px;
     padding-left: 10%;
     padding-right: 10%;
     background-color: rgba(160, 160, 160, 0.8);
     border: none;
+}
+
+/*----------------------------------- Patient-Profile-Design -----------------------------------------*/
+
+.flex-title {
+    display: flex;
+    justify-content: center;
+}
+
+.title-patientProfile {
+    height: 55px;
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #BFE8F4;
+    margin-top: 47px;
+}
+
+.text-in-title {
+    align-self: center;
+    font-weight: bold;
+}
+
+.text-in-title>h4 {
+
+    font-weight: bold;
+}
+
+.flex-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.body-patient-Profile table {
+    max-width: 60%;
+}
+
+.info-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-info-tab1 {
+    height: 61px;
+    width: 360px;
+    background-color: #ADDFEF;
+    border-radius: 6px;
+}
+
+.title-info-tab2 {
+    height: 61px;
+    width: 360px;
+    background-color: #ADDFEF;
+    border-radius: 6px;
+}
+
+.title-info-tab3 {
+    height: 61px;
+    width: 360px;
+    background-color: #ADDFEF;
+    border-radius: 6px;
 }
