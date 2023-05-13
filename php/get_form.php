@@ -22,12 +22,13 @@
         $ti  = $_GET["time"];
  
         if (in_array($im, $image)) {
-            echo "<h2>Patient ".$pnm." ".$lnm." with ID number ".$id."  ".$bc." is on its way!</h2>";
+            echo "<h2>Patient ".$pnm." ".$lnm." with ID number ".$id." age of ".$age." and the email"
+            .$mi." has made an appointment in ".$dt." at ".$ti."</h2>";
             if (!empty($add)) {
                 echo "<p>You also added: ".$add."</p>";
             }
         } else {
-            echo "<h2>We're sorry, but the color you entered is not in stock please try another one.</h2>";
+            echo "<h2>We're sorry, but the image you enterd is not correct please try again.</h2>";
         }
         ?>
     </section>

@@ -437,11 +437,7 @@ td {
     padding-right: 15%;
 }
 
-/* #appointment-third-wrapper-label{
-    padding-left: %;
-} */
 .upload_hide {
-    position: absolute;
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -502,7 +498,24 @@ td {
     border: none;
 }
 
+/* ----------------------------appointment-media-query---------------------------------------- */
+
+@media (max-width: 767px) {
+
+
+    
+}
+
+
 /*----------------------------------- Patient-Profile-Design -----------------------------------------*/
+
+#profileWrapper {
+    display: flex;
+    flex-flow: column;
+    width: 80vw;
+    margin: 0 auto;
+
+}
 
 .flex-title {
     display: flex;
@@ -511,12 +524,12 @@ td {
 
 .title-patientProfile {
     height: 55px;
-    width: 1080px;
+    width: 100%;
     display: flex;
     justify-content: center;
     border-radius: 10px;
     background-color: #BFE8F4;
-    margin-top: 47px;
+    margin-top: 15px;
 }
 
 .text-in-title {
@@ -532,36 +545,128 @@ td {
 .flex-table {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
-}
-
-.body-patient-Profile table {
-    max-width: 60%;
+    margin-top: 10px;
 }
 
 .info-profile {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex-flow: column;
+    direction: rtl;
+}
+
+#info-profile-tabs {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: center;
+    background-color: rgba(91, 192, 222, 0.5);
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+
+}
+
+#my-info-profile-tab {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.nav-bar-2 .nav-link.active {
+    background-color: #E0F4F9;
+    border-radius: 6px 6px 0px 0px;
+}
+
+#info-profile-content {
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    background-color: #E0F4F9;
+    border-radius: 0px 0px 6px 6px;
+}
+#myTabContent{
+    width: 100%;
+}
+#Medical-information-tab-pane{
+    width: 100%;
+}
+#Medical-information-tab-pane-upper-part{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.divider {
+    border-top: 1px solid #ABABAB;
+    height: 1px;
+    width: 100%;
+    margin-top: 1.3%;
+}
+#Medical-information-tab-pane-lower-part{
+    display: flex;
+    flex-flow: row;
+}
+#Medical-information-tab-pane-lower-part-right-side{
+    width: 30%;
+    margin-right: 20px;
+    margin-top: 1.5%;
+}
+#Medical-information-tab-pane-lower-part-left-side{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+#Medical-information-tab-pane-lower-part-left-side > label{
+    margin-bottom: 2%;
+}
+#Medical-information-tab-pane-lower-part-left-side-container{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    gap: 20px;
+}
+
+
+#virtual-assistant-tab-pane{
+    width: 100%;
+}
+
+#virtual-assistant-tab-pane-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+}
+#virtual-assistant-tab-pane-button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#virtual-assistant-tab-pane-button{
+    width: 20%;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    background-color: rgba(17, 90, 131, 0.59);
+    padding-left: 5%;
+    padding-right: 5%;
+    color: black;    
+}
+
+#save-info-profile-changes-container{
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
 
-.title-info-tab1 {
-    height: 61px;
-    width: 360px;
-    background-color: #ADDFEF;
-    border-radius: 6px;
-}
-
-.title-info-tab2 {
-    height: 61px;
-    width: 360px;
-    background-color: #ADDFEF;
-    border-radius: 6px;
-}
-
-.title-info-tab3 {
-    height: 61px;
-    width: 360px;
-    background-color: #ADDFEF;
-    border-radius: 6px;
+#save-info-profile-changes{
+    width: 20%;
+    margin: 2%;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    background-color: rgba(160, 160, 160, 0.8);
+    padding-left: 5%;
+    padding-right: 5%;
+    color: black;
 }
