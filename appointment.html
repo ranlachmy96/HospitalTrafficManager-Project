@@ -70,7 +70,7 @@
     </header>
     <main>
         <section id="appointmentWrapper">
-            <section id="h1-appointments">טופס קביעת תור</section>
+            <section id="h1-appointments"><h5>טופס קביעת תור</h5></section>
             <section id="appointment-form-wrapper">
                 <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation" novalidate>
                     <div id="appointment-inside-form-wrapper">
@@ -83,8 +83,9 @@
                             </label>
                         </div>
                         <div id="appointment-right-side-wrapper">
+                            <label id="appointment-third-wrapper-label">קיים במערכת</label>
                             <div id="appointment-third-wrapper">
-                                <label id="appointment-third-wrapper-label">קיים במערכת</label>
+                                
                                 <div id="appointment-third-wrapper-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exists" value="no"
@@ -106,23 +107,27 @@
                                 <div id="appointment-first-wrapper">
                                     <label class="form-label">שם פרטי</label>
                                     <input type="text" class="form-control" name="private_name" value="">
+                                    <br>
                                     <label>אימייל</label>
                                     <input type="email" class="form-control" name="mail" value=""
                                         pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
-                                    <label>גיל
+                                        <br>
+                                    <label>גיל </label>
                                         <select name="age" class="form-select" required>
                                             <option value="" disabled selected>-</option>
                                         </select>
-                                    </label>
+                                        <br>
                                     <label class="form-label"> תאריך</label>
                                     <input type="date" class="form-control" name="date" value="">
                                 </div>
                                 <div id="appointment-second-wrapper">
                                     <label class="form-label">שם משפחה</label>
                                     <input type="text" class="form-control" name="last_name" value="">
+                                    <br>
                                     <label class="form-label">ת"ז</label>
                                     <input type="number" class="form-control" name="id_number" min="0" value="">
-                                    <label>סוג דימות
+                                    <br>
+                                    <label>סוג דימות</label>
                                         <select name="image_type" class="form-select" required>
                                             <option value="">-</option>
                                             <option value="x-ray">רנטגן</option>
@@ -130,12 +135,13 @@
                                             <option value="ultra sound">אולטרסאונד</option>
                                             <option value="m.r.i">M.R.I</option>
                                         </select>
-                                    </label>
+                                        <br>
                                     <label class="form-label">שעה</label>
                                     <input type="time" class="form-control" name="time" value="">
                                 </div>
                             </div>
                             <div id="appointment-down-side-wrapper">
+                                <br>
                                 <label>הערות</label>
                                 <textarea class="form-control" name="moreToAdd"></textarea>
                             </div>
