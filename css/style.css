@@ -27,7 +27,7 @@ header {
 
 #logo {
     display: block;
-    background: url("../images/logo_n.png");
+    background: url("../images/logo-2.png");
     background-repeat: no-repeat;
     width: 254px;
     height: 73px;
@@ -62,6 +62,7 @@ ul.nav.nav-tabs {
 
 a {
     text-decoration: none;
+    color: #575555;
 }
 
 header>nav>ul {
@@ -98,7 +99,7 @@ a.nav-link.active {
 
 /* list-design */
 
-#view_real_time {
+/* #view_real_time {
     position: flex;
     width: 1320px;
     height: 180px;
@@ -106,16 +107,14 @@ a.nav-link.active {
     margin-top: 65px;
     background: #BFE8F4;
     border-radius: 6px;
-}
+} */
 
-.blue {
+/* .blue {
     width: 220px;
     height: 100px;
-    /* left: 416px;
-top: 241px; */
     background: #82BEDD;
     border-radius: 6px;
-}
+} */
 
 .dropdown-menu {
     --bs-dropdown-border-color: none;
@@ -153,21 +152,27 @@ top: 241px; */
     flex-flow: row;
     justify-content: center;
     gap: 72px;
-    width: 90%;
-    height: 180px;
-    margin-left: 62px;
+    /* width: 80%;
+    height: 180px; */
+    /* margin-left: 62px; */
 }
 
 .blue {
     display: flex;
     flex-flow: column;
-    width: 220px;
-    height: 100px;
-    margin-left: 20px;
+    /* width: 220px;
+    height: 100px; */
+    width: 30vh;
+height: 15vh;
+    /* margin-left: 20px; */
     background: #82BEDD;
     border-radius: 6px;
     align-items: center;
 
+}
+.test-flex{
+    display: flex; 
+    justify-content: center;
 }
 
 .text-blue {
@@ -199,6 +204,7 @@ top: 241px; */
     align-items: center;
     flex-flow: column;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .title-text h6 {
