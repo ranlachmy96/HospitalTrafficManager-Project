@@ -1,373 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Metamorphous&family=Rubik&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Metamorphous&family=Rubik&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <header>
-      <section id="mobile-profile-picture">
-        <img src="images/hanna_persona_mobile_profile.png">
+  <header>
+    <section id="mobile-profile-picture">
+      <img src="images/hanna_persona_mobile_profile.png">
     </section>
     <section class="logo-con">
-        <a href="#" id="logo"></a>
-        <a href="#" id="logo-mobile"></a>
+      <a href="#" id="logo"></a>
+      <a href="#" id="logo-mobile"></a>
     </section>
-      <nav>
-        <section>
-          <input type="checkbox" class="mobile-toggle-menu">
-          <div class="hamburger"></div>
-          <ul class="mobile-menu">
-              <li id="mobile-menu-header">תפריט</li>
-              <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
-              <li><a href="#"> מכסה מטופלים</a></li>
-              <li><a href="#">זימון תורים</a></li>
-              <li><a href="#"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
-              <li class="white-color"></li>
-              <li><a href="#">לוגיסטיקה</a></li>
-              <li><a href="#">הגדרות</a></li>
-              <li><a href="#">התנתקות</a></li>
-              <li class="white-color">
-                  <a href="#" id="second-logo-mobile"></a>
-              </li>
-          </ul>
+    <nav>
+      <section>
+        <input type="checkbox" class="mobile-toggle-menu">
+        <div class="hamburger"></div>
+        <ul class="mobile-menu">
+          <li id="mobile-menu-header">תפריט</li>
+          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+          <li><a href="#"> מכסה מטופלים</a></li>
+          <li><a href="#">זימון תורים</a></li>
+          <li><a href="#"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
+          <li class="white-color"></li>
+          <li><a href="#">לוגיסטיקה</a></li>
+          <li><a href="#">הגדרות</a></li>
+          <li><a href="#">התנתקות</a></li>
+          <li class="white-color">
+            <a href="#" id="second-logo-mobile"></a>
+          </li>
+        </ul>
       </section>
-        <ul class="nav nav-tabs">
-          <!-- <div class="hori-selector">
+      <ul class="nav nav-tabs">
+        <!-- <div class="hori-selector">
                     <div class="left"></div>
                     <div class="right"></div> אופציה להוספה לנראות יותר טובה
                 </div> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">לוגיסטיקה</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">רשימת מטופלים</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="appointment.html">זימון תורים</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">מכסה מטופלים</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">לוח בקרה
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-expanded="false"
-            >
-              <img src="images/hanna-persona-profile.png" />
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
-                                <li><a class="dropdown-item" href="#">הגדרות</a></li>
-                                <li><a class="dropdown-item" href="#">התנתקות</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <li class="nav-item">
+          <a class="nav-link" href="#">לוגיסטיקה</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">רשימת מטופלים</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="appointment.html">זימון תורים</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">מכסה מטופלים</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">לוח בקרה
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <img src="images/hanna-persona-profile.png" />
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
+            <li><a class="dropdown-item" href="#">הגדרות</a></li>
+            <li><a class="dropdown-item" href="#">התנתקות</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section id="listWrapper">
-        <section id="view_real_time">
-          <section class="blue-view">
-            <section class="all-container">
-              <section class="title-text">
-                <h6>MRI</h6>
-              </section>
-              <section class="blue">
-                <section class="text-blue">
-                  <h6>שם: שלומי שבת</h6>
-                  <h6>M15 :מספר</h6>
-                </section>
-              </section>
+  <main>
+    <section id="listWrapper">
+      <section id="view_real_time">
+        <section class="blue-view">
+          <section class="all-container">
+            <section class="title-text">
+              <h6>MRI</h6>
             </section>
-
-            <section class="all-container">
-              <section class="title-text"><h6>CT</h6></section>
-              <section class="blue">
-                <section class="text-blue">
-                  <h6>שם: דביר ישראל</h6>
-                  <h6>C15 :מספר</h6>
-                </section>
-              </section>
-            </section>
-
-            <section class="all-container">
-              <section class="title-text"><h6>רנגטן</h6></section>
-              <section class="blue">
-                <section class="text-blue">
-                  <h6>שם: אנה קשתי</h6>
-                  <h6>R10 :מספר</h6>
-                </section>
-              </section>
-            </section>
-
-            <section class="all-container">
-              <section class="title-text"><h6>אולטרסאונד</h6></section>
-              <section class="blue">
-                <section class="text-blue">
-                  <h6>שם: עומר דרור</h6>
-                  <h6>A11 :מספר</h6>
-                </section>
-              </section>
-            </section>
-
-            <section class="text-aside">
+            <section class="blue">
               <section class="text-blue">
-                <h6>בטיפול</h6>
-                <h6>כרגע</h6>
+                <h6>שם: שלומי שבת</h6>
+                <h6>M15 :מספר</h6>
               </section>
             </section>
           </section>
-        </section>
 
-        <!-- form search -->
-        <section class="container-list">
-      
+          <section class="all-container">
+            <section class="title-text">
+              <h6>CT</h6>
+            </section>
+            <section class="blue">
+              <section class="text-blue">
+                <h6>שם: דביר ישראל</h6>
+                <h6>C15 :מספר</h6>
+              </section>
+            </section>
+          </section>
 
-            <section class="center-form-search">
-            <section class="form_container">
-               
-        <form id="search-list">
-            <div class="form-control-wrapper">
-              <label class="form-label" for="search-input">
-              </label>
-              <input type="search" class="form-control" placeholder="חיפוש" />
-            </div>
-          </form>
+          <section class="all-container">
+            <section class="title-text">
+              <h6>רנגטן</h6>
+            </section>
+            <section class="blue">
+              <section class="text-blue">
+                <h6>שם: אנה קשתי</h6>
+                <h6>R10 :מספר</h6>
+              </section>
+            </section>
+          </section>
+
+          <section class="all-container">
+            <section class="title-text">
+              <h6>אולטרסאונד</h6>
+            </section>
+            <section class="blue">
+              <section class="text-blue">
+                <h6>שם: עומר דרור</h6>
+                <h6>A11 :מספר</h6>
+              </section>
+            </section>
+          </section>
+
+          <section class="text-aside">
+            <section class="text-blue">
+              <h6>בטיפול</h6>
+              <h6>כרגע</h6>
+            </section>
+          </section>
         </section>
-          
+      </section>
+
+      <!-- form search -->
+      <section class="container-list">
+
+
+        <section class="center-form-search">
+          <section class="form_container">
+
+            <form id="search-list">
+              <div class="form-control-wrapper">
+                <label class="form-label" for="search-input">
+                </label>
+                <input type="search" class="form-control"  placeholder="חיפוש" />
+              </div>
+            </form>
+          </section>
+
         </section>
         <section class="search-wrapper-pluse">
-            <section class="plus">
-                <i class="bi bi-plus-circle-fill"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                  </svg>
-                  <p>הוספה</p>
-                </section>
-            </section>
-</section>
-
-<br>
-<!-- list patients -->
- <section class="list-Wrapper-table">
-      <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th scope="col">תאריך</th>
-            <th scope="col">שעה</th>
-            <th scope="col">סוגי דימות</th>
-            <th scope="col">דחיפות</th>
-            <th scope="col">מין</th>
-            <th scope="col">גיל</th>
-            <th scope="col">שם משפחה</th>
-            <th scope="col">שם פרטי</th>
-            <th scope="col">מספר</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-        
-            <tr>
-                <td class="left-arrow"> <a href="patientProfile.html"><i class="bi bi-chevron-left"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                      </svg></a>
-                </td>
-                <td scope="row">24.02.23</td>
-                <td>10:50</td>
-                <td>אולטרסאונד</td>
-                <td>קל</td>
-                <td>נקבה</td>
-                <td>32</td>
-                <td>ניסמוב</td>
-                <td>איילת</td>
-                <td>A11</td>
-                <td>
-                    
-                        <div class="lightbox-content">
-                    <i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                  </svg>
-              
-
-                
-                </td>
-                <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                  </svg></td>
-              </tr>
-
-
-
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>10:00</td>
-            <td>רנגטן</td>
-            <td>קל</td>
-            <td>זכר</td>
-            <td>35</td>
-            <td>ישראלוף</td>
-            <td>שלום</td>
-            <td>R15</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>10:15</td>
-            <td>אולטרסאונד</td>
-            <td>קל</td>
-            <td>נקבה</td>
-            <td>29</td>
-            <td>דגן</td>
-            <td>מיה</td>
-            <td>A10</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>10:25</td>
-            <td>CT</td>
-            <td>קל</td>
-            <td>זכר</td>
-            <td>37</td>
-            <td>גולדברג</td>
-            <td>אייל</td>
-            <td>R17</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>10:30</td>
-            <td>MRI</td>
-            <td>קל</td>
-            <td>זכר</td>
-            <td>60</td>
-            <td>לוינסקי</td>
-            <td>דני</td>
-            <td>R18</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>10:40</td>
-            <td>CT</td>
-            <td>קל</td>
-            <td>זכר</td>
-            <td>72</td>
-            <td>צוקרמן</td>
-            <td>מנחם</td>
-            <td>C16</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-          <tr>
-            <td class="left-arrow"><i class="bi bi-chevron-left"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-            </td>
-            <td scope="row">24.02.23</td>
-            <td>11:00</td>
-            <td>CT</td>
-            <td>קל</td>
-            <td>נקבה</td>
-            <td>44</td>
-            <td>גוש</td>
-            <td>אפרת</td>
-            <td>C17</td>
-            <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-              </svg></td>
-            <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></td>
-          </tr>
-
-        </tbody>
-      </table>
-
-
- </section>
+          <section class="plus">
+            <i class="bi bi-plus-circle-fill"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+            <p>הוספה</p>
+          </section>
+        </section>
       </section>
-    </main>
-    <script src="js/script.js"></script>
-  </body>
+
+      <br>
+      <!-- list patients -->
+      <section class="list-Wrapper-table">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th scope="col">תאריך</th>
+              <th scope="col">שעה</th>
+              <th scope="col">סוגי דימות</th>
+              <th scope="col">דחיפות</th>
+              <th scope="col">מין</th>
+              <th scope="col">גיל</th>
+              <th scope="col">שם משפחה</th>
+              <th scope="col">שם פרטי</th>
+              <th scope="col">מספר</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="left-arrow"> <a href="patientProfile.html"><i class="bi bi-chevron-left"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                  </svg></a>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:50</td>
+              <td>אולטרסאונד</td>
+              <td>קל</td>
+              <td>נקבה</td>
+              <td>32</td>
+              <td>ניסמוב</td>
+              <td>איילת</td>
+              <td>A11</td>
+              <td>
+
+                <div class="lightbox-content">
+                  <i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                  </svg>
+
+
+
+              </td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+
+
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:00</td>
+              <td>רנגטן</td>
+              <td>קל</td>
+              <td>זכר</td>
+              <td>35</td>
+              <td>ישראלוף</td>
+              <td>שלום</td>
+              <td>R15</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:15</td>
+              <td>אולטרסאונד</td>
+              <td>קל</td>
+              <td>נקבה</td>
+              <td>29</td>
+              <td>דגן</td>
+              <td>מיה</td>
+              <td>A10</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:25</td>
+              <td>CT</td>
+              <td>קל</td>
+              <td>זכר</td>
+              <td>37</td>
+              <td>גולדברג</td>
+              <td>אייל</td>
+              <td>R17</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:30</td>
+              <td>MRI</td>
+              <td>קל</td>
+              <td>זכר</td>
+              <td>60</td>
+              <td>לוינסקי</td>
+              <td>דני</td>
+              <td>R18</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>10:40</td>
+              <td>CT</td>
+              <td>קל</td>
+              <td>זכר</td>
+              <td>72</td>
+              <td>צוקרמן</td>
+              <td>מנחם</td>
+              <td>C16</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+            <tr>
+              <td class="left-arrow"><i class="bi bi-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </td>
+              <td scope="row">24.02.23</td>
+              <td>11:00</td>
+              <td>CT</td>
+              <td>קל</td>
+              <td>נקבה</td>
+              <td>44</td>
+              <td>גוש</td>
+              <td>אפרת</td>
+              <td>C17</td>
+              <td><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                </svg></td>
+              <td><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                </svg></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </section>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
