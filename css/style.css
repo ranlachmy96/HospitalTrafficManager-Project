@@ -704,10 +704,33 @@ td {
 
 @media (max-width: 992px) {
 
+    /* #appointment-form-wrapper {
+        display: none;
+    } */
+
     #appointmentWrapper {
+    display: flex;
+    flex-flow: column;
+    margin: none;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+    #h1-appointments {
+        width: 90%;
+        height: 31px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #appointment-left-side-wrapper{
         display: none;
     }
-
+    #appointment-one-and-two-wrapper {
+        display: initial;
+    }
+    
 }
 
 
