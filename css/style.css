@@ -21,7 +21,9 @@ header {
     height: 116px;
     display: flex;
     justify-content: flex-start;
+    align-items: flex-end;
     background-color: #7BCCE4;
+    transition: 0.3s;
 }
 
 #logo {
@@ -40,6 +42,10 @@ header {
     height: inherit;
 }
 
+#mobile-profile-picture {
+    display: none;
+}
+
 nav {
     display: flex;
     align-items: flex-end;
@@ -53,6 +59,70 @@ ul.nav.nav-tabs {
     --bs-nav-tabs-border-radius: none;
     --bs-nav-tabs-link-hover-border-color: none;
     border-bottom: none;
+}
+
+
+.mobile-toggle-menu {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 4%;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hamburger {
+    position: relative;
+    width: 20px;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background-color: #000000;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.hamburger::before {
+    top: -10px;
+    width: 30px;
+}
+
+.hamburger::after {
+    top: 10px;
+    width: 30px;
+}
+
+.hamburger,
+.mobile-toggle-menu {
+    display: none;
+}
+
+nav input:checked~.hamburger {
+    background-color: transparent;
+}
+
+nav input:checked~.hamburger::before {
+    top: 0;
+    transform: rotate(-45deg);
+
+}
+
+nav input:checked~.hamburger::after {
+    top: 0;
+    transform: rotate(45deg);
 }
 
 a {
@@ -89,6 +159,118 @@ a.nav-link.active {
     border-top-right-radius: 15px;
     outline-offset: -2px;
     border: none;
+}
+
+.mobile-menu {
+    display: none;
+    transition: 0.5s;
+}
+
+/*----------------------------------- nav-media-query -----------------------------------------*/
+@media (max-width: 992px) {
+
+    .nav-tabs {
+        display: none;
+    }
+
+    header {
+        height: 50px;
+        padding: 10px 20px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .logo-con {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #logo-mobile {
+        width: 117px;
+        height: 34px;
+        background: url("../images/mobile_logo.png");
+        background-repeat: no-repeat;
+    }
+
+    .hamburger,
+    .mobile-toggle-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        list-style: none;
+        direction: rtl;
+        top: 0;
+        right: -300px;
+        width: 190px;
+        height: 100%;
+        padding-top: 10%;
+        transition: 0.3s;
+    }
+
+    .mobile-menu li {
+        width: 100%;
+        background-color: rgba(91, 192, 222, 0.2);
+    }
+
+    .mobile-menu li a {
+        display: block;
+        color: #115A83;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1;
+        transition: 0.3s;
+    }
+
+    nav input:checked~.mobile-menu {
+        right: 0;
+    }
+
+    .white-color {
+        margin-bottom: 15px;
+        background-color: white;
+        display: block;
+        width: 100%;
+    }
+
+    #mobile-menu-header {
+        background-color: #7BCCE4;
+        padding: 15px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #115A83;
+    }
+
+    #second-logo-mobile {
+        display: block;
+        background: url("../images/menu_mobile_logo.png");
+        background-repeat: no-repeat;
+        width: 127px;
+        height: 104px;
+        /* margin-top: 20px; */
+        /* padding-left: 20px;
+        bottom: 0; */
+        /* background-color: #fff; */
+    }
+
+    #mobile-profile-picture {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 /* list-design */
@@ -165,8 +347,9 @@ a.nav-link.active {
     padding: 0px 10px;
 
 }
-.test-flex{
-    display: flex; 
+
+.test-flex {
+    display: flex;
     justify-content: center;
 }
 
@@ -376,7 +559,8 @@ td {
     margin-top: 30px;
     padding-top: 2%;
 }
-#h1-appointments>h5{
+
+#h1-appointments>h5 {
     font-weight: bold;
 }
 
@@ -384,6 +568,7 @@ td {
 .form-select {
     background-color: #BFE8F4;
 }
+
 #appointment-form-wrapper {
     /* margin: 30px; */
     margin-top: 10px;
@@ -435,7 +620,6 @@ td {
     flex-flow: column;
     align-items: flex-end;
     margin-top: 10px
-
 }
 
 #appointment-left-side-wrapper {
@@ -492,7 +676,7 @@ td {
 }
 
 .form-label {
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 #appointment-submit-wrapper {
@@ -512,39 +696,11 @@ td {
 
 /* ----------------------------appointment-media-query---------------------------------------- */
 
-@media (max-width: 1080px) {
-
-    .nav-tabs {
-        display: none;
-    }
+@media (max-width: 992px) {
 
     #appointmentWrapper {
         display: none;
     }
-
-    header {
-        height: 50px;
-        display: flex;
-        justify-content: space-around;
-        background-color: #7BCCE4;
-    }
-
-    #logo {
-        display: none;
-    }
-    .logo-con {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-    #logo-mobile {
-        width: 117px;
-        height: 34px;
-        background: url("../images/mobile_logo.png");
-        background-repeat: no-repeat;
-    }
-
 
 }
 
@@ -577,7 +733,7 @@ td {
 .text-in-title {
     align-self: center;
     font-weight: bold;
-    padding-top:1% ;
+    padding-top: 1%;
 }
 
 .text-in-title>h5 {
