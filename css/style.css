@@ -1042,9 +1042,9 @@ td {
 /*----------------------------------- Patient-Profile-media-query ------------------------*/
 @media (max-width: 992px) {
 
-.table{
-    display: none;
-}
+/* .table{
+    display: none;   //צריך למצוא לזה שם של קלאס אחר זה יוצר קונפליקט
+} */
 
 
 /* #Medical-information-tab-pane-upper-part>  .name-visible-responsive{
