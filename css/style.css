@@ -423,7 +423,7 @@ a.nav-link.active {
 
 .form-control {
     background-color: #ffffff;
-    border: 1px solid #115A83; 
+    border: 1px solid #115A83;
 }
 
 .form-control::placeholder {
@@ -647,9 +647,11 @@ td {
     td.list-icons{
         display: none;
     }
+
     .table td::before {
         content: attr(data-title) ": ";
     }
+
     .table>:not(caption)>*>* {
         border-color: #ffffff;
     }
@@ -905,7 +907,7 @@ td {
     justify-content: center;
     flex-flow: column;
     direction: rtl;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #info-profile-tabs {
@@ -953,9 +955,9 @@ td {
     padding-top: 10px;
 }
 
-#Medical-information-tab-pane-upper-part>  .name-visible-responsive{
+/* #Medical-information-tab-pane-upper-part>.name-visible-responsive {
     display: none;
-}
+} */
 
 
 .divider {
@@ -1049,89 +1051,106 @@ td {
     padding-right: 5%;
     color: black;
 }
-.mobile-patient-profil-section1{
+
+.mobile-patient-profil-section1 {
     display: none;
 }
-.visible-tab-mobile{
+
+.visible-tab-mobile {
     display: none;
 }
+
+
+
 /*----------------------------------- Patient-Profile-media-query ------------------------*/
 @media (max-width: 992px) {
 
-/* .table{
-    display: none;   //צריך למצוא לזה שם של קלאס אחר זה יוצר קונפליקט
-} */
+    #medical-history-tab {
+        display: none;
+    }
+
+    .nav-fill .nav-item,
+    .nav-fill>.nav-link {
+        flex: 50%;
+        text-align: center;
+    }
 
 
-/* #Medical-information-tab-pane-upper-part>  .name-visible-responsive{
-    display:initial;
-    color: #115A83;
-} */
+    #myTabContent {
+        display: none;
+    }
 
+    .flex-mobile-warpper {
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        padding: 20px;
 
-#medical-history-tab{
-    display: none;
-}
+    }
 
-.nav-fill .nav-item, .nav-fill>.nav-link {
-    flex: 50%;
-    text-align: center;
-}
-
-
-#myTabContent{
-    display: none;
-}
-
-.flex-mobile-warpper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-   
-}
-.mobile-patient-profil-section1{
-    color: #115A83;
-    display: flex;
-  background-color:#CEECF5;
-    align-items: center; 
-    justify-content: center; 
-}
-
-
-.blue-section{
-    display: flex;
-    justify-content: center;
-   flex-direction: column;
-}
-
-.blue-section > .name-visible-responsive{
-    margin-top: 10px;
-    height: auto;
-}
-
-.form-condtion{
-    gap: 20px;
-}
-.warpper-inside-blue-section1{
-  
-    flex-direction: row;  
-}
-
-.visible-tab-mobile{
-    display: initial;
-    margin-top: 20px;
-}
-.tab2-mobile{
-   
+    .mobile-patient-profil-section1 {
         color: #115A83;
-        /* display: flex; */
-      background-color:#CEECF5;
-        align-items: center; 
-        justify-content: center; 
-        height: 100px;
-    
-    
+        display: flex;
+        background-color: #CEECF5;
+        height:fit-content;
+        flex-flow: column;    
+        /* text-align: center; */
+    }
+
+   
+
+    .warpper-inside-blue-section1 {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .visible-tab-mobile {
+        display: initial;
+        margin-top: 20px;
+    }
+
+    .tab2-mobile {
+        color: #115A83;
+        background-color: #CEECF5;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .visible-table {
+        display: none;
+    }
+
+    .icon-patient {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon1,
+    .icon2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .select-responsiblity {
+        display: flex;
+        flex-flow: row;
+        margin-top: 10px;
+        gap: 20px;
+    }
+
+.title-name-pateint-mobile{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
+#body-patientProfile .form-select{
+    width: 20vh;
+}
+
 
 }
