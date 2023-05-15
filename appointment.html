@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
     <header>
         <section id="mobile-profile-picture">
             <img src="images/hanna_persona_mobile_profile.png">
@@ -29,26 +30,36 @@
             <a href="#" id="logo-mobile"></a>
         </section>
         <nav>
+         
             <section>
-                <input type="checkbox" class="mobile-toggle-menu">
+                  
+                <input type="checkbox"  id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
+                
+                
                 <ul class="mobile-menu">
-                    <li id="mobile-menu-header">תפריט</li>
-                    <li class="white-color"></li>
+                    <li class="divider-item" id="mobile-menu-header">תפריט</li>
+                    <!-- <li class="white-color"></li> -->
                     <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
-                    <li><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
-                    <li class="white-color"></li>
+                    <li class="divider-item"><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
+                    <!-- <li class="white-color"></li> -->
+                    <li class="divider-item-space"></li>
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-                    <li class="white-color">
+                    <li class="divider-item"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+                    <li class="white-color-divide"></li>
+            
+                    <li >
                         <a href="#" id="second-logo-mobile"></a>
                     </li>
                 </ul>
+           
+                
             </section>
+        
             <ul class="nav nav-tabs">
                 <!-- <div class="hori-selector">
                     <div class="left"></div>
@@ -84,6 +95,7 @@
         </nav>
     </header>
     <main>
+       
         <section id="appointmentWrapper">
             <section id="h1-appointments">
                 <h5>טופס קביעת תור</h5>

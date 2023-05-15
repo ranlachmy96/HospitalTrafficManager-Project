@@ -88,12 +88,13 @@ ul.nav.nav-tabs {
     content: "";
     position: absolute;
     height: 4px;
-    right: 0;
     background-color: #000000;
     border-radius: 10px;
     transition: 0.3s;
 
 }
+
+
 
 .hamburger::before {
     top: -10px;
@@ -220,16 +221,20 @@ a.nav-link.active {
         direction: rtl;
         top: 0;
         right: -300px;
-        /* width: 195px; */
+        
         height: 100%;
-        /* padding-top: 10%; */
+      
         transition: 0.3s;
         
+        background-color: #ffffff;
+       
     }
 
+
+   
     .mobile-menu li {
         width: 100%;
-        background-color:#fff;
+        /* background-color:#fff; */
     }
 
     .mobile-menu li:nth-child(11){
@@ -257,8 +262,17 @@ a.nav-link.active {
         background-color: white;
         display: block;
         width: 100%;
-        height: 100%;
+        height: 5%;
     }
+
+    .white-color-divide {
+        padding-bottom: 10px;
+        background-color: white;
+        display: block;
+        width: 100%;
+        height: 18%;
+    }
+
 
     #mobile-menu-header {
         /* background-color: #7BCCE4; */
@@ -269,7 +283,12 @@ a.nav-link.active {
         
         line-height: 19px;
         text-align: center;
+        margin-top: 20px;
     }
+  
+      
+      
+   
 
     #second-logo-mobile {
         display: block;
@@ -292,6 +311,75 @@ a.nav-link.active {
     .mobile-menu li a .fa-regular{
         text-align: right;
     }
+
+    ol, ul {
+        padding: 0cm;
+    }
+
+  
+    .mobile-menu .divider-item {
+        border-bottom: 1px solid gray;
+        margin-bottom: 10px;
+      }
+      
+      .mobile-menu .divider-item:last-child {
+        margin-bottom: 0;
+      }
+       
+.divider-item-space{
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    margin-top: 30%;
+}
+
+/* שינויייייייייייי */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* z-index: 9999; */
+    display: none;
+  }
+  
+  .mobile-toggle-menu:checked ~ #overlay {
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
+ 
+  
+  
+
 }
 
 /* list-design */
@@ -651,7 +739,9 @@ td {
     .table tbody tr:nth-child(even){
         background-color: rgba(91, 192, 222, 0.6);
     }
-    
+
+
+
 }
 
 /* --------------------------------appointment-------------------------------------- */
@@ -848,6 +938,8 @@ td {
     #appointment-second-wrapper {
         padding-top: 30px;
     }
+
+
 
 }
 
