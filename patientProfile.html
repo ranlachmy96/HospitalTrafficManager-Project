@@ -20,7 +20,7 @@
   <title>profile patients</title>
 </head>
 
-<body>
+<body id="body-patientProfile">
   <header>
     <section id="mobile-profile-picture">
       <img src="images/hanna_persona_mobile_profile.png">
@@ -90,7 +90,7 @@
           </section>
         </section>
       </section>
-
+<section class="visible-table">
       <section class="flex-table">
         <table class="table">
           <thead>
@@ -112,6 +112,7 @@
             </tr>
         </table>
       </section>
+    </section>
       <section class="info-profile">
         <section id="info-profile-tabs">
           <ul class="nav nav-tabs nav-bar-2 nav-fill" id="my-info-profile-tab" role="tablist">
@@ -131,30 +132,29 @@
          
         </section>
 <!-- mobile -->
+
+
         <section class="mobile-patient-profil-section1">
-          <section class="flex-mobile-warpper"> 
-            <section class="blue-section">
-          <h5 class="name-visible-responsive">שם: איילת ניסמוב</h5>
-          <section class="warpper-inside-blue-section1">
-              <h6>דחיפות רפואית</h6>
+            <section class="title-name-pateint-mobile">
+              <h5 class="name-visible-responsive">שם: איילת ניסמוב</h5>
             </section>
-              <div class="form-condtion"></div>
-              <select name="image_type" class="form-select" required>
-                  <option value="">-</option>
-                  <option value="easy">קל</option>
-                  <option value="medium">בינוני</option>
-                  <option value="Hard">קשה</option>
-              </select>
+          <section class="flex-mobile-warpper"> 
+          <section class="warpper-inside-blue-section1">
+          <h6>דחיפות רפואית</h6>
+              <div class="form-condtion">
+                <select name="image_type" class="form-select" required>
+                    <option value="">-</option>
+                    <option value="easy">קל</option>
+                    <option value="medium">בינוני</option>
+                    <option value="Hard">קשה</option>
+                </select>
+              </div>
+            </section> 
               <label>הערות</label>
-              <textarea class="form-control" name="moreToAdd"></textarea>
-
-
-            </div> 
+              <textarea class="form-control" name="moreToAdd"></textarea> 
         </section>
           </section>
-         
-          </section>
-          
+
           <section class="visible-tab-mobile">
           <section id="info-profile-tabs">
             <ul class="nav nav-tabs nav-bar-2 nav-fill" id="my-info-profile-tab" role="tablist">
@@ -168,35 +168,56 @@
               </li>
             </ul>
           </section>
+
           <section class="tab2-mobile">
+            <section class="icon-patient">
+              <div class="icon1">
             <i class="bi bi-plus-lg"></i>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
             </svg>
+            <p>הוספה</p>
+          </div>
 
-
-
+        <div class="icon2">
             <i class="bi bi-check-lg"></i>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
               <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
             </svg>
+            <p>שמור תבנית</p>
+          </div>
 
           </section>
-          
+          <section class="note-tab2">
+            <label>הערות</label>
+            <textarea class="form-control" name="moreToAdd"></textarea>
+          </section>
 
-<!-- 
-<h6>באחריות מחלקת</h6>
-          <select name="image_type" class="form-select" required>
-            <option value="">-</option>
-            <option value="easy">דימות</option>
-            <option value="medium">בינוני</option>
-            <option value="Hard">קשה</option> -->
+          </section>
+
+
+          <section class="select-responsiblity">
+            <h6>באחריות מחלקת</h6>
+            <div class="form-condtion">
+              <select name="image_type" class="form-select" required>
+                  <option value="">-</option>
+                  <option value="easy">מיון</option>
+                  <option value="medium">דימות</option>
+                  <option value="Hard">פיזותרפיה</option>
+              </select>
+            </div>
+
+
+
+
+          </section>
+
 
 </section>
 
 
 
-
+<!-- mobile -->
 
 
         <section id="info-profile-content">
