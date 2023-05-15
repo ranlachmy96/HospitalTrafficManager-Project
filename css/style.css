@@ -230,19 +230,13 @@ a.nav-link.active {
 
     .mobile-menu li {
         width: 100%;
-        background-color: #7BCCE4;
+        background-color:#fff;
     }
-    .mobile-menu li:nth-child(2){
-        background-color: #fff;
-    }
-    .mobile-menu li:nth-child(7){
-        background-color: #fff;
-    }
+
     .mobile-menu li:nth-child(11){
         background-color: #fff;
         display: flex;
         justify-content: center;
-        padding-top: 2px;
     }
 
     .mobile-menu li a {
@@ -1155,14 +1149,14 @@ td {
 
 /* check */
 #message-overlay {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    background-color: rgba(217, 217, 217, 0.6);
+    z-index: 1;
   }
   
   #message-box {
