@@ -34,14 +34,15 @@
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
                     <li id="mobile-menu-header">תפריט</li>
-                    <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
-                    <li><a href="#"> מכסה מטופלים</a></li>
-                    <li><a href="#">זימון תורים</a></li>
-                    <li><a href="#"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
                     <li class="white-color"></li>
-                    <li><a href="#">לוגיסטיקה</a></li>
-                    <li><a href="#">הגדרות</a></li>
-                    <li><a href="#">התנתקות</a></li>
+                    <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+                    <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
+                    <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a></li>
+                    <li><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
+                    <li class="white-color"></li>
+                    <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
+                    <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
                     <li class="white-color">
                         <a href="#" id="second-logo-mobile"></a>
                     </li>
@@ -87,7 +88,8 @@
                 <h5>טופס קביעת תור</h5>
             </section>
             <section id="appointment-form-wrapper">
-                <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation" novalidate>
+                <form action="http://localhost/get_form.php" method="get" id="appointment-form"
+                    class="needs-validation" novalidate>
                     <div id="appointment-inside-form-wrapper">
                         <div id="appointment-left-side-wrapper">
                             <label id="appointment-left-side-label">העלת מסמכים</label>
@@ -104,14 +106,14 @@
                                 <div id="appointment-third-wrapper-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exists" value="no"
-                                            id="flexRadioOne">
+                                            id="flexRadioOne" required>
                                         <label class="form-check-label" for="flexRadioOne">
                                             לא
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exists" value="yes"
-                                            id="flexRadioTwo">
+                                            id="flexRadioTwo"required>
                                         <label class="form-check-label" for="flexRadioTwo">
                                             כן
                                         </label>
@@ -121,7 +123,8 @@
                             <div id="appointment-one-and-two-wrapper">
                                 <div id="appointment-first-wrapper">
                                     <label class="form-label">שם פרטי</label>
-                                    <input type="text" class="form-control" name="private_name" value="">
+                                    <input type="text" class="form-control" name="private_name" value=""
+                                        pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
                                     <label>אימייל</label>
                                     <input type="email" class="form-control" name="mail" value=""
@@ -130,6 +133,7 @@
                                     <label>גיל </label>
                                     <select name="age" class="form-select" required>
                                         <option value="" disabled selected>-</option>
+                                        <option value="1" >1</option>
                                     </select>
                                     <br>
                                     <label class="form-label"> תאריך</label>
@@ -137,18 +141,20 @@
                                 </div>
                                 <div id="appointment-second-wrapper">
                                     <label class="form-label">שם משפחה</label>
-                                    <input type="text" class="form-control" name="last_name" value="">
+                                    <input type="text" class="form-control" name="last_name" value=""
+                                        pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
                                     <label class="form-label">ת"ז</label>
-                                    <input type="number" class="form-control" name="id_number" min="0" value="">
+                                    <input type="number" class="form-control" name="id_number" min="0" max="9999999999"
+                                        value="">
                                     <br>
                                     <label>סוג דימות</label>
                                     <select name="image_type" class="form-select" required>
                                         <option value="">-</option>
                                         <option value="x-ray">רנטגן</option>
-                                        <option value="c.t">C.T</option>
-                                        <option value="ultra sound">אולטרסאונד</option>
-                                        <option value="m.r.i">M.R.I</option>
+                                        <option value="C.T">C.T</option>
+                                        <option value="ultrasound">אולטרסאונד</option>
+                                        <option value="M.R.I">M.R.I</option>
                                     </select>
                                     <br>
                                     <label class="form-label">שעה</label>
@@ -163,12 +169,13 @@
                         </div>
                     </div>
                     <div id="appointment-submit-wrapper">
-                        <input type="submit" id="submit-button" class="btn btn-primary" value="שמור" disabled>
+                        <input type="submit" id="submit-button" class="btn btn-primary" value="שמור">
                     </div>
                 </form>
             </section>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

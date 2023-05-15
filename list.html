@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -14,6 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -21,7 +22,7 @@
 <body>
   <header>
     <section id="mobile-profile-picture">
-      <img src="images/hanna_persona_mobile_profile.png">
+      <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
     </section>
     <section class="logo-con">
       <a href="#" id="logo"></a>
@@ -33,14 +34,15 @@
         <div class="hamburger"></div>
         <ul class="mobile-menu">
           <li id="mobile-menu-header">תפריט</li>
-          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
-          <li><a href="#"> מכסה מטופלים</a></li>
-          <li><a href="#">זימון תורים</a></li>
-          <li><a href="#"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
           <li class="white-color"></li>
-          <li><a href="#">לוגיסטיקה</a></li>
-          <li><a href="#">הגדרות</a></li>
-          <li><a href="#">התנתקות</a></li>
+          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+          <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
+          <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a></li>
+          <li><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
+          <li class="white-color"></li>
+          <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
+          <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
           <li class="white-color">
             <a href="#" id="second-logo-mobile"></a>
           </li>
@@ -55,7 +57,7 @@
           <a class="nav-link" href="#">לוגיסטיקה</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">רשימת מטופלים</a>
+          <a class="nav-link active" href="list.html">רשימת מטופלים</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="appointment.html">זימון תורים</a>
@@ -196,8 +198,8 @@
           <tbody>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
@@ -219,7 +221,8 @@
               <td data-title="סוגי דימות">אולטרסאונד</td>
               <td data-title="שעה">10:50</td>
               <td data-title="תאריך" scope="row">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"> <a href="patientProfile.html"><i class="bi bi-chevron-left"></i>
+              <td class="left-arrow" data-title="כניסה"> <a href="patientProfile.html"><i
+                    class="bi bi-chevron-left"></i>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-chevron-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -228,14 +231,14 @@
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>
@@ -258,14 +261,14 @@
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>
@@ -289,14 +292,14 @@
             </tr>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>
@@ -319,14 +322,14 @@
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>
@@ -349,14 +352,14 @@
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>
@@ -369,7 +372,7 @@
               <td data-title="דחיפות">קל</td>
               <td data-title="סוגי דימות">CT</td>
               <td data-title="שעה">10:40</td>
-              <td data-title="תאריך" scope="row">24.02.23</td>         
+              <td data-title="תאריך" scope="row">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><i class="bi bi-chevron-left"></i>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -380,14 +383,14 @@
             </tr>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                 </svg>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path
                     d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
                 </svg>

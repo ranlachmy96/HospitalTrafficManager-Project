@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Medula+One&family=Metamorphous&family=Rubik&display=swap"
@@ -15,15 +14,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css" />
-
   <title>profile patients</title>
 </head>
 
 <body>
   <header>
     <section id="mobile-profile-picture">
-      <img src="images/hanna_persona_mobile_profile.png">
+      <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
     </section>
     <section class="logo-con">
       <a href="#" id="logo"></a>
@@ -35,14 +34,15 @@
         <div class="hamburger"></div>
         <ul class="mobile-menu">
           <li id="mobile-menu-header">תפריט</li>
-          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
-          <li><a href="#"> מכסה מטופלים</a></li>
-          <li><a href="#">זימון תורים</a></li>
-          <li><a href="#"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
           <li class="white-color"></li>
-          <li><a href="#">לוגיסטיקה</a></li>
-          <li><a href="#">הגדרות</a></li>
-          <li><a href="#">התנתקות</a></li>
+          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+          <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
+          <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a></li>
+          <li><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
+          <li class="white-color"></li>
+          <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
+          <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
+          <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
           <li class="white-color">
             <a href="#" id="second-logo-mobile"></a>
           </li>
@@ -128,34 +128,34 @@
                 data-bs-target="#medical-history-tab-pane" type="button" role="tab">היסטוריה רפואית </button>
             </li>
           </ul>
-         
+
         </section>
-<!-- mobile -->
+        <!-- mobile -->
         <section class="mobile-patient-profil-section1">
-          <section class="flex-mobile-warpper"> 
+          <section class="flex-mobile-warpper">
             <section class="blue-section">
-          <h5 class="name-visible-responsive">שם: איילת ניסמוב</h5>
-          <section class="warpper-inside-blue-section1">
-              <h6>דחיפות רפואית</h6>
-            </section>
+              <h5 class="name-visible-responsive">שם: איילת ניסמוב</h5>
+              <section class="warpper-inside-blue-section1">
+                <h6>דחיפות רפואית</h6>
+              </section>
               <div class="form-condtion"></div>
               <select name="image_type" class="form-select" required>
-                  <option value="">-</option>
-                  <option value="easy">קל</option>
-                  <option value="medium">בינוני</option>
-                  <option value="Hard">קשה</option>
+                <option value="">-</option>
+                <option value="easy">קל</option>
+                <option value="medium">בינוני</option>
+                <option value="Hard">קשה</option>
               </select>
               <label>הערות</label>
               <textarea class="form-control" name="moreToAdd"></textarea>
 
 
-            </div> 
+              </div>
+            </section>
+          </section>
+
         </section>
-          </section>
-         
-          </section>
-          
-          <section class="visible-tab-mobile">
+
+        <section class="visible-tab-mobile">
           <section id="info-profile-tabs">
             <ul class="nav nav-tabs nav-bar-2 nav-fill" id="my-info-profile-tab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -170,21 +170,25 @@
           </section>
           <section class="tab2-mobile">
             <i class="bi bi-plus-lg"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
             </svg>
 
 
 
             <i class="bi bi-check-lg"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
-              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
             </svg>
 
           </section>
-          
 
-<!-- 
+
+          <!-- 
 <h6>באחריות מחלקת</h6>
           <select name="image_type" class="form-select" required>
             <option value="">-</option>
@@ -192,7 +196,7 @@
             <option value="medium">בינוני</option>
             <option value="Hard">קשה</option> -->
 
-</section>
+        </section>
 
 
 
@@ -207,7 +211,7 @@
 
               <div id="Medical-information-tab-pane-upper-part">
                 <h5>תור עכשוי</h5>
-                
+
                 <span>מחלקת דימות</span>
               </div>
 
@@ -258,13 +262,13 @@
               </div>
 
             </div>
-          
+
 
             <div class="tab-pane fade" id="virtual-assistant-tab-pane" role="tabpanel" tabindex="0">
               <div id="virtual-assistant-tab-pane-container">
                 <ul>
                   <li>לא קיים</li>
-      
+
                 </ul>
               </div>
 
@@ -282,7 +286,7 @@
               </ul>
             </div>
 
-          </div>   
+          </div>
 
         </section>
         <section id="save-info-profile-changes-container">

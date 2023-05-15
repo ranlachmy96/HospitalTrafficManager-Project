@@ -65,9 +65,9 @@ ul.nav.nav-tabs {
 .mobile-toggle-menu {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 5%;
-    height: 4%;
-    z-index: 3;
+    width: 10%;
+    height: 7%;
+    z-index: 999;
     opacity: 0;
     cursor: pointer;
 }
@@ -173,7 +173,6 @@ a.nav-link.active {
 .nav-item.dropdown {
     border-radius: 6px 6px 0 0;
 }
-
 /*----------------------------------- nav-media-query -----------------------------------------*/
 @media (max-width: 992px) {
 
@@ -209,6 +208,7 @@ a.nav-link.active {
     .hamburger,
     .mobile-toggle-menu {
         display: block;
+        z-index: 1;
     }
 
     .mobile-menu {
@@ -221,15 +221,28 @@ a.nav-link.active {
         direction: rtl;
         top: 0;
         right: -300px;
-        width: 190px;
+        /* width: 195px; */
         height: 100%;
-        padding-top: 10%;
+        /* padding-top: 10%; */
         transition: 0.3s;
+        
     }
 
     .mobile-menu li {
         width: 100%;
-        background-color: rgba(91, 192, 222, 0.2);
+        background-color: #7BCCE4;
+    }
+    .mobile-menu li:nth-child(2){
+        background-color: #fff;
+    }
+    .mobile-menu li:nth-child(7){
+        background-color: #fff;
+    }
+    .mobile-menu li:nth-child(11){
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        padding-top: 2px;
     }
 
     .mobile-menu li a {
@@ -239,6 +252,7 @@ a.nav-link.active {
         font-size: 16px;
         line-height: 1;
         transition: 0.3s;
+        text-align: right;
     }
 
     nav input:checked~.mobile-menu {
@@ -246,21 +260,22 @@ a.nav-link.active {
     }
 
     .white-color {
-        margin-bottom: 15px;
+        padding-bottom: 10px;
         background-color: white;
         display: block;
         width: 100%;
+        height: 100%;
     }
 
     #mobile-menu-header {
-        background-color: #7BCCE4;
-        padding: 15px;
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+        /* background-color: #7BCCE4; */
         color: #115A83;
+        padding-bottom: 19%;
+        font-weight: bold;
+        font-size: 16px;
+        
+        line-height: 19px;
+        text-align: center;
     }
 
     #second-logo-mobile {
@@ -269,6 +284,7 @@ a.nav-link.active {
         background-repeat: no-repeat;
         width: 127px;
         height: 104px;
+        /* height: 100vh; */
         /* margin-top: 20px; */
         /* padding-left: 20px;
         bottom: 0; */
@@ -278,6 +294,10 @@ a.nav-link.active {
     #mobile-profile-picture {
         display: flex;
         justify-content: flex-start;
+    }
+    .mobile-menu li a .fa-solid,
+    .mobile-menu li a .fa-regular{
+        text-align: right;
     }
 }
 
@@ -559,14 +579,10 @@ td {
         display: none;
     }
 
-    /* .container-list {
-        display: none;
-    } */
     .form_container {
         width: 100%;
         display: flex;
         justify-content: center;
-
     }
 
     #search-list {
@@ -624,6 +640,10 @@ td {
         display: block;
         font-size: 16px;
     }
+    table td:last-child {
+        text-align: left;
+        font-weight: bold;
+    }
     td.list-icons{
         display: none;
     }
@@ -631,19 +651,10 @@ td {
         content: attr(data-title) ": ";
     }
     .table>:not(caption)>*>* {
-         border-bottom-width: 0; 
+        border-color: #ffffff;
     }
-    tbody tr:nth-child(even){
-        background-color: white !important;
-    }
-    th {
-        color: #115A83;
-    }
-    td {
-        color: #115A83;
-    }
-    .table tbody tr{
-        border-radius: 6px;
+    .table tbody tr:nth-child(even){
+        background-color: rgba(91, 192, 222, 0.6);
     }
     
 }
@@ -793,6 +804,7 @@ td {
     display: flex;
     justify-content: center;
     margin-top: 8%;
+    margin-bottom: 5%;
     border-radius: 50%;
 }
 
@@ -836,6 +848,10 @@ td {
 
     #appointment-one-and-two-wrapper {
         display: initial;
+    }
+
+    #appointment-second-wrapper {
+        padding-top: 30px;
     }
 
 }
