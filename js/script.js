@@ -36,8 +36,6 @@ window.onload = function () {
                 submitButton.style.backgroundColor = isFormValid ? "#5BC0DE" : "";
             });
         });
-
-        console.log("File 1 loaded");
     } else if (window.location.pathname.endsWith('/patientProfile.html')) {
         //check
         const saveButton = document.getElementById('save-info-profile-changes');
@@ -56,16 +54,8 @@ window.onload = function () {
                 messageOverlay.style.display = 'none';
             }, 2000);
         });
-        console.log("File 2 loaded");
     } else if (window.location.pathname.endsWith('/file3.html')) {
         // Code specific to file3.html
-        console.log("File 3 loaded");
     }
-
-
-
-
-
-
 
 }

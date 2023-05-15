@@ -29,42 +29,38 @@
             <a href="#" id="logo-mobile"></a>
         </section>
         <nav>
-         
             <section>
-                  
-                <input type="checkbox"  id="menu-toggle" class="mobile-toggle-menu">
+                <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
-                
+
                 <ul class="mobile-menu">
                     <li class="divider-item" id="mobile-menu-header">תפריט</li>
-                  
+
                     <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
-                    <li class="divider-item"><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a></li>
-                   
+                    <li class="divider-item"><a href="index.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
+                            מטופלים</a></li>
+
                     <li class="divider-item-space"></li>
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li class="divider-item"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+                    <li class="divider-item"><a href="#"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
                     <li class="white-color-divide"></li>
-            
-                    <li >
+
+                    <li>
                         <a href="#" id="second-logo-mobile"></a>
                     </li>
                 </ul>
-           
-                
             </section>
-        
             <ul class="nav nav-tabs">
-              
                 <li class="nav-item">
                     <a class="nav-link " href="#">לוגיסטיקה</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="list.html">רשימת מטופלים</a>
+                    <a class="nav-link" href="index.html">רשימת מטופלים</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="appointment.html">זימון תורים</a>
@@ -90,14 +86,12 @@
         </nav>
     </header>
     <main>
-       
         <section id="appointmentWrapper">
             <section id="h1-appointments">
                 <h5>טופס קביעת תור</h5>
             </section>
             <section id="appointment-form-wrapper">
-                <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation"
-                    novalidate>
+                <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation" novalidate>
                     <div id="appointment-inside-form-wrapper">
                         <div id="appointment-left-side-wrapper">
                             <label id="appointment-left-side-label">העלת מסמכים</label>
@@ -152,8 +146,8 @@
                                         pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
                                     <label class="form-label">ת"ז</label>
-                                    <input type="number" class="form-control written" name="id_number" min="0" max="9999999999"
-                                        value="">
+                                    <input type="number" class="form-control written" name="id_number" min="0"
+                                        max="9999999999" value="">
                                     <br>
                                     <label>סוג דימות</label>
                                     <select name="image_type" class="form-select" required>
