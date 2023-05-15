@@ -208,7 +208,6 @@ a.nav-link.active {
     .hamburger,
     .mobile-toggle-menu {
         display: block;
-        z-index: 1;
     }
 
     .mobile-menu {
