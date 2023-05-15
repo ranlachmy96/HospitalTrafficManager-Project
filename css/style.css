@@ -567,9 +567,12 @@ td {
     background-color: #DAEEF4;
 }
 
-.table {
+
+/*  סגרתיי כי זה בילגאן את הסדר בפרופיל צריך לבדוק שזה לא עושה שינויים*/
+
+/* .table {
     direction: rtl;
-}
+} */
 
 /*----------------------------------- list-design-media-query ------------------------*/
 
@@ -1093,6 +1096,9 @@ td {
     font-size: 18px;
   }
 
+  .breadcrumb-right{
+    justify-content: flex-end
+  }
 
 /*----------------------------------- Patient-Profile-media-query ------------------------*/
 @media (max-width: 992px) {
@@ -1184,7 +1190,12 @@ td {
     width: 20vh;
 }
 
-
+.a-history {
+    text-align: left;
+    margin-top: 10px;
+    color: cornflowerblue;
+  }
+  
 
   
 
