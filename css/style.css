@@ -56,7 +56,7 @@ nav {
 ul.nav.nav-tabs {
     --bs-nav-tabs-border-width: none;
     --bs-nav-tabs-border-color: none;
-    /* --bs-nav-tabs-border-radius: none; */
+   
     --bs-nav-tabs-link-hover-border-color: none;
     border-bottom: none;
 }
@@ -227,6 +227,7 @@ a.nav-link.active {
         transition: 0.3s;
         
         background-color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25)
        
     }
 
@@ -234,7 +235,7 @@ a.nav-link.active {
    
     .mobile-menu li {
         width: 100%;
-        /* background-color:#fff; */
+        
     }
 
     .mobile-menu li:nth-child(11){
@@ -275,7 +276,7 @@ a.nav-link.active {
 
 
     #mobile-menu-header {
-        /* background-color: #7BCCE4; */
+        
         color: #115A83;
         padding-bottom: 19%;
         font-weight: bold;
@@ -296,11 +297,7 @@ a.nav-link.active {
         background-repeat: no-repeat;
         width: 127px;
         height: 104px;
-        /* height: 100vh; */
-        /* margin-top: 20px; */
-        /* padding-left: 20px;
-        bottom: 0; */
-        /* background-color: #fff; */
+   
     }
 
     #mobile-profile-picture {
@@ -332,80 +329,12 @@ a.nav-link.active {
     margin-top: 30%;
 }
 
-/* שינויייייייייייי */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* z-index: 9999; */
-    display: none;
-  }
-  
-  .mobile-toggle-menu:checked ~ #overlay {
-    display: block;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
- 
-
-
- 
-  
-  
-
 }
-
-/* list-design */
-
-/* #view_real_time {
-    position: flex;
-    width: 1320px;
-    height: 180px;
-    margin-left: 62px;
-    margin-top: 65px;
-    background: #BFE8F4;
-    border-radius: 6px;
-} */
-
-/* .blue {
-    width: 220px;
-    height: 100px;
-    background: #82BEDD;
-    border-radius: 6px;
-} */
-
 .dropdown-menu {
     --bs-dropdown-border-color: none;
     --bs-dropdown-border-radius: none;
     --bs-dropdown-border-width: none;
-    border-radius: none;
+    border-radius: 0;
     border: none;
 }
 
@@ -437,19 +366,14 @@ a.nav-link.active {
     flex-flow: row;
     justify-content: center;
     gap: 72px;
-    /* width: 80%;
-    height: 180px; */
-    /* margin-left: 62px; */
+  
 }
 
 .blue {
     display: flex;
     flex-flow: column;
-    /* width: 220px;
-    height: 100px; */
     width: 120%;
     height: 100%;
-    /* margin-left: 20px; */
     background: #82BEDD;
     border-radius: 6px;
     align-items: center;
@@ -693,7 +617,6 @@ td {
         border-collapse: separate;
         border-spacing: 0 10px;
         text-align: center;
-        /* border: 3px solid #82BEDD; */
         direction: rtl;
     }
 
@@ -801,7 +724,6 @@ td {
 #appointment-one-and-two-wrapper {
     display: flex;
     flex-flow: row-reverse;
-    /* column-gap: 20px; */
     gap: 30px;
 }
 
@@ -876,7 +798,6 @@ td {
 
 .drag_text>span {
     color: #2E6E92;
-    ;
 }
 
 .form-control {
@@ -902,22 +823,15 @@ td {
     background-color: rgba(160, 160, 160, 0.8);
     border: none;
 }
-.enabled {
-    background-color: green;
-    color: white;
-  }
+
 /* ----------------------------appointment-media-query---------------------------------------- */
 
 @media (max-width: 992px) {
 
-    /* #appointment-form-wrapper {
-        display: none;
-    } */
-
     #appointmentWrapper {
         display: flex;
         flex-flow: column;
-        margin: none;
+        margin: 0;
         align-items: center;
         width: 100%;
         height: 100%;
@@ -1034,9 +948,6 @@ td {
     width: 100%;
 }
 
-/* #Medical-information-tab-pane {
-    width: 100%;
-} */
 
 #Medical-information-tab-pane-upper-part {
     display: flex;
@@ -1045,9 +956,6 @@ td {
     padding-top: 10px;
 }
 
-/* #Medical-information-tab-pane-upper-part>.name-visible-responsive {
-    display: none;
-} */
 
 
 .divider {
@@ -1113,8 +1021,6 @@ td {
 }
 
 #virtual-assistant-tab-pane-button {
-    /* width: 20%;
-    height: 20%; */
     height: 30px;
     border-radius: 100px;
     border: none;
@@ -1131,7 +1037,6 @@ td {
 }
 
 #save-info-profile-changes {
-    /* width: 20%; */
     margin: 5%;
     height: 30px;
     border-radius: 100px;
@@ -1208,7 +1113,6 @@ td {
 
     .flex-mobile-warpper {
         display: flex;
-        /* justify-content: center; */
         flex-direction: column;
         padding: 20px;
 
@@ -1220,7 +1124,6 @@ td {
         background-color: #CEECF5;
         height:fit-content;
         flex-flow: column;    
-        /* text-align: center; */
     }
 
    
@@ -1283,9 +1186,5 @@ td {
     margin-top: 10px;
     color: cornflowerblue;
   }
-  
-
-  
-
 
 }

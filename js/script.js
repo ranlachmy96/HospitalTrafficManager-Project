@@ -62,43 +62,9 @@ window.onload = function () {
         console.log("File 3 loaded");
     }
 
-// JavaScript code to show/hide the overlay
-var menuToggle = document.getElementById("menu-toggle");
-var overlay = document.getElementById("overlay");
 
-menuToggle.addEventListener("click", function() {
-  if (menuToggle.checked) {
-    overlay.style.display = "block";
-  } else {
-    overlay.style.display = "none";
-  }
-});
 
-////////
-// var menuToggle = document.getElementById("menu-toggle");
-// var overlay = document.getElementById("overlay1");
 
-// menuToggle.addEventListener("click", function() {
-//   if (menuToggle.checked) {
-//     overlay.style.display = "block";
-//   } else {
-//     overlay.style.display = "none";
-//   }
-// });
-
-// //////
-// var menuToggle = document.getElementById("menu-toggle");
-// var overlay = document.getElementById("overlay2");
-
-// menuToggle.addEventListener("click", function() {
-//   if (menuToggle.checked) {
-//     overlay.style.display = "block";
-//   } else {
-//     overlay.style.display = "none";
-//   }
-// });
-
-/////
 
 
 
