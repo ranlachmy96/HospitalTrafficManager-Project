@@ -31,11 +31,11 @@ saveButton.addEventListener('click', function() {
   messageOverlay.style.display = 'block';
   
   // Set the message text
-  messageText.textContent = 'Your message here';
+  messageText.textContent = 'נשמר בהצלחה';
   
   // Hide the message overlay after a delay (e.g., 3 seconds)
   setTimeout(function() {
     messageOverlay.style.display = 'none';
-  }, 3000);
+  }, 2000);
 });
 }

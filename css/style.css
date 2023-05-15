@@ -560,9 +560,12 @@ td {
     background-color: #DAEEF4;
 }
 
-.table {
+
+/*  סגרתיי כי זה בילגאן את הסדר בפרופיל צריך לבדוק שזה לא עושה שינויים*/
+
+/* .table {
     direction: rtl;
-}
+} */
 
 /*----------------------------------- list-design-media-query ------------------------*/
 
@@ -1054,6 +1057,41 @@ td {
 }
 
 
+/* check */
+#message-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  #message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    color: #115A83;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  #message-text {
+    font-size: 18px;
+  }
+
+  .breadcrumb-right{
+    justify-content: flex-end
+  }
 
 /*----------------------------------- Patient-Profile-media-query ------------------------*/
 @media (max-width: 992px) {
@@ -1145,32 +1183,13 @@ td {
     width: 20vh;
 }
 
+.a-history {
+    text-align: left;
+    margin-top: 10px;
+    color: cornflowerblue;
+  }
+  
 
-/* check */
-#message-overlay {
-    /* display: none; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(217, 217, 217, 0.6);
-    z-index: 1;
-  }
-  
-  #message-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  #message-text {
-    font-size: 18px;
-  }
   
 
 
