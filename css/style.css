@@ -560,12 +560,9 @@ td {
     background-color: #DAEEF4;
 }
 
-
-/*  סגרתיי כי זה בילגאן את הסדר בפרופיל צריך לבדוק שזה לא עושה שינויים*/
-
-/* .table {
+.list-Wrapper-table {
     direction: rtl;
-} */
+}
 
 /*----------------------------------- list-design-media-query ------------------------*/
 
