@@ -22,7 +22,7 @@
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <img src="images/hanna_persona_mobile_profile.png">
+            <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
         </section>
         <section class="logo-con">
             <a href="#" id="logo"></a>
@@ -72,7 +72,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <img src="images/hanna-persona-profile.png">
+                        <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
@@ -89,7 +89,7 @@
                 <h5>טופס קביעת תור</h5>
             </section>
             <section id="appointment-form-wrapper">
-                <form action="http://localhost/get_form.php" method="get" id="appointment-form" class="needs-validation"
+                <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation"
                     novalidate>
                     <div id="appointment-inside-form-wrapper">
                         <div id="appointment-left-side-wrapper">
@@ -97,7 +97,7 @@
                             <input type="file" class="upload_hide" id="upload_costum">
                             <label for="upload_costum" class="upload_label">
                                 <i class="fas fa-cloud-upload-alt"></i>
-                                <p class="drag_text"><span class="font color">לחץ </span>או גרור מסמכים</p>
+                                <span class="drag_text"><span class="font color">לחץ </span>או גרור מסמכים</span>
                             </label>
                         </div>
                         <div id="appointment-right-side-wrapper">
@@ -124,11 +124,11 @@
                             <div id="appointment-one-and-two-wrapper">
                                 <div id="appointment-first-wrapper">
                                     <label class="form-label">שם פרטי</label>
-                                    <input type="text" class="form-control" name="private_name" value=""
+                                    <input type="text" class="form-control written" name="private_name" value=""
                                         pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
                                     <label>אימייל</label>
-                                    <input type="email" class="form-control" name="mail" value=""
+                                    <input type="email" class="form-control written" name="mail" value=""
                                         pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
                                     <br>
                                     <label>גיל </label>
@@ -137,15 +137,15 @@
                                     </select>
                                     <br>
                                     <label class="form-label"> תאריך</label>
-                                    <input type="date" class="form-control" name="date" value="">
+                                    <input type="date" class="form-control written" name="date" value="">
                                 </div>
                                 <div id="appointment-second-wrapper">
                                     <label class="form-label">שם משפחה</label>
-                                    <input type="text" class="form-control" name="last_name" value=""
+                                    <input type="text" class="form-control written" name="last_name" value=""
                                         pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
                                     <label class="form-label">ת"ז</label>
-                                    <input type="number" class="form-control" name="id_number" min="0" max="9999999999"
+                                    <input type="number" class="form-control written" name="id_number" min="0" max="9999999999"
                                         value="">
                                     <br>
                                     <label>סוג דימות</label>
@@ -158,7 +158,7 @@
                                     </select>
                                     <br>
                                     <label class="form-label">שעה</label>
-                                    <input type="time" class="form-control" name="time" value="">
+                                    <input type="time" class="form-control written" name="time" value="">
                                 </div>
                             </div>
                             <div id="appointment-down-side-wrapper">
