@@ -5,7 +5,7 @@ include "db.php";
 $query = "SELECT * FROM tbl_213_patients";
 $result = mysqli_query($connection, $query);
 if (!$result) {
-    die("DB query failed.");
+  die("DB query failed.");
 }
 ?>
 
@@ -23,6 +23,7 @@ if (!$result) {
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
@@ -37,8 +38,8 @@ if (!$result) {
       <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
     </section>
     <section class="logo-con">
-      <a href="index.html" id="logo"></a>
-      <a href="index.html" id="logo-mobile"></a>
+      <a href="index.php" id="logo"></a>
+      <a href="index.php" id="logo-mobile"></a>
     </section>
     <nav>
       <section>
@@ -49,9 +50,9 @@ if (!$result) {
 
           <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
           <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
-          <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
+          <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
           </li>
-          <li class="divider-item"><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
+          <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
           </li>
 
           <li class="divider-item-space"></li>
@@ -62,7 +63,7 @@ if (!$result) {
           <li class="white-color-divide"></li>
 
           <li>
-            <a href="index.html" id="second-logo-mobile"></a>
+            <a href="index.php" id="second-logo-mobile"></a>
           </li>
         </ul>
 
@@ -74,10 +75,10 @@ if (!$result) {
           <a class="nav-link" href="#">לוגיסטיקה</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="list.html">רשימת מטופלים</a>
+          <a class="nav-link active" href="list.php">רשימת מטופלים</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="appointment.html">זימון תורים</a>
+          <a class="nav-link" href="appointment.php">זימון תורים</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">מכסה מטופלים</a>
@@ -172,13 +173,9 @@ if (!$result) {
         </section>
         <section class="search-wrapper-pluse">
           <section class="plus">
-            <a href="appointment.html">
+            <a href="appointment.php">
               <i class="bi bi-plus-circle-fill"></i>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                <path
-                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-              </svg></a>
+            </a>
             <p>הוספה</p>
           </section>
         </section>
@@ -208,18 +205,10 @@ if (!$result) {
           <tbody>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
               </td>
               <td class="list-icons">
-                <i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                  fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+                <i class="bi bi-pencil"></i>
               </td>
               <td data-title="מספר">A11</td>
               <td data-title="שם פרטי">איילת</td>
@@ -230,27 +219,16 @@ if (!$result) {
               <td data-title="סוגי דימות">אולטרסאונד</td>
               <td data-title="שעה">10:50</td>
               <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"> <a href="patientProfile.html?patientId=7"><i
-                    class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+              <td class="left-arrow" data-title="כניסה"> 
+                <a href="patientProfile.php?patientId=7">
+                  <i class="bi bi-chevron-left"></i>
+                 </a>
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i>
               </td>
               <td data-title="מספר">R15</td>
               <td data-title="שם פרטי">שלום</td>
@@ -263,25 +241,13 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=8"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                  </a>
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i>
               </td>
               <td data-title="מספר">A10</td>
               <td data-title="שם פרטי">מיה</td>
@@ -294,26 +260,14 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=9"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                </a>
               </td>
             </tr>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i> 
               </td>
               <td data-title="מספר">R17</td>
               <td data-title="שם פרטי">אייל</td>
@@ -326,25 +280,13 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=10"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                  </a>
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i> 
               </td>
               <td data-title="מספר">R18</td>
               <td data-title="שם פרטי">דני</td>
@@ -357,25 +299,13 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=11"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                 </a>
               </td>
             </tr>
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i>
               </td>
               <td data-title="מספר">C16</td>
               <td data-title="שם פרטי">מנחם</td>
@@ -388,26 +318,14 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=12"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                </a>
               </td>
             </tr>
 
             <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
               </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                  height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path
-                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
-                </svg>
+              <td class="list-icons"><i class="bi bi-pencil"></i>
               </td>
               <td data-title="מספר">C17</td>
               <td data-title="שם פרטי">אפרת</td>
@@ -420,11 +338,7 @@ if (!$result) {
               <td data-title="תאריך">24.02.23</td>
               <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=13"><i
                     class="bi bi-chevron-left"></i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                  </svg></a>
+                  </a>
               </td>
             </tr>
           </tbody>

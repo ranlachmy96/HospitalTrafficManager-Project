@@ -25,8 +25,8 @@
             <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
         </section>
         <section class="logo-con">
-            <a href="index.html" id="logo"></a>
-            <a href="index.html" id="logo-mobile"></a>
+            <a href="index.php" id="logo"></a>
+            <a href="index.php" id="logo-mobile"></a>
         </section>
         <nav>
             <section>
@@ -38,9 +38,9 @@
 
                     <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
-                    <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
+                    <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
-                    <li class="divider-item"><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
+                    <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
                             מטופלים</a></li>
 
                     <li class="divider-item-space"></li>
@@ -51,7 +51,7 @@
                     <li class="white-color-divide"></li>
 
                     <li>
-                        <a href="index.html" id="second-logo-mobile"></a>
+                        <a href="index.php" id="second-logo-mobile"></a>
                     </li>
                 </ul>
             </section>
@@ -60,10 +60,10 @@
                     <a class="nav-link " href="#">לוגיסטיקה</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="list.html">רשימת מטופלים</a>
+                    <a class="nav-link" href="list.php">רשימת מטופלים</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="appointment.html">זימון תורים</a>
+                    <a class="nav-link active" href="appointment.php">זימון תורים</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">מכסה מטופלים</a>
