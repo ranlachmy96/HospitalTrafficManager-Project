@@ -41,7 +41,7 @@
           <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
           <li><a href="appointment.html"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
           </li>
-          <li class="divider-item"><a href="index.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
+          <li class="divider-item"><a href="list.html"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
           </li>
           <li class="divider-item-space"></li>
           <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
@@ -62,7 +62,7 @@
           <a class="nav-link" href="#">לוגיסטיקה</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">רשימת מטופלים</a>
+          <a class="nav-link active" href="list.html">רשימת מטופלים</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="appointment.html">זימון תורים</a>
