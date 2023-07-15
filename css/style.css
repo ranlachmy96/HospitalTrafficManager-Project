@@ -887,6 +887,9 @@ td {
     margin-top: 20px;
 }
 
+.visible-table {
+    direction: rtl;
+}
 .title-patientProfile {
     height: 55px;
     width: 100%;

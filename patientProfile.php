@@ -110,20 +110,20 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">תז</th>
-                <th scope="col">מין</th>
-                <th scope="col">גיל </th>
-                <th scope="col">שם משפחה</th>
                 <th scope="col">שם פרטי</th>
+                <th scope="col">שם משפחה</th>
+                <th scope="col">גיל </th>
+                <th scope="col">מין</th>
+                <th scope="col">תז</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>205165488</td>
-                <td>נקבה</td>
-                <td>32</td>
-                <td>ניסמוב</td>
                 <td>איילת</td>
+                <td>ניסמוב</td>
+                <td>32</td>
+                <td>נקבה</td>
+                <td>205165488</td>
               </tr>
           </table>
         </section>

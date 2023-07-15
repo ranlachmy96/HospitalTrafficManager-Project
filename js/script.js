@@ -1,5 +1,6 @@
+
 window.onload = function () {
-    if (window.location.pathname.endsWith('/appointment.html')) {
+    if (window.location.pathname.includes('appointment.php')) {
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
             'use strict'
@@ -36,7 +37,7 @@ window.onload = function () {
                 submitButton.style.backgroundColor = isFormValid ? "#5BC0DE" : "";
             });
         });
-    } else if (window.location.pathname.endsWith('/patientProfile.html')) {
+    } else if (window.location.pathname.includes('/patientProfile.php')) {
         //check
         const saveButton = document.getElementById('save-info-profile-changes');
         const messageOverlay = document.getElementById('message-overlay');
@@ -54,7 +55,7 @@ window.onload = function () {
                 messageOverlay.style.display = 'none';
             }, 2000);
         });
-    } else if (window.location.pathname.endsWith('/file3.html')) {
+    } else if (window.location.pathname.includes('/file3.html')) {
         // Code specific to file3.html
     }
 

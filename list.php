@@ -2,6 +2,7 @@
 include "db.php";
 ?>
 <?php
+mysqli_set_charset($connection, "utf8");
 $query = "SELECT * FROM tbl_213_patients";
 $result = mysqli_query($connection, $query);
 if (!$result) {
@@ -203,150 +204,39 @@ if (!$result) {
             </tr>
           </thead>
           <tbody>
-
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
-              </td>
-              <td class="list-icons">
-                <i class="bi bi-pencil"></i>
-              </td>
-              <td data-title="מספר">A11</td>
-              <td data-title="שם פרטי">איילת</td>
-              <td data-title="שם משפחה">ניסמוב</td>
-              <td data-title="גיל">32</td>
-              <td data-title="מין">נקבה</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">אולטרסאונד</td>
-              <td data-title="שעה">10:50</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"> 
-                <a href="patientProfile.php?patientId=7">
-                  <i class="bi bi-chevron-left"></i>
-                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i>
-              </td>
-              <td data-title="מספר">R15</td>
-              <td data-title="שם פרטי">שלום</td>
-              <td data-title="שם משפחה">ישראלוף</td>
-              <td data-title="גיל">35</td>
-              <td data-title="מין">זכר</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">רנגטן</td>
-              <td data-title="שעה">10:00</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=8"><i
-                    class="bi bi-chevron-left"></i>
-                  </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i>
-              </td>
-              <td data-title="מספר">A10</td>
-              <td data-title="שם פרטי">מיה</td>
-              <td data-title="שם משפחה">דגן</td>
-              <td data-title="גיל">29</td>
-              <td data-title="מין">נקבה</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">אולטרסאונד</td>
-              <td data-title="שעה">10:15</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=9"><i
-                    class="bi bi-chevron-left"></i>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> 
-              </td>
-              <td data-title="מספר">R17</td>
-              <td data-title="שם פרטי">אייל</td>
-              <td data-title="שם משפחה">גולדברג</td>
-              <td data-title="גיל">37</td>
-              <td data-title="מין">זכר</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">CT</td>
-              <td data-title="שעה">10:25</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=10"><i
-                    class="bi bi-chevron-left"></i>
-                  </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i> 
-              </td>
-              <td data-title="מספר">R18</td>
-              <td data-title="שם פרטי">דני</td>
-              <td data-title="שם משפחה">לוינסקי</td>
-              <td data-title="גיל">60</td>
-              <td data-title="מין">זכר</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">MRI</td>
-              <td data-title="שעה">10:30</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=11"><i
-                    class="bi bi-chevron-left"></i>
-                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i> 
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i>
-              </td>
-              <td data-title="מספר">C16</td>
-              <td data-title="שם פרטי">מנחם</td>
-              <td data-title="שם משפחה">צוקרמן</td>
-              <td data-title="גיל">72</td>
-              <td data-title="מין">זכר</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">CT</td>
-              <td data-title="שעה">10:40</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=12"><i
-                    class="bi bi-chevron-left"></i>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="list-icons"><i class="bi bi-x-circle-fill"></i>
-              </td>
-              <td class="list-icons"><i class="bi bi-pencil"></i>
-              </td>
-              <td data-title="מספר">C17</td>
-              <td data-title="שם פרטי">אפרת</td>
-              <td data-title="שם משפחה">גוש</td>
-              <td data-title="גיל">44</td>
-              <td data-title="מין">נקבה</td>
-              <td data-title="דחיפות">קל</td>
-              <td data-title="סוגי דימות">CT</td>
-              <td data-title="שעה">11:00</td>
-              <td data-title="תאריך">24.02.23</td>
-              <td class="left-arrow" data-title="כניסה"><a href="patientProfile.html?patientId=13"><i
-                    class="bi bi-chevron-left"></i>
-                  </a>
-              </td>
-            </tr>
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+              echo '<tr>';
+              echo '<td class="list-icons"><i class="bi bi-x-circle-fill"></i></td>';
+              echo '<td class="list-icons"><i class="bi bi-pencil"></i></td>';
+              echo '<td data-title="מספר">' . $row["id_number"] . '</td>';
+              echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
+              echo '<td data-title="שם משפחה">' . $row["last_name"] . '</td>';
+              echo '<td data-title="גיל">' . $row["age"] . '</td>';
+              echo '<td data-title="מין">' . $row["gender"] . '</td>';
+              echo '<td data-title="דחיפות">' . $row["urgency"] . '</td>';
+              echo '<td data-title="סוגי דימות">' . $row["type"] . '</td>';
+              echo '<td data-title="שעה">' . $row["time"] . '</td>';
+              echo '<td data-title="תאריך">' . $row["date"] . '</td>';
+              echo '<td class="left-arrow" data-title="כניסה">';
+              echo '<a href="patientProfile.php?patientId=' . $row["id_number"] . '">';
+              echo '<i class="bi bi-chevron-left"></i></a></td>';
+              echo '</tr>';
+            }
+            ?>
           </tbody>
         </table>
       </section>
+      <?php
+      mysqli_free_result($result);
+      ?>
     </section>
   </main>
   <script src="js/script.js"></script>
 </body>
 
 </html>
+
+<?php
+mysqli_close($connection);
+?>
