@@ -475,6 +475,7 @@ a.nav-link.active {
     max-width: 90%;
     align-items: center;
     margin-left: 62px;
+    text-align: center;
 }
 
 
@@ -496,7 +497,7 @@ td {
     font-family: 'Rubik', 'Aerial';
 }
 
-.table thead {
+.table  thead {
     background-color: #BFE8F4;
 }
 
@@ -1229,6 +1230,183 @@ td {
         text-align: left;
         margin-top: 10px;
         color: cornflowerblue;
+    }
+
+}
+/*----------------------------------- dashboard -----------------------------------------*/
+
+/* chart! */
+.graphbox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns:  1fr 2fr 1fr;
+    grid-gap: 30px;
+    min-height: 200px;
+    text-align: center;
+}
+
+.graphbox .box {
+    position: relative;
+    background:  #DAEEF4;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.dashbord-chart-row2{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 30px;
+    min-height: 200px; 
+}
+
+
+.dashbord-chart-row2 .box {
+    position: relative;
+    background:  #DAEEF4;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.add-task,.dash-add-task{
+    direction: rtl;
+}
+ #addButton{
+    border-radius: 5px;
+    height: 50%;
+    width: 20%;
+    background-color: #72aaca;
+    border-color: white;
+ }
+ .delete-button{
+    border-radius: 5px;
+    height: 50%;
+    width: 20%;
+ }
+ #taskInput{
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+ }
+.dashbord-list-Patients{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    min-height: 200px;
+
+}
+.dashbord-list-Patients .box {
+    position: relative;
+    background:  #DAEEF4;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+
+
+
+/* table */
+/* color-table */
+
+
+.table-dashboard tr:nth-child(even) {
+    background-color: #6caec3; /* Change this color as desired */
+  }
+
+  /* Set a different background color for the icon cells in the first column */
+  .table-dashboard td.tbl-color-dashboard {
+    background-color: #BFE8F4; /* Change this color as desired */
+  }
+
+  .table-dashboard th.tbl-color-dashboard {
+    background-color: #5ab3ce; /* Change this color as desired */
+  }
+
+
+/* calender */
+.calendar {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    padding: 20px;
+    background-color: #DAEEF4;
+    border-radius: 10px;
+}
+
+.month {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.day {
+    width: 14.28%; /* 100% divided by 7 days */
+    text-align: center;
+    font-weight: bold;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.days div {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.header-calnder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+#prevBtn, #nextBtn{
+border-radius: 20px;
+width: 30px;
+height: 30px;
+background: #fff;
+}
+
+
+
+
+
+
+
+
+/* responsvie dashbord */
+@media (max-width:991px) {
+    .graphbox {
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
 }
