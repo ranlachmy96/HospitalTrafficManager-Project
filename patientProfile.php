@@ -1,3 +1,20 @@
+<?php
+include "db.php";
+?>
+<?php
+mysqli_set_charset($connection, "utf8");
+$patientID = $_GET["patientId"];
+$query = "SELECT * FROM tbl_213_patients WHERE id_number = ?";
+$stmt = mysqli_prepare($connection, $query);
+mysqli_stmt_bind_param($stmt, "s", $patientID);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+if ($result) {
+  $row = mysqli_fetch_assoc($result);
+} else {
+  die("DB query failed.");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -118,13 +135,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>איילת</td>
-                <td>ניסמוב</td>
-                <td>32</td>
-                <td>נקבה</td>
-                <td>205165488</td>
-              </tr>
+              <?php
+              echo '<tr>';
+              echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
+              echo '<td data-title="שם משפחה">' . $row["last_name"] . '</td>';
+              echo '<td data-title="גיל">' . $row["age"] . '</td>';
+              echo '<td data-title="מין">' . $row["gender"] . '</td>';
+              echo '<td data-title="תעודת זהות">' . $row["id"] . '</td>';
+              echo '</tr>';
+              ?>
           </table>
         </section>
       </section>
@@ -149,7 +168,9 @@
         <!-- mobile -->
         <section class="mobile-patient-profil-section1">
           <section class="title-name-pateint-mobile">
-            <h5 class="name-visible-responsive">שם: איילת ניסמוב</h5>
+            <?php 
+            echo '<h5 class="name-visible-responsive">שם: '.$row["first_name"].' '.$row["last_name"].'</h5>'
+            ?>
           </section>
           <section class="flex-mobile-warpper">
             <section class="warpper-inside-blue-section1">

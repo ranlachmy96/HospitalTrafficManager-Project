@@ -9,8 +9,6 @@ if (!$result) {
   die("DB query failed.");
 }
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
