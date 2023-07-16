@@ -102,22 +102,29 @@
                             </label>
                         </div>
                         <div id="appointment-right-side-wrapper">
-                            <label id="appointment-third-wrapper-label">קיים במערכת</label>
+                            <label id="appointment-third-wrapper-label">דחיפות רפואית</label>
                             <div id="appointment-third-wrapper">
 
                                 <div id="appointment-third-wrapper-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exists" value="no"
+                                        <input class="form-check-input" type="radio" name="urgency" value="easy"
                                             id="flexRadioOne" required>
                                         <label class="form-check-label" for="flexRadioOne">
-                                            לא
+                                            קל
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exists" value="yes"
+                                        <input class="form-check-input" type="radio" name="urgency" value="medium"
                                             id="flexRadioTwo" required>
                                         <label class="form-check-label" for="flexRadioTwo">
-                                            כן
+                                            בינוני
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="urgency" value="severe"
+                                            id="flexRadioThree" required>
+                                        <label class="form-check-label" for="flexRadioThree">
+                                            קשה
                                         </label>
                                     </div>
                                 </div>

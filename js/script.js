@@ -35,6 +35,7 @@ window.onload = function () {
                 const isFormValid = inputs.every(input => input.value.trim() !== "");
                 submitButton.disabled = !isFormValid;
                 submitButton.style.backgroundColor = isFormValid ? "#5BC0DE" : "";
+                submitButton.style.color = isFormValid ? "#000" : "";
             });
         });
     } else if (window.location.pathname.includes('/patientProfile.php')) {
@@ -55,8 +56,18 @@ window.onload = function () {
                 messageOverlay.style.display = 'none';
             }, 2000);
         });
-    } else if (window.location.pathname.includes('/file3.html')) {
-        // Code specific to file3.html
+    } else if (window.location.pathname.includes('/list.php')) {
+
+        // Get all delete buttons
+        var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
+
+        // Attach onclick event handler to each delete button
+        deleteButtons.forEach(function (button) {
+            button.onclick = function () {
+                var deleteId = this.getAttribute("data-person-id");
+                document.getElementById("delete_id").value = deleteId;
+            };
+        });
     }
 
 }

@@ -186,7 +186,6 @@ if (!$result) {
         <table class="table">
           <thead>
             <tr>
-
               <th></th>
               <th></th>
               <th scope="col">מספר</th>
@@ -205,8 +204,10 @@ if (!$result) {
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
               echo '<tr>';
-              echo '<td class="list-icons"><i class="bi bi-x-circle-fill"></i></td>';
-              echo '<td class="list-icons"><i class="bi bi-pencil"></i></td>';
+              echo '<td class="list-icons">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-person-id="' . $row["id_number"] . '">
+              <i class="bi bi-x-circle-fill"></i></button></td>';
+              echo '<td class="list-icons"><button><i class="bi bi-pencil"></i></button></td>';
               echo '<td data-title="מספר">' . $row["id_number"] . '</td>';
               echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
               echo '<td data-title="שם משפחה">' . $row["last_name"] . '</td>';
@@ -229,6 +230,30 @@ if (!$result) {
       mysqli_free_result($result);
       ?>
     </section>
+    <!-- Modal-Delete-Data -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="deleteModalLabel">ביטול התור</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="deleteData.php" method="POST" id="deleteForm">
+            <input type="hidden" name="delete_id" id="delete_id">
+            <div class="modal-body">
+              לבטל את התור?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                id="list-delete-cancel-button">ביטול</button>
+              <button type="submit" name="deletedata" class="btn btn-primary"
+                id="list-delete-agree-button">אישור</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Modal-Delete-Data -->
   </main>
   <script src="js/script.js"></script>
 </body>

@@ -500,9 +500,64 @@ td {
     background-color: #BFE8F4;
 }
 
+.btn-primary {
+    --bs-btn-color: none;
+    --bs-btn-bg: none;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-color: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-color: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: none;
+}
 
+.modal-content {
+    direction: rtl;
+}
 
+.modal-header {
+    background-color: rgba(91, 192, 222, 0.60);
+}
 
+.modal-header .btn-close {
+    margin: 0;
+    padding: 0;
+}
+
+#deleteModalLabel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    justify-content: space-between;
+}
+
+#list-delete-cancel-button {
+    background-color: #5BC0DE;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+#list-delete-agree-button {
+    background-color: #5BC0DE;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
 
 /* border-radius */
 .table thead tr:first-child {
@@ -551,37 +606,15 @@ td {
 
 /* color-table */
 
-.table tbody tr:nth-child(1) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(2) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(3) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(4) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(5) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(6) {
-    background-color: #DAEEF4;
-}
-
-.table tbody tr:nth-child(7) {
+.table tbody tr {
     background-color: #DAEEF4;
 }
 
 .list-Wrapper-table {
     direction: rtl;
 }
+
+
 
 /*----------------------------------- list-design-media-query ------------------------*/
 
@@ -702,14 +735,12 @@ td {
     font-weight: bold;
 }
 
-
 .form-select {
     background-color: #ffffff;
     border: 1px solid #115A83;
 }
 
 #appointment-form-wrapper {
-    /* margin: 30px; */
     margin-top: 10px;
 }
 
@@ -890,6 +921,7 @@ td {
 .visible-table {
     direction: rtl;
 }
+
 .title-patientProfile {
     height: 55px;
     width: 100%;

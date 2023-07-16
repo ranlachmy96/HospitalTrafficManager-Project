@@ -31,6 +31,7 @@ if ($result) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
   <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>profile patients</title>
@@ -168,9 +169,9 @@ if ($result) {
         <!-- mobile -->
         <section class="mobile-patient-profil-section1">
           <section class="title-name-pateint-mobile">
-            <?php 
-            echo '<h5 class="name-visible-responsive">שם: '.$row["first_name"].' '.$row["last_name"].'</h5>'
-            ?>
+            <?php
+            echo '<h5 class="name-visible-responsive">שם: ' . $row["first_name"] . ' ' . $row["last_name"] . '</h5>'
+              ?>
           </section>
           <section class="flex-mobile-warpper">
             <section class="warpper-inside-blue-section1">
@@ -208,21 +209,11 @@ if ($result) {
             <section class="icon-patient">
               <div class="icon1">
                 <i class="bi bi-plus-lg"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
-                  viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                </svg>
                 <p>הוספה</p>
               </div>
 
               <div class="icon2">
                 <i class="bi bi-check-lg"></i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-check-lg" viewBox="0 0 16 16">
-                  <path
-                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-                </svg>
                 <p>שמור תבנית</p>
               </div>
 
@@ -321,18 +312,20 @@ if ($result) {
             <div id="message-box">
               <span id="message-text"></span>
               <i class="bi bi-check-lg"></i>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg"
-                viewBox="0 0 16 16">
-                <path
-                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
-              </svg>
             </div>
           </div>
         </section>
       </section>
     </section>
+    <?php
+    mysqli_free_result($result);
+    ?>
+
   </main>
   <script src="js/script.js"></script>
 </body>
 
 </html>
+<?php
+mysqli_close($connection);
+?>
