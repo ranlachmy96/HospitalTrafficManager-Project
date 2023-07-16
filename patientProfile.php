@@ -37,7 +37,7 @@
 
         <ul class="mobile-menu">
           <li class="divider-item" id="mobile-menu-header">תפריט</li>
-          <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+          <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
           <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
           <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
           </li>
