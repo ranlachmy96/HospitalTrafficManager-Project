@@ -229,9 +229,8 @@ new Chart(chartload, {
 
 
 
+// task
 
-//task mangement
-// Get references to the elements
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
@@ -241,25 +240,40 @@ addButton.addEventListener("click", addTask);
 
 function addTask() {
     if (taskInput.value.trim() !== "") {
+        const taskItemWrapper = document.createElement("div");
+        taskItemWrapper.classList.add("task-item-wrapper");
+
         const taskItem = document.createElement("li");
-        taskItem.innerHTML = `<div class="dash-add-task"> <span>${taskInput.value}</span>
-            <button class="delete-button">מחיקה</button></div>
-        `;
-        taskList.appendChild(taskItem);
+        taskItem.innerHTML = `<span>${taskInput.value}</span> `;
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "מחיקה";
+        deleteButton.classList.add("delete-button");
+
+        taskItemWrapper.appendChild(taskItem);
+        taskItemWrapper.appendChild(deleteButton);
+        taskList.appendChild(taskItemWrapper);
+
         taskInput.value = "";
-        addDeleteEventListener(taskItem);
+        addDeleteEventListener(taskItemWrapper);
     }
 }
 
 function deleteTask() {
-    const taskItem = this.parentNode;
-    taskItem.parentNode.removeChild(taskItem);
+    const taskItemWrapper = this.parentNode;
+    taskItemWrapper.parentNode.removeChild(taskItemWrapper);
 }
 
-function addDeleteEventListener(taskItem) {
-    const deleteButton = taskItem.querySelector(".delete-button");
+function addDeleteEventListener(taskItemWrapper) {
+    const deleteButton = taskItemWrapper.querySelector(".delete-button");
     deleteButton.addEventListener("click", deleteTask);
 }
+
+
+
+ 
+
+
+
 
 
 

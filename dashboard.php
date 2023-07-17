@@ -27,10 +27,10 @@ if (!$result) {
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>dashboard</title>
 </head>
-
 <body>
     <header>
         <section id="mobile-profile-picture">
@@ -96,26 +96,19 @@ if (!$result) {
     <main>
         <!-- chart -->
         <div class="graphbox">
-
             <div class="box">
                 <h4>ניטור קיבולת מטופלים: מחלקת דימות</h4>
                 <canvas id="myChart"></canvas>
             </div>
             <div class="box">
                 <h4>מכסה מטופלים -עומס</h4>
-
                 <canvas id="myChartload"></canvas>
-
             </div>
-
-
             <div class="box">
                 <!-- calender -->
-
                 <div class="calendar">
                     <div class="header-calnder">
                         <button id="prevBtn">&lt;</button>
-
                         <div class="month" id="current-month">יולי 2023</div>
                         <button id="nextBtn">&gt;</button>
                     </div>
@@ -129,13 +122,10 @@ if (!$result) {
                         <div class="day">שבת</div>
                     </div>
                     <div class="days" id="calendar-days">
-                        <!-- Days will be added dynamically here -->
                     </div>
                 </div>
             </div>
-
         </div>
-
         <div class="dashbord-chart-row2">
             <div class="box">
                 <div class="task-manager">
@@ -146,63 +136,62 @@ if (!$result) {
                     </div>
                     <ul id="taskList"></ul>
                 </div>
-
-
             </div>
             <div class="box">
                 <h4>מלאי לוגיסטיקה </h4>
                 <canvas id="chart-col"></canvas>
             </div>
             <div class="box">
-                <h4>לוח הודעות</h4>
-                <table class="dashboard-table">
-                    <thead>
-                        <tr>
-                            <th>שעה</th>
-                            <th>נושא</th>
-                            <th>מוען</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>9:55</td>
-                            <td>עומס קל</td>
-                            <td>הודעת מערכת</td>
-                        </tr>
-                        <tr>
-                            <td>9:40</td>
-                            <td>קביעה פגישה</td>
-                            <td>ד"ר שרון</td>
-                        </tr>
-                        <tr>
-                            <td>9:00</td>
-                            <td>בקשה העברה</td>
-                            <td>ד"ר ארז</td>
-                        </tr>
-                        <tr>
-                            <td>8:50</td>
-                            <td>קביעה פגישה</td>
-                            <td>ד"ר אבי</td>
-                        </tr>
-                        <tr>
-                            <td>8:00</td>
-                            <td>קביעה פגישה</td>
-                            <td>ד"ר נוי</td>
-                        </tr>
-                        <tr>
-                            <td>7:40</td>
-                            <td>קביעה פגישה</td>
-                            <td>ד"ר רן</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="dashboard-flex-h4">
+                    <h4>הודעות אחרונות</h4>
+                    <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                </div>
+                <div class="dashboard-divider-gray"></div>
+                <div class="dashboard-flex-table">
+                    <table class="table">
+                        <thead class="dashboard-table-message">
+                            <tr>
+                                <th>מוען</th>
+                                <th>נושא</th>
+                                <th>שעה</th>
+                            </tr>
+                        </thead>
+                        <tbody class="dashboard-table-message">
+                            <tr class="dashboard-system-message">
+                                <td> מערכת</td>
+                                <td>עומס קל</td>
+                                <td>9:55</td>
+                            </tr>
+                            <tr>
+                                <td>ד"ר ארז</td>
+                                <td>בקשה העברה</td>
+                                <td>9:00</td>
+                            </tr>
+                            <tr>
+                                <td>ד"ר אבי</td>
+                                <td>קביעה פגישה</td>
+                                <td>8:50</td>
+                            </tr>
+                            <tr>
+                                <td>ד"ר נוי</td>
+                                <td>קביעה פגישה</td>
+                                <td>8:00</td>
+                            </tr>
+                            <tr>
+                                <td>ד"ר רן</td>
+                                <td>ביטול פגישה</td>
+                                <td>7:40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="dashbord-list-Patients">
             <div class="box">
                 <!-- list patients -->
                 <section class="list-Wrapper-table">
-                    <h4 class="dashboard-h4">רשימת מטופלים</h4>
+                    <h4 class="dashboard-h4">רשימת תורים במחלקות ביה"ח</h4>
                     <table class="table">
                         <thead class="table-dashboard">
                             <tr>

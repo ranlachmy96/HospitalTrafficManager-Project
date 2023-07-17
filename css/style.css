@@ -1278,26 +1278,43 @@ td {
     border-radius: 20px;
 }
 
-.add-task,.dash-add-task{
+.add-task{
     direction: rtl;
 }
+
+
  #addButton{
     border-radius: 5px;
     height: 50%;
-    width: 20%;
+    width: 30%;
     background-color: #72aaca;
-    border-color: white;
+    border: none;
+
  }
  .delete-button{
     border-radius: 5px;
     height: 50%;
-    width: 20%;
+    width: 30%;
+    background-color: #72aaca;
+    border: none;
+
  }
  #taskInput{
     text-align: center;
     border-radius: 5px;
     border-color: white;
  }
+
+.task-item-wrapper{
+    margin-top: 5px;
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    justify-content: center;
+}
+
 .dashbord-list-Patients{
     position: relative;
     width: 100%;
@@ -1323,18 +1340,15 @@ td {
 /* table */
 /* color-table */
 
-
 .table-dashboard tr:nth-child(even) {
-    background-color: #6caec3; /* Change this color as desired */
+    background-color: #6caec3;     
   }
 
-  /* Set a different background color for the icon cells in the first column */
   .table-dashboard td.tbl-color-dashboard {
-    background-color: #BFE8F4; /* Change this color as desired */
-  }
+    background-color: #BFE8F4; }
 
   .table-dashboard th.tbl-color-dashboard {
-    background-color: #5ab3ce; /* Change this color as desired */
+    background-color: #5ab3ce;     
   }
 
 
@@ -1396,10 +1410,53 @@ background: #fff;
 }
 
 
+/* message board */
+
+.dashboard-flex-table{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 
+.dashboard-table-message tbody tr td {
+    font-size: 1.2em;
+}
 
+.dashboard-system-message td{
+    color: #F69623;
+}
 
+.dashboard-divider-gray{
+    width: 100%;
+    background-color: #706d6d;
+    height: 0.5px;
+}
+
+.dashboard-flex-h4{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: center;
+    justify-content: center;
+    gap:20px;
+   
+}
+#dashborad-icon{
+    height: 10px;
+}
+
+.dashboard-flex-table{
+    direction: rtl;
+}
+
+.dashboard-table-message td {
+    background-color: #BFE8F4; 
+  }
+
+  .dashboard-table-message th {
+    background-color: #b4dbe7; 
+  }
 
 
 /* responsvie dashbord */

@@ -89,7 +89,7 @@ if ($result) {
           <a class="nav-link" href="#">מכסה מטופלים</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">לוח בקרה </a>
+          <a class="nav-link" aria-current="page" href="dashboard.php">לוח בקרה </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
