@@ -1,3 +1,17 @@
+
+<?php
+include "db.php";
+?>
+
+<?php 
+session_start();
+if (!$_SESSION["user_id"]) {
+    echo "no user id";
+    header('Location:' . URL . 'index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +33,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>appointment</title>
 </head>
 
 <body>
@@ -39,7 +53,7 @@
                 <ul class="mobile-menu">
                     <li class="divider-item" id="mobile-menu-header">תפריט</li>
 
-                    <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
@@ -72,7 +86,7 @@
                     <a class="nav-link" href="#">מכסה מטופלים</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">לוח בקרה </a>
+                    <a class="nav-link" aria-current="page" href="dashboard.php">לוח בקרה </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"

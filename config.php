@@ -1,4 +1,4 @@
 <?php 
-    define("URL" ,"http://localhost/htm/");
+    define("URL" ,"http://localhost/final-project/");
 ?>
 
