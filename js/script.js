@@ -41,6 +41,21 @@ window.onload = function () {
                 submitButton.style.color = isFormValid ? "#000" : "";
             });
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+        const date = urlParams.get('date');
+        const time = urlParams.get('time');
+    
+        if (success === 'true') {
+            $(document).ready(function() {
+                $('#successModal').modal('show');
+                $('#appointment-modal-calendar').after('<span>' + date + '</span>');
+                $('#appointment-modal-clock').after('<span>' + time + '</span>');
+            });
+        }
+
+        
     } else if (window.location.pathname.includes('/patientProfile.php')) {
         //check
         const saveButton = document.getElementById('save-info-profile-changes');

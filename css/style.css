@@ -497,7 +497,7 @@ td {
     font-family: 'Rubik', 'Aerial';
 }
 
-.table  thead {
+.table thead {
     background-color: #BFE8F4;
 }
 
@@ -772,7 +772,9 @@ td {
     flex-flow: column;
     margin-bottom: 5%;
 }
-
+#appointment-fourth-wrapper{
+    text-align: end;
+}
 #appointment-third-wrapper-2 {
     display: flex;
     flex-flow: row-reverse;
@@ -862,6 +864,55 @@ td {
     padding-right: 10%;
     background-color: rgba(160, 160, 160, 0.8);
     border: none;
+}
+
+#appointment-modal-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.appointment-divider-line{
+    border-left: 2px dashed #DBDADE;
+    height: 10vh;;
+    margin: 10px;
+}
+.modal-body span{
+    color: #000;
+}
+#appointment-modal-body-second-part{
+    display: flex;
+    flex-flow: column;
+    gap: 20%;
+    justify-content: center;
+}
+#appointment-modal-body-third-part{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    
+}
+#appointment-modal-check{
+    color: #6CFC95;
+    font-size: 35px;
+}
+#appointment-modal-calendar{
+    color: #115A83;
+    font-size: 35px;
+}
+#appointment-modal-clock{
+    color: #115A83;
+    font-size: 35px;
+}
+#successModalLabel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #000;
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 /* ----------------------------appointment-media-query---------------------------------------- */
@@ -1233,6 +1284,7 @@ td {
     }
 
 }
+
 /*----------------------------------- dashboard -----------------------------------------*/
 
 /* chart! */
@@ -1241,7 +1293,7 @@ td {
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns:  1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 30px;
     min-height: 200px;
     text-align: center;
@@ -1249,14 +1301,14 @@ td {
 
 .graphbox .box {
     position: relative;
-    background:  #DAEEF4;
+    background: #DAEEF4;
     padding: 20px;
     width: 100%;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
 
-.dashbord-chart-row2{
+.dashbord-chart-row2 {
     position: relative;
     text-align: center;
     width: 100%;
@@ -1264,13 +1316,13 @@ td {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 30px;
-    min-height: 200px; 
+    min-height: 200px;
 }
 
 
 .dashbord-chart-row2 .box {
     position: relative;
-    background:  #DAEEF4;
+    background: #DAEEF4;
     align-items: center;
     padding: 20px;
     width: 100%;
@@ -1278,27 +1330,32 @@ td {
     border-radius: 20px;
 }
 
-.add-task,.dash-add-task{
+.add-task,
+.dash-add-task {
     direction: rtl;
 }
- #addButton{
+
+#addButton {
     border-radius: 5px;
     height: 50%;
     width: 20%;
     background-color: #72aaca;
     border-color: white;
- }
- .delete-button{
+}
+
+.delete-button {
     border-radius: 5px;
     height: 50%;
     width: 20%;
- }
- #taskInput{
+}
+
+#taskInput {
     text-align: center;
     border-radius: 5px;
     border-color: white;
- }
-.dashbord-list-Patients{
+}
+
+.dashbord-list-Patients {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -1308,9 +1365,10 @@ td {
     min-height: 200px;
 
 }
+
 .dashbord-list-Patients .box {
     position: relative;
-    background:  #DAEEF4;
+    background: #DAEEF4;
     padding: 20px;
     width: 100%;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -1325,17 +1383,20 @@ td {
 
 
 .table-dashboard tr:nth-child(even) {
-    background-color: #6caec3; /* Change this color as desired */
-  }
+    background-color: #6caec3;
+    /* Change this color as desired */
+}
 
-  /* Set a different background color for the icon cells in the first column */
-  .table-dashboard td.tbl-color-dashboard {
-    background-color: #BFE8F4; /* Change this color as desired */
-  }
+/* Set a different background color for the icon cells in the first column */
+.table-dashboard td.tbl-color-dashboard {
+    background-color: #BFE8F4;
+    /* Change this color as desired */
+}
 
-  .table-dashboard th.tbl-color-dashboard {
-    background-color: #5ab3ce; /* Change this color as desired */
-  }
+.table-dashboard th.tbl-color-dashboard {
+    background-color: #5ab3ce;
+    /* Change this color as desired */
+}
 
 
 /* calender */
@@ -1364,7 +1425,8 @@ td {
 }
 
 .day {
-    width: 14.28%; /* 100% divided by 7 days */
+    width: 14.28%;
+    /* 100% divided by 7 days */
     text-align: center;
     font-weight: bold;
 }
@@ -1381,18 +1443,19 @@ td {
     border: 1px solid #ccc;
 }
 
-.header-calnder{
+.header-calnder {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
 }
 
-#prevBtn, #nextBtn{
-border-radius: 20px;
-width: 30px;
-height: 30px;
-background: #fff;
+#prevBtn,
+#nextBtn {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
 }
 
 

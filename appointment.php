@@ -14,6 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -91,7 +94,8 @@
                 <h5>טופס קביעת תור</h5>
             </section>
             <section id="appointment-form-wrapper">
-                <form action="php/get_form.php" method="get" id="appointment-form" class="needs-validation" novalidate>
+                <form action="insertData.php" method="get" id="appointment-form" accept-charset="UTF-8"
+                    class="needs-validation" novalidate>
                     <div id="appointment-inside-form-wrapper">
                         <div id="appointment-left-side-wrapper">
                             <label id="appointment-left-side-label">העלת מסמכים</label>
@@ -102,26 +106,25 @@
                             </label>
                         </div>
                         <div id="appointment-right-side-wrapper">
-                            <label id="appointment-third-wrapper-label">דחיפות רפואית</label>
+                            <label>דחיפות רפואית</label>
                             <div id="appointment-third-wrapper">
-
                                 <div id="appointment-third-wrapper-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="urgency" value="easy"
+                                        <input class="form-check-input" type="radio" name="urgency" value="קל"
                                             id="flexRadioOne" required>
                                         <label class="form-check-label" for="flexRadioOne">
                                             קל
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="urgency" value="medium"
+                                        <input class="form-check-input" type="radio" name="urgency" value="בינוני"
                                             id="flexRadioTwo" required>
                                         <label class="form-check-label" for="flexRadioTwo">
                                             בינוני
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="urgency" value="severe"
+                                        <input class="form-check-input" type="radio" name="urgency" value="קשה"
                                             id="flexRadioThree" required>
                                         <label class="form-check-label" for="flexRadioThree">
                                             קשה
@@ -132,12 +135,12 @@
                             <div id="appointment-one-and-two-wrapper">
                                 <div id="appointment-first-wrapper">
                                     <label class="form-label">שם פרטי</label>
-                                    <input type="text" class="form-control written" name="private_name" value=""
+                                    <input type="text" class="form-control written" name="first_name" value=""
                                         pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
-                                    <label>אימייל</label>
-                                    <input type="email" class="form-control written" name="mail" value=""
-                                        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                                    <label class="form-label">ת"ז</label>
+                                    <input type="number" class="form-control written" name="id_number" min="0"
+                                        max="9999999999" value="">
                                     <br>
                                     <label>גיל </label>
                                     <select name="age" class="form-select" id="age-select" required>
@@ -152,9 +155,13 @@
                                     <input type="text" class="form-control written" name="last_name" value=""
                                         pattern="[A-Za-z\u0590-\u05FF]+">
                                     <br>
-                                    <label class="form-label">ת"ז</label>
-                                    <input type="number" class="form-control written" name="id_number" min="0"
-                                        max="9999999999" value="">
+                                    <label>מגדר</label>
+                                    <select name="gender" class="form-select" id="gender-select" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="נקבה">נקבה</option>
+                                        <option value="זכר">זכר</option>
+                                        <option value="אחר">אחר</option>
+                                    </select>
                                     <br>
                                     <label>סוג דימות</label>
                                     <select name="image_type" class="form-select" required>
@@ -171,16 +178,47 @@
                             </div>
                             <div id="appointment-down-side-wrapper">
                                 <br>
+                                <label>אימייל</label>
+                                <input type="email" class="form-control written" name="mail" value=""
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                                <br>
                                 <label>הערות</label>
                                 <textarea class="form-control" name="moreToAdd"></textarea>
                             </div>
                         </div>
                     </div>
                     <div id="appointment-submit-wrapper">
-                        <input type="submit" id="submit-button" class="btn btn-primary" value="שמור" disabled>
+                        <input type="submit" id="submit-button" class="btn btn-primary" value="שמור" name="insert_data"
+                            disabled>
                     </div>
                 </form>
             </section>
+            <!-- Modal-Delete-Data -->
+            <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="appointment-modal-header">
+                            <h4 class="modal-title" id="successModalLabel">אישור</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="appointment-modal-body">
+                            <i class="fa-solid fa-check" id="appointment-modal-check"></i>
+                            <span>התור נקבע <br> בהצלחה</span>
+                            <div class="appointment-divider-line"></div>
+                            <section id="appointment-modal-body-second-part">
+                                <i class="fa-solid fa-calendar-check" id="appointment-modal-calendar"></i>
+                            </section>
+                            <div class="appointment-divider-line"></div>
+                            <section id="appointment-modal-body-third-part">
+                                <i class="fa-solid fa-clock" id="appointment-modal-clock"></i>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Modal-Delete-Data -->
         </section>
     </main>
     <script src="js/script.js"></script>
