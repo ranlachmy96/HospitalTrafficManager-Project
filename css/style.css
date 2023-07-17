@@ -772,9 +772,11 @@ td {
     flex-flow: column;
     margin-bottom: 5%;
 }
-#appointment-fourth-wrapper{
+
+#appointment-fourth-wrapper {
     text-align: end;
 }
+
 #appointment-third-wrapper-2 {
     display: flex;
     flex-flow: row-reverse;
@@ -866,43 +868,52 @@ td {
     border: none;
 }
 
-#appointment-modal-body{
+#appointment-modal-body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.appointment-divider-line{
+
+.appointment-divider-line {
     border-left: 2px dashed #DBDADE;
-    height: 10vh;;
+    height: 10vh;
+    ;
     margin: 10px;
 }
-.modal-body span{
+
+.modal-body span {
     color: #000;
 }
-#appointment-modal-body-second-part{
+
+#appointment-modal-body-second-part {
     display: flex;
     flex-flow: column;
     gap: 20%;
     justify-content: center;
 }
-#appointment-modal-body-third-part{
+
+#appointment-modal-body-third-part {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    
+
 }
-#appointment-modal-check{
+
+#appointment-modal-check {
     color: #6CFC95;
     font-size: 35px;
 }
-#appointment-modal-calendar{
+
+#appointment-modal-calendar {
     color: #115A83;
     font-size: 35px;
 }
-#appointment-modal-clock{
+
+#appointment-modal-clock {
     color: #115A83;
     font-size: 35px;
 }
+
 #successModalLabel {
     display: flex;
     justify-content: center;
@@ -1330,34 +1341,36 @@ td {
     border-radius: 20px;
 }
 
-.add-task{
+.add-task {
     direction: rtl;
 }
 
 
- #addButton{
+#addButton {
     border-radius: 5px;
     height: 50%;
     width: 30%;
     background-color: #72aaca;
     border: none;
 
- }
- .delete-button{
+}
+
+.delete-button {
     border-radius: 5px;
     height: 50%;
     width: 30%;
     background-color: #72aaca;
     border: none;
 
- }
- #taskInput{
+}
+
+#taskInput {
     text-align: center;
     border-radius: 5px;
     border-color: white;
- }
+}
 
-.task-item-wrapper{
+.task-item-wrapper {
     margin-top: 5px;
     display: flex;
     direction: rtl;
@@ -1367,7 +1380,7 @@ td {
     justify-content: center;
 }
 
-.dashbord-list-Patients{
+.dashbord-list-Patients {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -1394,15 +1407,16 @@ td {
 /* color-table */
 
 .table-dashboard tr:nth-child(even) {
-    background-color: #6caec3;     
-  }
+    background-color: #6caec3;
+}
 
-  .table-dashboard td.tbl-color-dashboard {
-    background-color: #BFE8F4; }
+.table-dashboard td.tbl-color-dashboard {
+    background-color: #BFE8F4;
+}
 
-  .table-dashboard th.tbl-color-dashboard {
-    background-color: #5ab3ce;     
-  }
+.table-dashboard th.tbl-color-dashboard {
+    background-color: #5ab3ce;
+}
 
 
 /* calender */
@@ -1467,7 +1481,7 @@ td {
 
 /* message board */
 
-.dashboard-flex-table{
+.dashboard-flex-table {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1478,40 +1492,41 @@ td {
     font-size: 1.2em;
 }
 
-.dashboard-system-message td{
+.dashboard-system-message td {
     color: #F69623;
 }
 
-.dashboard-divider-gray{
+.dashboard-divider-gray {
     width: 100%;
     background-color: #706d6d;
     height: 0.5px;
 }
 
-.dashboard-flex-h4{
+.dashboard-flex-h4 {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     text-align: center;
     justify-content: center;
-    gap:20px;
-   
+    gap: 20px;
+
 }
-#dashborad-icon{
+
+#dashborad-icon {
     height: 10px;
 }
 
-.dashboard-flex-table{
+.dashboard-flex-table {
     direction: rtl;
 }
 
 .dashboard-table-message td {
-    background-color: #BFE8F4; 
-  }
+    background-color: #BFE8F4;
+}
 
-  .dashboard-table-message th {
-    background-color: #b4dbe7; 
-  }
+.dashboard-table-message th {
+    background-color: #b4dbe7;
+}
 
 
 /* responsvie dashbord */
@@ -1522,69 +1537,78 @@ td {
     }
 
 }
-/*----------------------------------- index - login -----------------------------------------*/
+
+/*----------------------------------- index--login -----------------------------------------*/
 
 
 
-.header-index{
+.header-index {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.index-container{
+
+.index-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 100vh;
 
 }
-#index-form-input
-{
-    max-width: 440px;
-    height: 50px;
+
+#index-form-input {
+    /* max-width: 440px;
+    height: 50px; */
 }
 
-    .index-form-box{
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
-        padding: 20px;
-        border: 1px solid #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        justify-content: space-between;
-        border-radius: 16px;
-        background: linear-gradient(180deg, #7BCCE4 0%, rgba(255, 255, 255, 0.00) 60.73%, #76ABBA 100%);
-        flex-direction: column;
-        width: 760px;
-        height: 678px;
-        
-    }
+.index-form-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #7BCCE4 0%, rgba(255, 255, 255, 0.00) 60.73%, #76ABBA 100%);
+    flex-direction: column;
+    width: 32%;
+    height: 32%;
 
-    #frm{
-        direction: rtl;
-        margin-top: 120px;
+}
 
-    }
-    #inedx-button{
-        margin-top: 125px;
-        background-color: #55a7d7;
-        width: 440px;
-        height: 50px;
+#frm {
+    direction: rtl;
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* margin-top: 120px; */
 
-        font-size: 1.5em;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+}
 
-    }
-    .index-label{
-        font-size: 1.5em;
-        color: #000000;
-    }
-    .index-backgorund-img{
-        background: url("../images/login-img-background.png");
-        background-repeat: no-repeat;
-        background-size: cover; 
+#inedx-button {
+    /* margin-top: 125px; */
+    background-color: #55a7d7;
+    /* width: 440px;
+    height: 50px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    display: flex;
+    align-self: flex-end;
 
-    }
+}
+
+.index-label {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.index-backgorund-img {
+    background: url("../images/login-img-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
