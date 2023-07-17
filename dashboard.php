@@ -70,7 +70,7 @@ if (!$result) {
                     <li class="divider-item-space"></li>
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li class="divider-item"><a href="#"><i
+                    <li class="divider-item"><a href="logout.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
                     <li class="white-color-divide"></li>
                     <li>

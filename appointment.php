@@ -64,7 +64,7 @@ if (!$_SESSION["user_id"]) {
                     <li class="divider-item-space"></li>
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li class="divider-item"><a href="#"><i
+                    <li class="divider-item"><a href="logout.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
                     <li class="white-color-divide"></li>
 
@@ -97,7 +97,7 @@ if (!$_SESSION["user_id"]) {
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
-                        <li><a class="dropdown-item" href="#">התנתקות</a></li>
+                        <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>
                 </li>
             </ul>
