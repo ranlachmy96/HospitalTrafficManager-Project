@@ -1556,10 +1556,6 @@ td {
 
 }
 
-#index-form-input {
-    /* max-width: 440px;
-    height: 50px; */
-}
 
 .index-form-box {
     display: flex;
@@ -1572,7 +1568,7 @@ td {
     background: linear-gradient(180deg, #7BCCE4 0%, rgba(255, 255, 255, 0.00) 60.73%, #76ABBA 100%);
     flex-direction: column;
     width: 32%;
-    height: 32%;
+    height: 50%;
 
 }
 
@@ -1583,22 +1579,16 @@ td {
     flex-flow: column;
     justify-content: space-evenly;
     flex-direction: column;
-    /* margin-top: 120px; */
-
 }
 
 #inedx-button {
-    /* margin-top: 125px; */
     background-color: #55a7d7;
-    /* width: 440px;
-    height: 50px; */
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 23px;
     display: flex;
     align-self: flex-end;
-
 }
 
 .index-label {
