@@ -1,6 +1,6 @@
 <?php
 include "db.php";
-
+include "config.php"
 ?>
 <?php 
 session_start();
