@@ -1,6 +1,18 @@
 <?php
 include "db.php";
+include "config.php";
+
 ?>
+<?php 
+session_start();
+if (!$_SESSION["user_id"]) {
+    echo "no user id";
+    header('Location:' . URL . 'index.php');
+}
+
+?>
+
+
 <?php
 mysqli_set_charset($connection, "utf8");
 $query = "SELECT * FROM tbl_213_patients";
@@ -9,6 +21,9 @@ if (!$result) {
     die("DB query failed.");
 }
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +102,7 @@ if (!$result) {
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
-                        <li><a class="dropdown-item" href="#">התנתקות</a></li>
+                        <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>
                 </li>
             </ul>

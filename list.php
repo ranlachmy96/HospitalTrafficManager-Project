@@ -1,6 +1,18 @@
 <?php
 include "db.php";
+
 ?>
+
+<?php 
+session_start();
+if (!$_SESSION["user_id"]) {
+    echo "no user id";
+    header('Location:' . URL . 'index.php');
+}
+
+?>
+
+
 <?php
 mysqli_set_charset($connection, "utf8");
 $query = "SELECT * FROM tbl_213_patients";
@@ -165,7 +177,7 @@ if (!$result) {
               <div class="form-control-wrapper">
                 <label class="form-label">
                 </label>
-                <input type="search" class="form-control" placeholder="חיפוש">
+                <input type="search"  id="form-control-list" class="form-control" placeholder="חיפוש">
               </div>
             </form>
           </section>

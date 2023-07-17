@@ -434,7 +434,7 @@ a.nav-link.active {
     border: 1px solid #115A83;
 }
 
-.form-control::placeholder {
+#form-control-list::placeholder {
     text-align: center;
     background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
     background-repeat: no-repeat;
@@ -1467,3 +1467,69 @@ background: #fff;
     }
 
 }
+/*----------------------------------- index - login -----------------------------------------*/
+
+
+
+.header-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+}
+#index-form-input
+{
+    max-width: 440px;
+    height: 50px;
+}
+
+    .index-form-box{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        justify-content: space-between;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #7BCCE4 0%, rgba(255, 255, 255, 0.00) 60.73%, #76ABBA 100%);
+        flex-direction: column;
+        width: 760px;
+        height: 678px;
+        
+    }
+
+    #frm{
+        direction: rtl;
+        margin-top: 120px;
+
+    }
+    #inedx-button{
+        margin-top: 125px;
+        background-color: #55a7d7;
+        width: 440px;
+        height: 50px;
+
+        font-size: 1.5em;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .index-label{
+        font-size: 1.5em;
+        color: #000000;
+    }
+    .index-backgorund-img{
+        background: url("../images/login-img-background.png");
+        background-repeat: no-repeat;
+        background-size: cover; 
+
+    }

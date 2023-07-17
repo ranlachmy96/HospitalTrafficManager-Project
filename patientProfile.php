@@ -1,6 +1,16 @@
 <?php
 include "db.php";
+
 ?>
+<?php 
+session_start();
+if (!$_SESSION["user_id"]) {
+    echo "no user id";
+    header('Location:' . URL . 'index.php');
+}
+
+?>
+
 <?php
 mysqli_set_charset($connection, "utf8");
 $patientID = $_GET["patientId"];

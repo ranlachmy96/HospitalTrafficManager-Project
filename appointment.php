@@ -1,3 +1,17 @@
+
+<?php
+include "db.php";
+?>
+
+<?php 
+session_start();
+if (!$_SESSION["user_id"]) {
+    echo "no user id";
+    header('Location:' . URL . 'index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +30,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>appointment</title>
 </head>
 
 <body>
@@ -69,7 +83,7 @@
                     <a class="nav-link" href="#">מכסה מטופלים</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">לוח בקרה </a>
+                    <a class="nav-link" aria-current="page" href="dashboard.php">לוח בקרה </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
