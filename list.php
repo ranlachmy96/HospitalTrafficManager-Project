@@ -38,6 +38,9 @@ if (!$result) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
@@ -221,7 +224,7 @@ if (!$result) {
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-person-id="' . $row["id_number"] . '">
               <i class="bi bi-x-circle-fill"></i></button></td>';
               echo '<td class="list-icons">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal" data-person-id="' . $row["id_number"] . '">
+              <button type="button" class="btn btn-primary editbtn" data-bs-toggle="modal" data-bs-target="#updateModal" data-person-id="' . $row["id_number"] . '">
               <i class="bi bi-pencil"></i></button></td>';
               echo '<td data-title="מספר">' . $row["id_number"] . '</td>';
               echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
@@ -271,21 +274,52 @@ if (!$result) {
     <!-- Modal-Update-Data -->
     <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="updateModalLabel">ביטול התור</h1>
+        <div class="modal-content" id="list-update-modal-content">
+          <div class="modal-header" id="list-update-modal-header">
+            <h5 class="modal-title" id="updateModalLabel">עריכת פרטים</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form action="UpdateData.php" method="POST" id="deleteForm">
-            <input type="hidden" name="delete_id" id="delete_id">
-            <div class="modal-body">
-              לבטל את התור?
+          <form action="UpdateData.php" method="POST" id="updateForm">
+            <input type="hidden" name="update_id" id="update_id">
+            <div class="modal-body" id="list-update-modal-body-wrapper">
+              <label>שם פרטי</label>
+              <input type="text" class="form-control written" name="first_name" value=""
+                pattern="[A-Za-z\u0590-\u05FF]+" id="first_name">
+              <label>שם משפחה</label>
+              <input type="text" class="form-control written" name="last_name" value=""
+                pattern="[A-Za-z\u0590-\u05FF]+" id="last_name">
+              <label>גיל</label>
+              <input type="number" class="form-control" name="age" min="0" max="120 " value="" id="age">
+              <label>מגדר</label>
+              <select name="gender" class="form-select" required id="gender">
+                <option value="נקבה">נקבה</option>
+                <option value="זכר">זכר</option>
+                <option value="אחר">אחר</option>
+              </select>
+              <label>דחיפות רפואית</label>
+              <select name="urgency" class="form-select" id="urgency" required>
+                <option value="קל">קל</option>
+                <option value="בינוני">בינוני</option>
+                <option value="קשה">קשה</option>
+              </select>
+              <label>סוג דימות</label>
+              <select name="image_type" class="form-select" required id="image_type">
+                <option value="">-</option>
+                <option value="x-ray">רנטגן</option>
+                <option value="C.T">C.T</option>
+                <option value="ultrasound">אולטרסאונד</option>
+                <option value="M.R.I">M.R.I</option>
+              </select>
+              <label>שעה</label>
+              <input type="time" class="form-control written" name="time" value="" id="time">
+              <label>תאריך</label>
+              <input type="date" class="form-control written" name="date" value="" id="date">
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" id="list-update-modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                id="list-delete-cancel-button">ביטול</button>
-              <button type="submit" name="deletedata" class="btn btn-primary"
-                id="list-delete-agree-button">אישור</button>
+                id="list-update-cancel-button">ביטול</button>
+              <button type="submit" name="updatedata" class="btn btn-primary"
+                id="list-update-agree-button">אישור</button>
             </div>
           </form>
         </div>

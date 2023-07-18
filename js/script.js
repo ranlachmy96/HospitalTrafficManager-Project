@@ -86,6 +86,34 @@ window.onload = function () {
                 document.getElementById("delete_id").value = deleteId;
             };
         });
+    // edit button
+        $(document).ready(function(){
+          $('.editbtn').on('click',function(){
+
+            $('#updateModal').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            let data = $tr.children("td").map(function(){
+              return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id').val(data[2]);
+            $('#first_name').val(data[3]);
+            $('#last_name').val(data[4]);
+            $('#age').val(data[5]);
+            $('#gender').val(data[6]);
+            $('#urgency').val(data[7]);
+            $('#image_type').val(data[8]);
+            $('#time').val(data[9]);
+            $('#date').val(data[10]);
+            
+          });
+
+        });
+
 
 
 

@@ -1,10 +1,9 @@
-
 <?php
 include "db.php";
 include "config.php"
-?>
+    ?>
 
-<?php 
+<?php
 session_start();
 if (!$_SESSION["user_id"]) {
     echo "no user id";
