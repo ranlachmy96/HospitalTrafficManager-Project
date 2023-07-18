@@ -1602,3 +1602,64 @@ td {
     background-size: cover;
 
 }
+
+/*----------------------------------- editProfile-Container -----------------------------------------*/
+
+
+#editProfile-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+
+
+.editProfile-Container{
+    flex-direction: row;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    height: 100%;
+}
+
+.editProfile-col1, .editProfile-col2{
+    display: flex;
+    flex-direction: column;
+}
+
+.editProfile-Container-inner{
+    display: flex;
+}
+.editProfile-col1-group{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.editProfile-col3{
+
+ display: flex;
+justify-content: center;   
+}
+
+.editProfile-img{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.editProfile-Container-out{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#editProfile-submit-button{
+    background-color: #5BC0DE;
+    width: 20%;
+    border-radius:20px ;
+}
