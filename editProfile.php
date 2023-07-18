@@ -13,21 +13,36 @@ if (!$_SESSION["user_id"]) {
 ?>
 
 
-<?php 
+<?php
+if (isset($_GET["update-profile_data"])) {
+    mysqli_set_charset($connection, "utf8mb4");
+    echo '<script>console.log(8)</script>';
+    $id = $_GET["id_number"];
+    $pnm = $_GET["first_name"];
+    $lnm = $_GET["last_name"];
+    $pass = $_GET["password"];
+    $nd = $_GET["name-department"];
+    $mi = $_GET["mail"];
 
-
-
- mysqli_set_charset($connection, "utf8");
- $idNumber =$_SESSION["user_id"];
+    $query = "UPDATE tbl_213_users SET id='$id', name='$pnm', last_name='$lnm', email='$mi', password='$pass', name_department='$nd' WHERE id='$id'";
+    $query_run = mysqli_query($connection, $query);
+    if ($query_run) {
+        header("location:editProfile.php");
+    } else {
+        echo '<script>alert("Data Not Saved");</script>';
+    }
+}
+mysqli_set_charset($connection, "utf8");
+$idNumber = $_SESSION["user_id"];
 $query = "SELECT * FROM tbl_213_users WHERE id = ?";
 $stmt = mysqli_prepare($connection, $query);
 mysqli_stmt_bind_param($stmt, "s", $idNumber);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 if ($result) {
-  $row = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
 } else {
-  die("DB query failed.");
+    die("DB query failed.");
 }
 
 ?>
@@ -126,56 +141,52 @@ if ($result) {
         <nav class="breadcrumb-right" style="--bs-breadcrumb-divider;" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">עריכת פרופיל</li>
-
-
             </ol>
         </nav>
-
         <!-- editProfile -->
         <div class="editProfile-Container-out">
-        <div class="editProfile-img">
-            <img src="images/hanna-profile-edit.png">
-        </div>
-
-        <div class="editProfile-Container">
-            <div class="editProfile-Container-inner">
-                <form action="editProfile.php" method="get" id="editProfile-form" accept-charset="UTF-8"
-                    class="needs-validation" novalidate>
-                    <div class="editProfile-col1-group">
-                        <div class="editProfile-col1">
-                            <label class="form-label">ת"ז</label>
-                            <input type="number" class="form-control written" name="id_number" min="0" max="9999999999"
-                                value=""<?php echo 'placeholder="'.$row["id"] .'"';?>>
-                            <label class="form-label">שם פרטי</label>
-                            <input type="text" class="form-control written" name="first_name" value=""<?php echo 'placeholder="'.$row["name"] .'"';?>
-                                pattern="[A-Za-z\u0590-\u05FF]+">
-                            <label class="form-label"> מחלקה</label>
-                            <select name="name-department"  class="form-select" id="name-department-select" <?php echo 'placeholder="'.$row["name_department"] .'"';?> required >
-                                <option value=""  ></option>
-                                <option value="דימות" selected>דימות</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+            <div class="editProfile-img">
+                <img src="images/hanna-profile-edit.png">
+            </div>
+            <div class="editProfile-Container">
+                <div class="editProfile-Container-inner">
+                    <form action="editProfile.php" method="get" id="editProfile-form" accept-charset="UTF-8"
+                        class="needs-validation" novalidate>
+                        <div class="editProfile-col1-group">
+                            <div class="editProfile-col1">
+                                <label class="form-label">ת"ז</label>
+                                <input type="number" class="form-control written" name="id_number" min="0"
+                                    max="9999999999" <?php echo 'placeholder="' . $row["id"] . '" value="' . $row["id"] . '"'; ?>>
+                                <label class="form-label">שם פרטי</label>
+                                <input type="text" class="form-control written" name="first_name" <?php echo 'placeholder="' . $row["name"] . '" value="' . $row["name"] . '" '; ?>
+                                    pattern="[A-Za-z\u0590-\u05FF]+">
+                                <label class="form-label"> מחלקה</label>
+                                <select name="name-department" class="form-select" id="name-department-select" <?php echo 'placeholder="' . $row["name_department"] . '"'; ?> required>
+                                    <option value=""></option>
+                                    <option value="דימות" selected>דימות</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="editProfile-col2">
+                                <label>אימייל</label>
+                                <input type="email" class="form-control written" name="mail"
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" <?php echo 'placeholder="' . $row["email"] . '" value="' . $row["email"] . '" '; ?>>
+                                <label class="form-label">שם משפחה</label>
+                                <input type="text" class="form-control written" name="last_name"
+                                    pattern="[A-Za-z\u0590-\u05FF]+" <?php echo 'placeholder="' . $row["last_name"] . '" value="' . $row["last_name"] . '"'; ?>>
+                                <label class="form-label"> סיסמא</label>
+                                <input type="password" class="form-control" name="password" <?php echo 'placeholder="' . $row["password"] . '" value="' . $row["password"] . '"'; ?>>
+                            </div>
                         </div>
-                        <div class="editProfile-col2">
-                            <label>אימייל</label>
-                            <input type="email" class="form-control written" name="mail" value=""
-                                pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" <?php echo 'placeholder="'.$row["email"] .'"';?>>
-                            <label class="form-label">שם משפחה</label>
-                            <input type="text" class="form-control written" name="last_name" value=""
-                                pattern="[A-Za-z\u0590-\u05FF]+" <?php echo 'placeholder="'.$row["last_name"] .'"';?> >
-                            <label class="form-label"> סיסמא</label>
-                            <input type="password" class="form-control" name="date" value="" <?php echo 'placeholder="'.$row["password"] .'"';?>>
+                        <div class="editProfile-col3">
+                            <input type="submit" id="editProfile-submit-button" class="btn btn-primary" value="שמור"
+                                name="update-profile_data">
                         </div>
-                    </div>
-                    <div class="editProfile-col3">
-                        <input type="submit" id="editProfile-submit-button" class="btn btn-primary" value="שמור"
-                            name="insert_data" >
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-</div>
 
 
 
@@ -187,7 +198,7 @@ if ($result) {
 
 
 
-<br>
+        <br>
     </main>
 
 </body>
