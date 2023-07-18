@@ -1,13 +1,13 @@
 <?php
 include "db.php";
 include "config.php"
-?>
+  ?>
 
-<?php 
+<?php
 session_start();
 if (!$_SESSION["user_id"]) {
-    echo "no user id";
-    header('Location:' . URL . 'index.php');
+  echo "no user id";
+  header('Location:' . URL . 'index.php');
 }
 
 ?>
@@ -69,7 +69,8 @@ if (!$result) {
           <li class="divider-item-space"></li>
           <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
           <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-          <li class="divider-item"><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
+          <li class="divider-item"><a href="logout.php"><i
+                class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
           </li>
           <li class="white-color-divide"></li>
 
@@ -177,7 +178,7 @@ if (!$result) {
               <div class="form-control-wrapper">
                 <label class="form-label">
                 </label>
-                <input type="search"  id="form-control-list" class="form-control" placeholder="חיפוש">
+                <input type="search" id="form-control-list" class="form-control" placeholder="חיפוש">
               </div>
             </form>
           </section>
@@ -219,7 +220,9 @@ if (!$result) {
               echo '<td class="list-icons">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-person-id="' . $row["id_number"] . '">
               <i class="bi bi-x-circle-fill"></i></button></td>';
-              echo '<td class="list-icons"><button><i class="bi bi-pencil"></i></button></td>';
+              echo '<td class="list-icons">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal" data-person-id="' . $row["id_number"] . '">
+              <i class="bi bi-pencil"></i></button></td>';
               echo '<td data-title="מספר">' . $row["id_number"] . '</td>';
               echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
               echo '<td data-title="שם משפחה">' . $row["last_name"] . '</td>';
@@ -265,7 +268,29 @@ if (!$result) {
         </div>
       </div>
     </div>
-    <!-- Modal-Delete-Data -->
+    <!-- Modal-Update-Data -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="updateModalLabel">ביטול התור</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="UpdateData.php" method="POST" id="deleteForm">
+            <input type="hidden" name="delete_id" id="delete_id">
+            <div class="modal-body">
+              לבטל את התור?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                id="list-delete-cancel-button">ביטול</button>
+              <button type="submit" name="deletedata" class="btn btn-primary"
+                id="list-delete-agree-button">אישור</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="js/script.js"></script>
 </body>
