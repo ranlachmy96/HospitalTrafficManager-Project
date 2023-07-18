@@ -94,7 +94,7 @@ if (!$_SESSION["user_id"]) {
                         <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">עריכת פרופיל</a></li>
+                        <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
                         <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>
