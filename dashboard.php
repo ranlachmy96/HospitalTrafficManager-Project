@@ -3,7 +3,7 @@ include "db.php";
 include "config.php";
 
 ?>
-<?php 
+<?php
 session_start();
 if (!$_SESSION["user_id"]) {
     echo "no user id";
@@ -38,7 +38,7 @@ if ($result1) {
 }
 ?>
 
-                       
+
 
 
 
@@ -63,11 +63,12 @@ if ($result1) {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>dashboard</title>
 </head>
+
 <body>
     <header>
         <section id="mobile-profile-picture">
             <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?>
+            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
 
         </section>
         <section class="logo-con">
@@ -119,7 +120,7 @@ if ($result1) {
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
                         <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '">' ; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
 
                     </a>
                     <ul class="dropdown-menu">
@@ -132,40 +133,48 @@ if ($result1) {
         </nav>
     </header>
     <main>
+
         <!-- chart -->
-        <div class="graphbox">
-            <div class="box">
-                <h4>ניטור קיבולת מטופלים: מחלקת דימות</h4>
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="box">
-                <h4>מכסה מטופלים -עומס</h4>
-                <canvas id="myChartload"></canvas>
-            </div>
-            <div class="box">
-                <!-- calender -->
-                <div class="calendar">
-                    <div class="header-calnder">
-                        <button id="prevBtn">&lt;</button>
-                        <div class="month" id="current-month">יולי 2023</div>
-                        <button id="nextBtn">&gt;</button>
-                    </div>
-                    <div class="weekdays">
-                        <div class="day">ראשון</div>
-                        <div class="day">שני</div>
-                        <div class="day">שלישי</div>
-                        <div class="day">רביעי</div>
-                        <div class="day">חמישי</div>
-                        <div class="day">שישי</div>
-                        <div class="day">שבת</div>
-                    </div>
-                    <div class="days" id="calendar-days">
+
+    
+            <div class="graphbox">
+              
+                <div class="box">
+                    <h4>ניטור קיבולת מטופלים: מחלקת דימות</h4>
+
+                    <div class="chart-size"> <canvas id="myChart"></canvas></div>
+                </div>
+                <div class="box box-row2-col2">
+                    <h4>מכסה מטופלים -עומס</h4>
+                    <div class="chart-size"><canvas id="myChartload" class="myChartload1"></canvas></div>
+                </div>
+                <div class="box box-calendar">
+                    <!-- calender -->
+                    <div class="calendar">
+                        <div class="header-calnder">
+                            <button id="prevBtn">&lt;</button>
+                            <div class="month" id="current-month">יולי 2023</div>
+                            <button id="nextBtn">&gt;</button>
+                        </div>
+                        <div class="weekdays">
+                            <div class="day">ראשון</div>
+                            <div class="day">שני</div>
+                            <div class="day">שלישי</div>
+                            <div class="day">רביעי</div>
+                            <div class="day">חמישי</div>
+                            <div class="day">שישי</div>
+                            <div class="day">שבת</div>
+                        </div>
+                        <div class="days" id="calendar-days">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="dashbord-chart-row2">
-            <div class="box">
+        
+
+
+<!-- row2 -->
+
+            <div class="box box-task-manager">
                 <div class="task-manager">
                     <h4>הוספת משימה</h4>
                     <div class="add-task">
@@ -177,9 +186,9 @@ if ($result1) {
             </div>
             <div class="box">
                 <h4>מלאי לוגיסטיקה </h4>
-                <canvas id="chart-col"></canvas>
+                <div class="chart-size"> <canvas id="chart-col"></canvas></div>
             </div>
-            <div class="box">
+            <div class="box box-messages">
                 <div class="dashboard-flex-h4">
                     <h4>הודעות אחרונות</h4>
                     <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
@@ -224,9 +233,12 @@ if ($result1) {
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="dashbord-list-Patients">
-            <div class="box">
+            </div>
+
+
+<!-- row 3 -->
+<div class="dashbord-list-Patients">
+            <div class="box box-list">
                 <!-- list patients -->
                 <section class="list-Wrapper-table">
                     <h4 class="dashboard-h4">רשימת תורים במחלקות ביה"ח</h4>
@@ -236,14 +248,14 @@ if ($result1) {
                                 <th class="tbl-color-dashboard"></th>
                                 <th class="tbl-color-dashboard" scope="col">שם מחלקה</th>
                                 <th class="tbl-color-dashboard" scope="col">קיבולת מטופלים </th>
-                                 <th class="tbl-color-dashboard" scope="col">כמות מטופלים כרגע</th>
+                                <th class="tbl-color-dashboard" scope="col">כמות מטופלים כרגע</th>
                                 <th class="tbl-color-dashboard" scope="col">מצב קשה </th>
                                 <th class="tbl-color-dashboard" scope="col">מצב בינוני</th>
                                 <th class="tbl-color-dashboard" scope="col">מצב קל</th>
                                 <th class="tbl-color-dashboard" scope="col">כמות צוות רפואי</th>
                                 <th class="tbl-color-dashboard" scope="col"> אחראי מחלקה</th>
                                 <th class="tbl-color-dashboard" scope="col">תפקיד</th>
-                             
+
                             </tr>
                         </thead>
                         <tbody class="table-dashboard">
@@ -272,7 +284,13 @@ if ($result1) {
                 ?>
                 </section>
             </div>
-        </div>
+            </div>
+
+
+           
+        
+
+
     </main>
 
 

@@ -149,6 +149,14 @@ window.onload = function () {
 
     // dashboard page
   } else if (window.location.pathname.includes("/dashboard.php")) {
+
+
+ 
+
+
+
+
+
     // chart!
     const ctx = document.getElementById("myChart");
     const chartcol = document.getElementById("chart-col");
@@ -179,6 +187,10 @@ window.onload = function () {
       },
       options: {
         responsive: true,
+        maintainAspectRatio:false,
+        resizeDelay:2,
+        
+       
       },
     });
 
@@ -196,6 +208,9 @@ window.onload = function () {
       },
       options: {
         responsive: true,
+        maintainAspectRatio:false,
+        resizeDelay:2,
+     
       },
     });
 
@@ -226,6 +241,9 @@ window.onload = function () {
       },
       options: {
         responsive: true,
+        maintainAspectRatio:false,
+        resizeDelay:2,
+    
       },
     });
 
