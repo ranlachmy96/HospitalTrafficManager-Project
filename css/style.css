@@ -340,6 +340,9 @@ a.nav-link.active {
     --bs-dropdown-border-width: none;
     border-radius: 0;
     border: none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    background-color: #7BCCE4;
 }
 
 .dropdown-item {
