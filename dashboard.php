@@ -56,6 +56,7 @@ if (!$result) {
             <a href="index.php" id="logo-mobile"></a>
         </section>
         <nav>
+            <!-- mobile -->
             <section>
                 <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
@@ -78,6 +79,7 @@ if (!$result) {
                     </li>
                 </ul>
             </section>
+            <!-- web -->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link " href="#">לוגיסטיקה</a>
