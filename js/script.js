@@ -33,34 +33,34 @@ window.onload = function () {
     const submitButton = document.getElementById("submit-button");
     const inputs = Array.from(document.getElementsByClassName("written"));
 
-        inputs.forEach(input => {
-            input.addEventListener("input", () => {
-                const isFormValid = inputs.every(input => input.value.trim() !== "");
-                submitButton.disabled = !isFormValid;
-                submitButton.style.backgroundColor = isFormValid ? "#5BC0DE" : "";
-                submitButton.style.color = isFormValid ? "#000" : "";
-            });
-        });
+    inputs.forEach(input => {
+      input.addEventListener("input", () => {
+        const isFormValid = inputs.every(input => input.value.trim() !== "");
+        submitButton.disabled = !isFormValid;
+        submitButton.style.backgroundColor = isFormValid ? "#5BC0DE" : "";
+        submitButton.style.color = isFormValid ? "#000" : "";
+      });
+    });
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const success = urlParams.get('success');
-        const date = urlParams.get('date');
-        const time = urlParams.get('time');
-    
-        if (success === 'true') {
-            $(document).ready(function() {
-                $('#successModal').modal('show');
-                $('#appointment-modal-calendar').after('<span>' + date + '</span>');
-                $('#appointment-modal-clock').after('<span>' + time + '</span>');
-            });
-        }
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    const date = urlParams.get('date');
+    const time = urlParams.get('time');
 
-        
-    } else if (window.location.pathname.includes('/patientProfile.php')) {
-        //check
-        const saveButton = document.getElementById('save-info-profile-changes');
-        const messageOverlay = document.getElementById('message-overlay');
-        const messageText = document.getElementById('message-text');
+    if (success === 'true') {
+      $(document).ready(function () {
+        $('#successModal').modal('show');
+        $('#appointment-modal-calendar').after('<span>' + date + '</span>');
+        $('#appointment-modal-clock').after('<span>' + time + '</span>');
+      });
+    }
+
+
+  } else if (window.location.pathname.includes('/patientProfile.php')) {
+    //check
+    const saveButton = document.getElementById('save-info-profile-changes');
+    const messageOverlay = document.getElementById('message-overlay');
+    const messageText = document.getElementById('message-text');
 
     saveButton.addEventListener("click", function () {
       // Show the message overlay
@@ -74,45 +74,66 @@ window.onload = function () {
         messageOverlay.style.display = "none";
       }, 2000);
     });
+    
+    fetch("data/medicalHistory.json")
+    .then(response => response.json())
+    .then(data => {
+        var ulElement = document.querySelector("#medical-history-tab-pane ul");
+        var desiredId = document.querySelector('[data-title="תעודת זהות"]').textContent;
+        
+        for (var i = 0; i < data.patients.length; i++) {
+            if (data.patients[i].id === desiredId) {
+                for (var prop in data.patients[i]) {
+                    if (prop !== "id") {
+                        var liEvent = document.createElement("li");
+                        liEvent.textContent = prop + ": " + data.patients[i][prop];
+                        ulElement.appendChild(liEvent);
+                    }
+                }
+                break;
+            }
+        }
+    });
+
   } else if (window.location.pathname.includes("/list.php")) {
 
     // Get all delete buttons
-        var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
+    var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
 
-        // Attach onclick event handler to each delete button
-        deleteButtons.forEach(function (button) {
-            button.onclick = function () {
-                var deleteId = this.getAttribute("data-person-id");
-                document.getElementById("delete_id").value = deleteId;
-            };
-        });
+    // Attach onclick event handler to each delete button
+    deleteButtons.forEach(function (button) {
+      button.onclick = function () {
+        var deleteId = this.getAttribute("data-person-id");
+        document.getElementById("delete_id").value = deleteId;
+      };
+    });
     // edit button
-        $(document).ready(function(){
-          $('.editbtn').on('click',function(){
+    $(document).ready(function () {
+      $('.editbtn').on('click', function () {
 
-            $('#updateModal').modal('show');
+        $('#updateModal').modal('show');
 
-            $tr = $(this).closest('tr');
+        $tr = $(this).closest('tr');
 
-            let data = $tr.children("td").map(function(){
-              return $(this).text();
-            }).get();
+        let data = $tr.children("td").map(function () {
+          return $(this).text();
+        }).get();
 
-            console.log(data);
+        console.log(data);
 
-            $('#update_id').val(data[2]);
-            $('#first_name').val(data[3]);
-            $('#last_name').val(data[4]);
-            $('#age').val(data[5]);
-            $('#gender').val(data[6]);
-            $('#urgency').val(data[7]);
-            $('#image_type').val(data[8]);
-            $('#time').val(data[9]);
-            $('#date').val(data[10]);
-            
-          });
+        $('#update_id').val(data[2]);
+        $('#first_name').val(data[3]);
+        $('#last_name').val(data[4]);
+        $('#age').val(data[5]);
+        $('#gender').val(data[6]);
+        $('#urgency').val(data[7]);
+        $('#image_type').val(data[8]);
+        $('#time').val(data[9]);
+        $('#date').val(data[10]);
 
-        });
+      });
+
+    });
 
 
 
@@ -171,39 +192,39 @@ window.onload = function () {
     });
 
 
-const chartload = document.getElementById("myChartload");
-new Chart(chartload, {
-  type: "line",
-  data: {
-    labels: [" 6:00", "7:00","8:00", "9:00","10:00","11:00", "12:00", "13:00","14:00","15:00", "16:00","17:00", "18:00"], 
-    datasets: [
-  {
-        label: "מחלקת דימות",
-        data: [15, 25, 50, 75, 100, 90,100,100,100,85,70,60,90],
-        borderWidth: 2,
-      },{
-              label: " עומס כבד  ",
+    const chartload = document.getElementById("myChartload");
+    new Chart(chartload, {
+      type: "line",
+      data: {
+        labels: [" 6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"],
+        datasets: [
+          {
+            label: "מחלקת דימות",
+            data: [15, 25, 50, 75, 100, 90, 100, 100, 100, 85, 70, 60, 90],
+            borderWidth: 2,
+          }, {
+            label: " עומס כבד  ",
 
-              data: [85,85,85,85,85,85,85,85,85,85,85,85,85],
-              borderWidth: 2,
-            },{
-              label: " עומס קל  ",
+            data: [85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85],
+            borderWidth: 2,
+          }, {
+            label: " עומס קל  ",
 
-              data: [60,60,60,60,60,60,60,60,60,60,60,60,60],
-              borderWidth: 2,
-              
-            }  
-          ]
-  },
-  options: {
-    responsive: true,
-  },
-});
+            data: [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+            borderWidth: 2,
 
-///
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+      },
+    });
+
+    ///
 
 
-//////////////////////////////////
+    //////////////////////////////////
     //calander
     function generateCalendarDays(year, month) {
       const daysContainer = document.getElementById("calendar-days");
@@ -272,17 +293,17 @@ new Chart(chartload, {
 
 
 
-// task
+    // task
 
-const taskInput = document.getElementById("taskInput");
-const addButton = document.getElementById("addButton");
-const taskList = document.getElementById("taskList");
+    const taskInput = document.getElementById("taskInput");
+    const addButton = document.getElementById("addButton");
+    const taskList = document.getElementById("taskList");
 
-// Add event listener to the button
-addButton.addEventListener("click", addTask);
+    // Add event listener to the button
+    addButton.addEventListener("click", addTask);
 
-function addTask() {
-    if (taskInput.value.trim() !== "") {
+    function addTask() {
+      if (taskInput.value.trim() !== "") {
         const taskItemWrapper = document.createElement("div");
         taskItemWrapper.classList.add("task-item-wrapper");
 
@@ -298,22 +319,22 @@ function addTask() {
 
         taskInput.value = "";
         addDeleteEventListener(taskItemWrapper);
+      }
     }
-}
 
-function deleteTask() {
-    const taskItemWrapper = this.parentNode;
-    taskItemWrapper.parentNode.removeChild(taskItemWrapper);
-}
+    function deleteTask() {
+      const taskItemWrapper = this.parentNode;
+      taskItemWrapper.parentNode.removeChild(taskItemWrapper);
+    }
 
-function addDeleteEventListener(taskItemWrapper) {
-    const deleteButton = taskItemWrapper.querySelector(".delete-button");
-    deleteButton.addEventListener("click", deleteTask);
-}
-
+    function addDeleteEventListener(taskItemWrapper) {
+      const deleteButton = taskItemWrapper.querySelector(".delete-button");
+      deleteButton.addEventListener("click", deleteTask);
+    }
 
 
- 
+
+
 
 
 

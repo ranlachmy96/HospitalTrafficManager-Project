@@ -307,9 +307,7 @@ if ($result) {
             </div>
             <div class="tab-pane fade" id="medical-history-tab-pane" role="tabpanel" tabindex="0">
               <ul>
-                <li>בריאה ופעילה עם מצב רפואי כללי טוב</li>
-                <li>סבלה בעבר מבוהן נפוחה</li>
-                <li>לא יודע על עבר רפואי גנטי</li>
+                <!-- נכנס פה גיסון -->
               </ul>
             </div>
           </div>
