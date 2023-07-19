@@ -1,7 +1,7 @@
 <?php
 include "db.php";
 include "config.php"
-?>
+    ?>
 
 <?php
 session_start();
@@ -81,8 +81,7 @@ if ($result1) {
                     <li class="divider-item-space"></li>
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li ><a href="logout.php"><i
-                                class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+                    <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
                     <!-- <li class="white-color-divide"></li> -->
                     <!-- class="divider-item" -->
                     <!-- <li>
@@ -115,6 +114,11 @@ if ($result1) {
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
+                        <?php
+                        if ($_SESSION["user_type"] == "admin") {
+                            echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
+                        }
+                        ?>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
                         <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>

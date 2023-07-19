@@ -98,12 +98,12 @@ if ($result1) {
           <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
           <li class="divider-item"><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
           </li>
-          <li class="white-color-divide"></li>
+          <!-- <li class="white-color-divide"></li>
 
           <li>
             <a href="index.php" id="second-logo-mobile"></a>
           </li>
-        </ul>
+        </ul> -->
 
 
       </section>
@@ -131,6 +131,11 @@ if ($result1) {
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
+            <?php
+            if ($_SESSION["user_type"] == "admin") {  
+              echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
+            }
+            ?>
             <li><a class="dropdown-item" href="#">הגדרות</a></li>
             <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
           </ul>

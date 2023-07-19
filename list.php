@@ -98,11 +98,11 @@ if ($result1) {
           <li class="divider-item"><a href="logout.php"><i
                 class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
           </li>
-          <li class="white-color-divide"></li>
+          <!-- <li class="white-color-divide"></li>
 
           <li>
             <a href="index.php" id="second-logo-mobile"></a>
-          </li>
+          </li> -->
         </ul>
 
 
