@@ -290,6 +290,41 @@ if ($result1) {
                 </section>
             </div>
         </div>
+        <div class="dashboard-mobile">
+
+            <div class="dashboard-mobile-grid">
+                <div class="dashboard-box-mobile">
+                    <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
+                  
+                    <a class="nav-wrapper" href="list.php">
+                        <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
+                    </a>
+                </div>
+                <div class="dashboard-box-mobile">
+                <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
+                  
+                  <a class="nav-wrapper" href="#">
+                  <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
+                  </a>
+
+                </div>
+                <div class="dashboard-box-mobile">
+
+                <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
+                  
+                  <a class="nav-wrapper" href="logout.php">
+                  <i class="fa-solid fa-arrow-right-from-bracket"id="size-mobile-icon3"></i>
+                </a>
+                </div>
+                
+
+
+
+
+            </div>
+        </div>
+
+
 
 
 
