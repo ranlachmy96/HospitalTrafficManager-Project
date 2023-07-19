@@ -522,6 +522,9 @@ td {
 .table thead {
     background-color: #BFE8F4;
 }
+.table.dataTable thead th{
+    text-align: center;
+}
 
 .btn-primary {
     --bs-btn-color: none;
