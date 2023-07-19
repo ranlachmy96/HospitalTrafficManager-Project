@@ -15,13 +15,30 @@ if (!$_SESSION["user_id"]) {
 
 <?php
 mysqli_set_charset($connection, "utf8");
-$query = "SELECT * FROM tbl_213_patients";
+$query = "SELECT * FROM tbl_213_queues";
 $result = mysqli_query($connection, $query);
 if (!$result) {
     die("DB query failed.");
 }
 ?>
 
+<?php
+$user = $_SESSION["user_id"];
+mysqli_set_charset($connection, "utf8");
+$query1 = "SELECT * FROM tbl_213_users WHERE id = ?";
+$stmt = mysqli_prepare($connection, $query1);
+mysqli_stmt_bind_param($stmt, "i", $user);
+mysqli_stmt_execute($stmt);
+$result1 = mysqli_stmt_get_result($stmt);
+
+if ($result1) {
+    $row1 = mysqli_fetch_assoc($result1);
+} else {
+    die("DB query failed.");
+}
+?>
+
+                       
 
 
 
@@ -49,7 +66,9 @@ if (!$result) {
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
+            <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
+            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '" id="test"' ; ?>
+
         </section>
         <section class="logo-con">
             <a href="index.php" id="logo"></a>
@@ -99,7 +118,9 @@ if (!$result) {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
+                        <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '"' ; ?>
+
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -213,32 +234,32 @@ if (!$result) {
                         <thead class="table-dashboard">
                             <tr>
                                 <th class="tbl-color-dashboard"></th>
-                                <th class="tbl-color-dashboard" scope="col">מספר</th>
-                                <th class="tbl-color-dashboard" scope="col">שם פרטי</th>
-                                <th class="tbl-color-dashboard" scope="col">שם משפחה</th>
-                                <th class="tbl-color-dashboard" scope="col">גיל</th>
-                                <th class="tbl-color-dashboard" scope="col">מין</th>
-                                <th class="tbl-color-dashboard" scope="col">דחיפות</th>
-                                <th class="tbl-color-dashboard" scope="col">סוגי דימות</th>
-                                <th class="tbl-color-dashboard" scope="col">שעה</th>
-                                <th class="tbl-color-dashboard" scope="col">תאריך</th>
+                                <th class="tbl-color-dashboard" scope="col">שם מחלקה</th>
+                                <th class="tbl-color-dashboard" scope="col">קיבולת מטופלים </th>
+                                 <th class="tbl-color-dashboard" scope="col">כמות מטופלים כרגע</th>
+                                <th class="tbl-color-dashboard" scope="col">מצב קשה </th>
+                                <th class="tbl-color-dashboard" scope="col">מצב בינוני</th>
+                                <th class="tbl-color-dashboard" scope="col">מצב קל</th>
+                                <th class="tbl-color-dashboard" scope="col">כמות צוות רפואי</th>
+                                <th class="tbl-color-dashboard" scope="col"> אחראי מחלקה</th>
+                                <th class="tbl-color-dashboard" scope="col">תפקיד</th>
+                             
                             </tr>
                         </thead>
                         <tbody class="table-dashboard">
                             <?php
-                            for ($i = 0; $i < 4 && $row = mysqli_fetch_assoc($result); $i++) {
+                            for ($i = 0; $i < 5 && $row = mysqli_fetch_assoc($result); $i++) {
                                 echo '<tr>';
                                 echo '<td class="tbl-color-dashboard"></td>';
-                                echo '<td class="tbl-color-dashboard" data-title="מספר">' . $row["id_number"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="שם פרטי">' . $row["first_name"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="שם משפחה">' . $row["last_name"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="גיל">' . $row["age"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="מין">' . $row["gender"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="דחיפות">' . $row["urgency"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="סוגי דימות">' . $row["type"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="שעה">' . $row["time"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="תאריך">' . $row["date"] . '</td>';
-                                echo '<a href="patientProfile.php?patientId=' . $row["id_number"] . '">';
+                                echo '<td class="tbl-color-dashboard" data-title="שם מחלקה">' . $row["name_department"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="קיבולת מטופלים">' . $row["capacity"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="כמות מטופלים כרגע">' . $row["Number_of_patients_currently"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title=" מצב קשה">' . $row["severe"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="מצב בינוני">' . $row["medium"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="מצב קל">' . $row["easy"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="כמות צוות רפואי">' . $row["quantity_of_medical_staff"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="אחראי מחלקה">' . $row["responsible_manager"] . '</td>';
+                                echo '<td class="tbl-color-dashboard" data-title="תפקיד">' . $row["type_responsible_manager"] . '</td>';
                                 echo '<i class="bi bi-chevron-left"></i></a></td>';
                                 echo '</tr>';
                             }
