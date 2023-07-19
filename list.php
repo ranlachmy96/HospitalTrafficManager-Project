@@ -50,6 +50,7 @@ if (!$result) {
   <header>
     <section id="mobile-profile-picture">
       <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
+      
     </section>
     <section class="logo-con">
       <a href="index.php" id="logo"></a>
@@ -105,6 +106,7 @@ if (!$result) {
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
+            
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>

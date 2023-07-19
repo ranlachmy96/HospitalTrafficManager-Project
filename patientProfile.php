@@ -51,6 +51,7 @@ if ($result) {
   <header>
     <section id="mobile-profile-picture">
       <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
+
     </section>
     <section class="logo-con">
       <a href="index.php" id="logo"></a>

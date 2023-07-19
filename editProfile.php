@@ -107,6 +107,7 @@ if ($result) {
                     </li>
                 </ul>
             </section>
+
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link " href="#">לוגיסטיקה</a>
@@ -126,7 +127,9 @@ if ($result) {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
+                        <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
+                    
+                        <?php echo '<img src="' . $row["img_user_menu"] . '"' ; ?>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -143,10 +146,12 @@ if ($result) {
                 <li class="breadcrumb-item active" aria-current="page">עריכת פרופיל</li>
             </ol>
         </nav>
+
         <!-- editProfile -->
         <div class="editProfile-Container-out">
             <div class="editProfile-img">
-                <img src="images/hanna-profile-edit.png">
+                <!-- <img src="images/hanna-profile-edit.png"> -->
+                <?php echo '<img src="' . $row["img_user"] . '"' ; ?>
             </div>
             <div class="editProfile-Container">
                 <div class="editProfile-Container-inner">
