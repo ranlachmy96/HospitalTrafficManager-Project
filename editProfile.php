@@ -75,6 +75,8 @@ if ($result) {
     <header>
         <section id="mobile-profile-picture">
             <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
+            <?php echo '<img src="' . $row["img_user_menu_mobile"] . '">' ; ?>
+
         </section>
         <section class="logo-con">
             <a href="index.php" id="logo"></a>
@@ -129,7 +131,7 @@ if ($result) {
                         aria-expanded="false">
                         <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
                     
-                        <?php echo '<img src="' . $row["img_user_menu"] . '"' ; ?>
+                        <?php echo '<img src="' . $row["img_user_menu"] . '">' ; ?>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -151,7 +153,7 @@ if ($result) {
         <div class="editProfile-Container-out">
             <div class="editProfile-img">
                 <!-- <img src="images/hanna-profile-edit.png"> -->
-                <?php echo '<img src="' . $row["img_user"] . '"' ; ?>
+                <?php echo '<img src="' . $row["img_user"] . '">' ; ?>
             </div>
             <div class="editProfile-Container">
                 <div class="editProfile-Container-inner">

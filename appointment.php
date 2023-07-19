@@ -9,8 +9,29 @@ if (!$_SESSION["user_id"]) {
     echo "no user id";
     header('Location:' . URL . 'index.php');
 }
-
 ?>
+
+
+<?php
+$user = $_SESSION["user_id"];
+mysqli_set_charset($connection, "utf8");
+$query1 = "SELECT * FROM tbl_213_users WHERE id = ?";
+$stmt = mysqli_prepare($connection, $query1);
+mysqli_stmt_bind_param($stmt, "i", $user);
+mysqli_stmt_execute($stmt);
+$result1 = mysqli_stmt_get_result($stmt);
+
+if ($result1) {
+    $row1 = mysqli_fetch_assoc($result1);
+} else {
+    die("DB query failed.");
+}
+?>
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,8 +60,9 @@ if (!$_SESSION["user_id"]) {
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
-          
+            <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
+            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?>
+
         </section>
         <section class="logo-con">
             <a href="index.php" id="logo"></a>
@@ -92,8 +114,9 @@ if (!$_SESSION["user_id"]) {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture">
-                    
+                        <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '">' ; ?>
+
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>

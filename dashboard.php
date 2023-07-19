@@ -67,7 +67,7 @@ if ($result1) {
     <header>
         <section id="mobile-profile-picture">
             <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '" id="test">' ; ?>
+            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?>
 
         </section>
         <section class="logo-con">
@@ -119,7 +119,7 @@ if ($result1) {
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
                         <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '"' ; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '">' ; ?>
 
                     </a>
                     <ul class="dropdown-menu">
