@@ -111,6 +111,7 @@ ul.nav.nav-tabs {
 .hamburger,
 .mobile-toggle-menu {
     display: none;
+   
 }
 
 nav input:checked~.hamburger {
@@ -231,7 +232,7 @@ a.nav-link.active {
 
         background-color: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-        z-index: 999;
+        /* z-index: 999; */
         
     }
 
@@ -721,8 +722,8 @@ table.dataTable>tbody>tr {
 
     .form-control::placeholder {
         text-align: center;
-        background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>'),
-            url('../images/sliders-solid.svg');
+        /* background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>'),
+            url('../images/sliders-solid.svg'); */
         background-repeat: no-repeat, no-repeat;
         background-position: left center, right center;
         padding-left: 30px;
@@ -790,7 +791,10 @@ table.dataTable>tbody>tr {
     .table tbody tr:nth-child(even) {
         background-color: rgba(91, 192, 222, 0.6);
     }
-
+    div.dataTables_wrapper div.dt-row {
+        position: relative;
+        /* z-index: -1; */
+    }
 
 
 }
@@ -1664,6 +1668,7 @@ table.dataTable>tbody>tr {
     .graphbox {
         grid-template-columns: 0.5fr;
         height: auto;
+        z-index: -1;
     }
 
     .box-row2-col2 {
@@ -1754,6 +1759,42 @@ table.dataTable>tbody>tr {
     background-size: cover;
 
 }
+/*----------------------------------- responsive-index--login -----------------------------------------*/
+
+@media (max-width: 992px) {
+
+    /* #frm {
+        direction: rtl;
+        display: flex;
+        height: 100%;
+        flex-flow: column;
+        justify-content: space-evenly;
+        flex-direction: column;
+    } */
+   /* .form-control::placeholder {
+        text-align: center;
+        background-repeat: no-repeat, no-repeat;
+        background-position: left center, right center;
+        padding-left: 30px;
+    } */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------- editProfile-Container -----------------------------------------*/
 
