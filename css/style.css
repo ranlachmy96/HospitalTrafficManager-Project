@@ -42,7 +42,7 @@ header {
     height: inherit;
 }
 
-#mobile-profile-picture  {
+#mobile-profile-picture {
     display: none;
 }
 
@@ -563,10 +563,12 @@ td {
     padding-right: 10%;
     padding-left: 10%;
 }
-#updateForm{
+
+#updateForm {
     display: flex;
     flex-flow: column;
 }
+
 #list-update-modal-content {
     width: 100%;
 }
@@ -792,7 +794,7 @@ td {
     border: 1px solid #115A83;
     direction: rtl;
     padding: 0.375rem 0.5rem 0.375rem 0.75rem;
-    
+
     background-position: left 0.75rem center;
 }
 
@@ -1355,46 +1357,77 @@ td {
 /*----------------------------------- dashboard -----------------------------------------*/
 
 /* chart! */
+
+/* .dashboard-flex-graph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 .graphbox {
     position: relative;
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 30px;
-    min-height: 200px;
+    grid-template-columns: [start] 1fr [middle] 2fr[end] 1fr;
+    /* grid-template-columns: 18% 55% 18% ;
+    grid-template-rows: repeat(3, 2fr); ; */
+    gap: 3em;
+
+    /* grid-template-areas: "circle graph date" "add log last" "list list list"; */
+    /* grid-template-columns: repeat(3, 2fr); */
     text-align: center;
+    justify-content: center;
+}
+
+/* .graphbox:nth-chlid(1) {
+    grid-area: circle;
+}
+
+.graphbox:nth-chlid(2) {
+    grid-area: graph;
+}
+
+.graphbox:nth-chlid(3) {
+    grid-area: date;
+}
+
+.graphbox:nth-chlid(4) {
+    grid-area: add;
+}
+
+.graphbox:nth-chlid(5) {
+    grid-area: log;
+}
+
+.graphbox:nth-chlid(6) {
+    grid-area: last;
+} */
+
+
+
+
+
+.chart-size {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding: 10px
 }
 
 .graphbox .box {
     position: relative;
     background: #DAEEF4;
-    padding: 20px;
-    width: 100%;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-}
-
-.dashbord-chart-row2 {
-    position: relative;
-    text-align: center;
-    width: 100%;
+    /* height: 50vh; */
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 30px;
-    min-height: 200px;
 }
 
 
-.dashbord-chart-row2 .box {
-    position: relative;
-    background: #DAEEF4;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
+.box {
+    max-width: 99%;
+    max-height: 99%;
 }
 
 .add-task {
@@ -1450,7 +1483,7 @@ td {
 .dashbord-list-Patients .box {
     position: relative;
     background: #DAEEF4;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
@@ -1477,11 +1510,14 @@ td {
 
 /* calender */
 .calendar {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    padding: 20px;
-    background-color: #DAEEF4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    /* max-width: 400px; */
+    padding: 10px;
+    /* background-color: #DAEEF4; */
     border-radius: 10px;
 }
 
@@ -1497,6 +1533,7 @@ td {
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    gap: 5px;
     margin-bottom: 10px;
 }
 
@@ -1587,11 +1624,34 @@ td {
 
 /* responsvie dashbord */
 @media (max-width:991px) {
+
     .graphbox {
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.5fr;
         height: auto;
     }
 
+    .box-row2-col2 {
+        display: none;
+    }
+    .box-calendar{
+        display: none;
+    }
+   .box-task-manager{
+    display: none;
+   }
+.box-messages{
+    display: none;
+}
+
+
+.box-list{
+    display: none;
+}
+.graphbox .box {
+    height: 50vh;
+    width: 90vw;
+    padding: 20px;
+}
 }
 
 /*----------------------------------- index--login -----------------------------------------*/
@@ -1662,7 +1722,7 @@ td {
 /*----------------------------------- editProfile-Container -----------------------------------------*/
 
 
-#editProfile-form{
+#editProfile-form {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1672,35 +1732,38 @@ td {
 
 
 
-.editProfile-Container{
+.editProfile-Container {
     flex-direction: row;
- display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     direction: rtl;
     height: 100%;
 }
 
-.editProfile-col1, .editProfile-col2{
+.editProfile-col1,
+.editProfile-col2 {
     display: flex;
     flex-direction: column;
 }
 
-.editProfile-Container-inner{
+.editProfile-Container-inner {
     display: flex;
 }
-.editProfile-col1-group{
+
+.editProfile-col1-group {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.editProfile-col3{
 
- display: flex;
-justify-content: center;   
+.editProfile-col3 {
+
+    display: flex;
+    justify-content: center;
 }
 
-.editProfile-img{
+.editProfile-img {
 
     align-items: center;
     display: flex;
@@ -1709,15 +1772,15 @@ justify-content: center;
     gap: 20px;
 }
 
-.editProfile-Container-out{
+.editProfile-Container-out {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
-#editProfile-submit-button{
+#editProfile-submit-button {
     background-color: #5BC0DE;
     width: 20%;
-    border-radius:20px ;
+    border-radius: 20px;
 }
