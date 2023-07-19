@@ -42,7 +42,7 @@ header {
     height: inherit;
 }
 
-#mobile-profile-picture {
+
 #mobile-profile-picture {
     display: none;
 }
@@ -499,6 +499,8 @@ div.dataTables_wrapper div.dataTables_filter input::placeholder {
 
 .table {
     text-align: center;
+    border-spacing: 0 10px;
+    border-collapse: separate;
 }
 
 table.dataTable {
@@ -580,7 +582,6 @@ td {
     padding-left: 10%;
 }
 
-#updateForm {
 
 #updateForm {
     display: flex;
@@ -1752,7 +1753,7 @@ table.dataTable>tbody>tr {
 /*----------------------------------- editProfile-Container -----------------------------------------*/
 
 
-#editProfile-form {
+
 #editProfile-form {
     height: 100%;
     display: flex;
@@ -1764,7 +1765,6 @@ table.dataTable>tbody>tr {
 
 
 .editProfile-Container {
-.editProfile-Container {
     flex-direction: row;
     display: flex;
     display: flex;
@@ -1774,20 +1774,19 @@ table.dataTable>tbody>tr {
     height: 100%;
 }
 
-.editProfile-col1,
-.editProfile-col2 {
+
 .editProfile-col1,
 .editProfile-col2 {
     display: flex;
     flex-direction: column;
 }
 
-.editProfile-Container-inner {
+
 .editProfile-Container-inner {
     display: flex;
 }
 
-.editProfile-col1-group {
+
 
 .editProfile-col1-group {
     display: flex;
@@ -1817,7 +1816,7 @@ table.dataTable>tbody>tr {
     gap: 40px;
 }
 
-#editProfile-submit-button {
+
 #editProfile-submit-button {
     background-color: #5BC0DE;
     width: 20%;
