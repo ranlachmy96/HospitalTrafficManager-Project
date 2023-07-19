@@ -227,7 +227,7 @@ if ($result1) {
                     </div>
                 </form>
             </section>
-            <!-- Modal-Delete-Data -->
+            <!-- Modal-Success-Message -->
             <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
@@ -252,7 +252,7 @@ if ($result1) {
                     </div>
                 </div>
             </div>
-            <!-- Modal-Delete-Data -->
+            <!-- Modal-Success-Message -->
         </section>
     </main>
     <script src="js/script.js"></script>

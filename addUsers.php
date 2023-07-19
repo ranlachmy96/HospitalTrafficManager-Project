@@ -43,12 +43,15 @@ if ($result1) {
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>profile patients</title>
 </head>
 
-<body id="body-patientProfile">
+<body>
     <header>
         <section id="mobile-profile-picture">
             <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
@@ -135,48 +138,60 @@ if ($result1) {
                 <h5>הוספת משתמש</h5>
             </section>
 
-            <form action="" method="get" id="addUser-form" accept-charset="UTF-8" class="needs-validation" novalidate>
+            <form action="insertUserData.php" method="get" id="addUser-form" accept-charset="UTF-8"
+                class="needs-validation" novalidate>
                 <section class="addUser-form-inner-wrapper">
                     <section class="addUser-form-inputs-wrapper">
                         <label class="form-label">שם פרטי</label>
                         <input type="text" class="form-control written" name="first_name"
-                            pattern="[A-Za-z\u0590-\u05FF]+">
+                            pattern="[A-Za-z\u0590-\u05FF]+" required>
                         <label class="form-label">ת"ז</label>
-                        <input type="number" class="form-control written" name="id_number" min="0" max="9999999999">
+                        <input type="number" class="form-control written" name="id_number" min="0" max="9999999999"
+                            required>
                         <label class="form-label"> מחלקה</label>
-                        <select name="name-department" class="form-select" id="name-department-select" required>
+                        <select name="name-department" class="form-select" id="addUser-select" required>
                             <option value="דימות" selected>דימות</option>
                         </select>
                     </section>
-
                     <section class="addUser-form-inputs-wrapper">
                         <label class="form-label">שם משפחה</label>
                         <input type="text" class="form-control written" name="last_name"
-                            pattern="[A-Za-z\u0590-\u05FF]+">
-
+                            pattern="[A-Za-z\u0590-\u05FF]+" required>
                         <label class="form-label"> סיסמא</label>
-                        <input type="password" class="form-control" name="password">
-
+                        <input type="password" class="form-control" name="password" required>
                         <label>אימייל</label>
                         <input type="email" class="form-control written" name="mail"
-                            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+                            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
                     </section>
                 </section>
                 <section class="addUser-form-inputs-wrapper">
                     <label class="form-label">סוג משתמש</label>
-                    <select name="name-department" class="form-select" id="name-department-select" required>
+                    <select name="user-type" class="form-select" required>
                         <option value="user">user</option>
                         <option value="admin">admin</option>
                     </select>
                 </section>
                 <input type="submit" id="addUser-submit-button" class="btn btn-primary" value="שמור"
-                    name="update-profile_data">
-
+                    name="add-profile_data">
             </form>
-
-
-
         </section>
+        <!-- Modal-Success-Message -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" id="appointment-modal-header">
+                        <h4 class="modal-title" id="successModalLabel">אישור</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="addUser-modal-body">
+                        <i class="fa-solid fa-check" id="appointment-modal-check"></i>
+                        <span>משתמש חדש נרשם בהצלחה</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal-Success-Message -->
     </main>
     <script src="js/script.js"></script>
 </body>
