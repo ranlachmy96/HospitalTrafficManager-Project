@@ -96,7 +96,15 @@ window.onload = function () {
     });
 
   } else if (window.location.pathname.includes("/list.php")) {
-
+    new DataTable('#example', {
+      ordering: false,
+      paging: false,
+      language: {
+        searchPlaceholder: "חיפוש",
+        search: "",
+        processing: "<i class='fas fa-search'></i>" // Change 'fa-solid' to 'fas' for Font Awesome 6
+      }
+    });
     // Get all delete buttons
     var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
 

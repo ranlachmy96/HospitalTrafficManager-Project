@@ -1,7 +1,7 @@
 <?php
 include "db.php";
 include "config.php"
-  ?>
+?>
 
 <?php
 session_start();
@@ -9,7 +9,6 @@ if (!$_SESSION["user_id"]) {
   echo "no user id";
   header('Location:' . URL . 'index.php');
 }
-
 ?>
 
 
@@ -32,9 +31,9 @@ mysqli_stmt_execute($stmt);
 $result1 = mysqli_stmt_get_result($stmt);
 
 if ($result1) {
-    $row1 = mysqli_fetch_assoc($result1);
+  $row1 = mysqli_fetch_assoc($result1);
 } else {
-    die("DB query failed.");
+  die("DB query failed.");
 }
 ?>
 
@@ -61,6 +60,9 @@ if ($result1) {
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -69,7 +71,7 @@ if ($result1) {
   <header>
     <section id="mobile-profile-picture">
       <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-      <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?>
+      <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
 
     </section>
     <section class="logo-con">
@@ -126,11 +128,16 @@ if ($result1) {
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
             <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
-            <?php echo '<img src="' . $row1["img_user_menu"] . '">' ; ?>
+            <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
 
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
+            <?php
+            if ($_SESSION["user_type"] == "admin") {  
+              echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
+            }
+            ?>
             <li><a class="dropdown-item" href="#">הגדרות</a></li>
             <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
           </ul>
@@ -198,7 +205,7 @@ if ($result1) {
       </section>
       <!-- form search -->
       <section class="container-list">
-        <section class="center-form-search">
+        <!-- <section class="center-form-search">
           <section class="form_container">
             <form id="search-list">
               <div class="form-control-wrapper">
@@ -208,7 +215,7 @@ if ($result1) {
               </div>
             </form>
           </section>
-        </section>
+        </section> -->
         <section class="search-wrapper-pluse">
           <section class="plus">
             <a href="appointment.php">
@@ -222,7 +229,7 @@ if ($result1) {
       <br>
       <!-- list patients -->
       <section class="list-Wrapper-table">
-        <table class="table">
+        <table class="table" id="example">
           <thead>
             <tr>
               <th></th>
@@ -309,8 +316,8 @@ if ($result1) {
               <input type="text" class="form-control written" name="first_name" value=""
                 pattern="[A-Za-z\u0590-\u05FF]+" id="first_name">
               <label>שם משפחה</label>
-              <input type="text" class="form-control written" name="last_name" value=""
-                pattern="[A-Za-z\u0590-\u05FF]+" id="last_name">
+              <input type="text" class="form-control written" name="last_name" value="" pattern="[A-Za-z\u0590-\u05FF]+"
+                id="last_name">
               <label>גיל</label>
               <input type="number" class="form-control" name="age" min="0" max="120 " value="" id="age">
               <label>מגדר</label>
