@@ -71,7 +71,7 @@ if ($result1) {
   <header>
     <section id="mobile-profile-picture">
       <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-      <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?>
+      <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?> -->
 
     </section>
     <section class="logo-con">

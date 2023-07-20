@@ -326,6 +326,74 @@ window.onload = function () {
       generateCalendarDays(currentDate.getFullYear(), currentDate.getMonth());
     });
 
+//// add to calender
+function updateCurrentDayCell(year, month) {
+  const daysContainer = document.getElementById("calendar-days");
+  const dayCells = daysContainer.getElementsByClassName("day-cell");
+
+  // Get the current date
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  const currentDay = currentDate.getDate();
+
+  // Loop through all day cells and add/remove the "current-day" class based on the date
+  for (let i = 0; i < dayCells.length; i++) {
+    const dayCell = dayCells[i];
+    const cellYear = year;
+    const cellMonth = month;
+    const cellDay = parseInt(dayCell.textContent);
+
+    if (cellYear === currentYear && cellMonth === currentMonth && cellDay === currentDay) {
+      dayCell.classList.add("current-day");
+    } else {
+      dayCell.classList.remove("current-day");
+    }
+  }
+}
+
+function generateCalendarDays(year, month) {
+  const daysContainer = document.getElementById("calendar-days");
+  const currentMonthElement = document.getElementById("current-month");
+
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
+
+  // Clear the previous days
+  daysContainer.innerHTML = "";
+
+  // Update the current month in the title
+  currentMonthElement.textContent = new Date(year, month).toLocaleString(
+    "default",
+    { month: "long", year: "numeric" }
+  );
+
+  // Create empty cells for days of the week before the first day of the month
+  for (let i = 0; i < firstDayOfMonth; i++) {
+    const emptyCell = document.createElement("div");
+    emptyCell.classList.add("empty-cell");
+    daysContainer.appendChild(emptyCell);
+  }
+
+  // Create cells for each day of the month
+  for (let day = 1; day <= totalDaysInMonth; day++) {
+    const dayCell = document.createElement("div");
+    dayCell.textContent = day;
+    dayCell.classList.add("day-cell");
+    daysContainer.appendChild(dayCell);
+  }
+
+  // Update the current day cell within the right month
+  updateCurrentDayCell(year, month);
+}
+
+
+
+
+
+
+
+
 
 
     // task

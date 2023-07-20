@@ -206,7 +206,7 @@ a.nav-link.active {
     #logo-mobile {
         width: 117px;
         height: 34px;
-        background: url("../images/mobile_logo.png");
+        background: url("../images/h.t.m-logo-mobile.png");
         background-repeat: no-repeat;
     }
 
@@ -304,7 +304,7 @@ a.nav-link.active {
 
     #second-logo-mobile {
         display: block;
-        background: url("../images/menu_mobile_logo.png");
+        background: url("../images/h.t.m-logo-mobile.png");
         background-repeat: no-repeat;
         width: 127px;
         height: 104px;
@@ -1572,12 +1572,12 @@ table.dataTable>tbody>tr {
 
 } */
 .table-dashboard td.tbl-color-dashboard-red  {
-    background-color: red ;
+    background-color: #FF4E4E ;
 }
 
 /* Orange background for rows where 0 <= (current - capacity) <= 10 */
 .table-dashboard td.tbl-color-dashboard-orange {
-    background-color: orange;
+    background-color: #F49754;
 }
 
 /* Blue background for rows where (current - capacity) < 0 */
@@ -1628,6 +1628,7 @@ table.dataTable>tbody>tr {
     padding: 5px;
     text-align: center;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .header-calnder {
@@ -1644,6 +1645,9 @@ table.dataTable>tbody>tr {
     height: 30px;
     background: #fff;
 }
+.current-day {
+    background-color: #82BEDD; /* Replace this with the color you want for the current day */
+  }
 
 
 /* message board */
@@ -1945,10 +1949,19 @@ table.dataTable>tbody>tr {
     #logo-mobile {
         display: block;
         width: 117px;
-        height: 34px;
-        background: url(../images/mobile_logo.png);
+        height: 43px;
+        background: url(../images/h.t.m-logo-mobile.png);
         background-repeat: no-repeat;
     }
+
+    .index-backgorund-img {
+        background: url("../images/login-img-background-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+
+
 }
 
 
@@ -2114,7 +2127,7 @@ table.dataTable>tbody>tr {
 
 #addUser-submit-button {
     background-color: #5BC0DE;
-    width: 20%;
+    width: 25%;
     border-radius: 20px;
     margin-top: 5%;
     color: #fff;
