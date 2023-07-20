@@ -74,8 +74,8 @@ if ($result) {
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo">
-            <?php echo '<img src="' . $row["img_user_menu_mobile"] . '">' ; ?>
+            <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
+            <?php echo '<img src="' . $row["img_user_menu_mobile"] . '">'; ?>
 
         </section>
         <section class="logo-con">
@@ -102,11 +102,11 @@ if ($result) {
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
                     <li class="divider-item"><a href="logout.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-                    <li class="white-color-divide"></li>
+                    <!-- <li class="white-color-divide"></li>
 
                     <li>
                         <a href="index.php" id="second-logo-mobile"></a>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
 
@@ -130,11 +130,16 @@ if ($result) {
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
                         <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
-                    
-                        <?php echo '<img src="' . $row["img_user_menu"] . '">' ; ?>
+
+                        <?php echo '<img src="' . $row["img_user_menu"] . '">'; ?>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
+                        <?php
+                        if ($_SESSION["user_type"] == "admin") {
+                            echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
+                        }
+                        ?>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
                         <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>
@@ -153,7 +158,7 @@ if ($result) {
         <div class="editProfile-Container-out">
             <div class="editProfile-img">
                 <!-- <img src="images/hanna-profile-edit.png"> -->
-                <?php echo '<img src="' . $row["img_user"] . '">' ; ?>
+                <?php echo '<img src="' . $row["img_user"] . '">'; ?>
             </div>
             <div class="editProfile-Container">
                 <div class="editProfile-Container-inner">

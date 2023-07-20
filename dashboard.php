@@ -93,10 +93,10 @@ if ($result1) {
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
                     <li class="divider-item"><a href="logout.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-                    <li class="white-color-divide"></li>
+                    <!-- <li class="white-color-divide"></li>
                     <li>
                         <a href="index.php" id="second-logo-mobile"></a>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
             <!-- web -->
@@ -125,6 +125,11 @@ if ($result1) {
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
+                        <?php
+                        if ($_SESSION["user_type"] == "admin") {
+                            echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
+                        }
+                        ?>
                         <li><a class="dropdown-item" href="#">הגדרות</a></li>
                         <li><a class="dropdown-item" href="logout.php">התנתקות</a></li>
                     </ul>
@@ -136,43 +141,43 @@ if ($result1) {
 
         <!-- chart -->
 
-    
-            <div class="graphbox">
-              
-                <div class="box">
-                    <h4>ניטור קיבולת מטופלים: מחלקת דימות</h4>
 
-                    <div class="chart-size"> <canvas id="myChart"></canvas></div>
-                </div>
-                <div class="box box-row2-col2">
-                    <h4>מכסה מטופלים -עומס</h4>
-                    <div class="chart-size"><canvas id="myChartload" class="myChartload1"></canvas></div>
-                </div>
-                <div class="box box-calendar">
-                    <!-- calender -->
-                    <div class="calendar">
-                        <div class="header-calnder">
-                            <button id="prevBtn">&lt;</button>
-                            <div class="month" id="current-month">יולי 2023</div>
-                            <button id="nextBtn">&gt;</button>
-                        </div>
-                        <div class="weekdays">
-                            <div class="day">ראשון</div>
-                            <div class="day">שני</div>
-                            <div class="day">שלישי</div>
-                            <div class="day">רביעי</div>
-                            <div class="day">חמישי</div>
-                            <div class="day">שישי</div>
-                            <div class="day">שבת</div>
-                        </div>
-                        <div class="days" id="calendar-days">
-                        </div>
+        <div class="graphbox">
+
+            <div class="box">
+                <h4>ניטור קיבולת מטופלים: מחלקת דימות</h4>
+
+                <div class="chart-size"> <canvas id="myChart"></canvas></div>
+            </div>
+            <div class="box box-row2-col2">
+                <h4>מכסה מטופלים -עומס</h4>
+                <div class="chart-size"><canvas id="myChartload" class="myChartload1"></canvas></div>
+            </div>
+            <div class="box box-calendar">
+                <!-- calender -->
+                <div class="calendar">
+                    <div class="header-calnder">
+                        <button id="prevBtn">&lt;</button>
+                        <div class="month" id="current-month">יולי 2023</div>
+                        <button id="nextBtn">&gt;</button>
+                    </div>
+                    <div class="weekdays">
+                        <div class="day">ראשון</div>
+                        <div class="day">שני</div>
+                        <div class="day">שלישי</div>
+                        <div class="day">רביעי</div>
+                        <div class="day">חמישי</div>
+                        <div class="day">שישי</div>
+                        <div class="day">שבת</div>
+                    </div>
+                    <div class="days" id="calendar-days">
                     </div>
                 </div>
-        
+            </div>
 
 
-<!-- row2 -->
+
+            <!-- row2 -->
 
             <div class="box box-task-manager">
                 <div class="task-manager">
@@ -233,11 +238,11 @@ if ($result1) {
                     </table>
                 </div>
             </div>
-            </div>
+        </div>
 
 
-<!-- row 3 -->
-<div class="dashbord-list-Patients">
+        <!-- row 3 -->
+        <div class="dashbord-list-Patients">
             <div class="box box-list">
                 <!-- list patients -->
                 <section class="list-Wrapper-table">
@@ -284,11 +289,46 @@ if ($result1) {
                 ?>
                 </section>
             </div>
+        </div>
+        <div class="dashboard-mobile">
+
+            <div class="dashboard-mobile-grid">
+                <div class="dashboard-box-mobile">
+                    <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
+                  
+                    <a class="nav-wrapper" href="list.php">
+                        <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
+                    </a>
+                </div>
+                <div class="dashboard-box-mobile">
+                <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
+                  
+                  <a class="nav-wrapper" href="#">
+                  <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
+                  </a>
+
+                </div>
+                <div class="dashboard-box-mobile">
+
+                <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
+                  
+                  <a class="nav-wrapper" href="logout.php">
+                  <i class="fa-solid fa-arrow-right-from-bracket"id="size-mobile-icon3"></i>
+                </a>
+                </div>
+                
+
+
+
+
             </div>
+        </div>
 
 
-           
-        
+
+
+
+
 
 
     </main>
