@@ -65,10 +65,11 @@ if ($result1) {
         </section>
         <nav>
             <section>
-                <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
+               
+            <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
-
                 <ul class="mobile-menu">
+
                     <li class="divider-item" id="mobile-menu-header">תפריט</li>
 
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
@@ -182,7 +183,7 @@ if ($result1) {
                                     </select>
                                     <br>
                                     <label class="form-label"> תאריך</label>
-                                    <input type="date" class="form-control written" name="date" value="">
+                                    <input type="date" class="form-control written" name="date" id="dateInput" value="" min="">
                                 </div>
                                 <div id="appointment-second-wrapper">
                                     <label class="form-label">שם משפחה</label>
@@ -233,12 +234,14 @@ if ($result1) {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header" id="appointment-modal-header">
-                            <h4 class="modal-title" id="successModalLabel">אישור</h4>
+                            <h4 class="modal-title" id="successModalLabel">הודעה</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body" id="appointment-modal-body">
+                        <span id="appointment-error-message"><i class="fa-solid fa-xmark" id="appointment-modal-error"></i>
+                            אחד מהנתונים שהוזנו קיימים כבר במערכת</span>
                             <i class="fa-solid fa-check" id="appointment-modal-check"></i>
-                            <span>התור נקבע <br> בהצלחה</span>
+                            <span id="appointment-success-message">התור נקבע <br> בהצלחה</span>
                             <div class="appointment-divider-line"></div>
                             <section id="appointment-modal-body-second-part">
                                 <i class="fa-solid fa-calendar-check" id="appointment-modal-calendar"></i>
