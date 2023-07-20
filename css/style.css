@@ -222,7 +222,7 @@ a.nav-link.active {
         align-items: center;
         position: fixed; */
         position: absolute;
-        display: block;
+        display: none;
         list-style: none;
         direction: rtl;
         top: 0;
@@ -264,6 +264,9 @@ a.nav-link.active {
 
     nav input:checked~.mobile-menu {
         right: 0;
+    }
+    .mobile-toggle-menu:checked ~ .mobile-menu {
+        display: block;
     }
 
     .white-color {
