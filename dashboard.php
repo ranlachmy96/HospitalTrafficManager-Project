@@ -84,9 +84,11 @@ if ($result1) {
                 <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
-                    
-                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
-                       <li class="divider-item-space"></li>
+
+                    <li id="mobile-menu-header">
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?>
+                    </li>
+                    <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
@@ -96,8 +98,8 @@ if ($result1) {
                     <!-- <li class="divider-item-space"></li> -->
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    
-                                
+
+
                     <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
                     <?php
                     if ($_SESSION["user_type"] == "admin") {
@@ -308,24 +310,16 @@ if ($result1) {
         <div class="dashboard-mobile">
             <div class="dashboard-mobile-Container">
                 <div class="dashboard-mobile-h3">
-                            <div class="dashboard-flex-h4">
-                            <h4>הודעות אחרונות</h4>
-                            <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
-                        </div>
+                    <div class="dashboard-flex-h4">
+                        <h4>הודעות אחרונות</h4>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successModal">
+                        <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                        <span class="new-message-icon"></span>
+                        </button>
+                    </div>
                 </div>
-
-
                 <div class="dashboard-mobile-divider"></div>
-                <div class="dashboard-mobile-h4">
-                    <div>
-                        <h4>הודעת מערכת</h4>
-                    </div>
-                    <div>
-                        <h4> עומס קל בבדיקה ראשונית</h4>
-                    </div>
-                    <div>
-                        <h4> 9:30</h4>
-                    </div>
+                <div class="dashboard-mobile-h4" id="h4Container">
                 </div>
             </div>
 
@@ -352,22 +346,30 @@ if ($result1) {
 
                 </div>
                 <div class="dashboard-box-mobile">
-
                     <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
 
                     <a class="nav-wrapper" href="logout.php">
                         <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal-Success-Message -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" id="appointment-modal-header">
+                        <h4 class="modal-title" id="successModalLabel">לוח הודעות</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="dashboard-modal-body">
+                    </div>
 
                 </div>
             </div>
-
         </div>
-
-
+        <!-- Modal-Success-Message -->
     </main>
-
-
     <script src="js/script.js"></script>
 </body>
 

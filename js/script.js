@@ -119,7 +119,7 @@ window.onload = function () {
         searchPlaceholder: "חיפוש",
         search: "",
       },
-       // or any other desired value
+      // or any other desired value
     });
     // Get all delete buttons
     var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
@@ -368,55 +368,91 @@ window.onload = function () {
     }
 
 
-//////save button alert
-   //check
-   const saveButton = document.getElementById('dashboard-box-mobile-savebutton');
-   const messageOverlay = document.getElementById('message-overlay');
-   const messageText = document.getElementById('message-text');
+    //////save button alert
+    //check
+    const saveButton = document.getElementById('dashboard-box-mobile-savebutton');
+    const messageOverlay = document.getElementById('message-overlay');
+    const messageText = document.getElementById('message-text');
 
-   saveButton.addEventListener("click", function () {
-     // Show the message overlay
-     messageOverlay.style.display = "block";
+    saveButton.addEventListener("click", function () {
+      // Show the message overlay
+      messageOverlay.style.display = "block";
 
-     // Set the message text
-     messageText.textContent = "ההתראה נשלחה בהצלחה";
+      // Set the message text
+      messageText.textContent = "ההתראה נשלחה בהצלחה";
 
-     // Hide the message overlay after a delay (e.g., 3 seconds)
-     setTimeout(function () {
-       messageOverlay.style.display = "none";
-     }, 2000);
-   });
-
-
+      // Hide the message overlay after a delay (e.g., 3 seconds)
+      setTimeout(function () {
+        messageOverlay.style.display = "none";
+      }, 2000);
+    });
 
 
 
 
 
 
+    let alertFlag = 0;
     const rows = document.querySelectorAll(".colored-row");
     for (let i = 0; i < rows.length; i++) {
-        const tds = rows[i].querySelectorAll(".color-according"); // Get all <td> elements with class "color-according" within the row
-        const current = parseInt(tds[3].textContent); // Index 3 for "dash-current"
-        const capacity = parseInt(tds[2].textContent); // Index 2 for "dash-capacity"
-    
-        if ((current - capacity) > 10) {
-            for (let j = 0; j < tds.length; j++) {
-                tds[j].classList.add("tbl-color-dashboard-red");
-            }
-        } else if ((current - capacity) >= 0) {
-            for (let j = 0; j < tds.length; j++) {
-                tds[j].classList.add("tbl-color-dashboard-orange");
-            }
-        } else {
-            for (let j = 0; j < tds.length; j++) {
-                tds[j].classList.add("tbl-color-dashboard");
-            }
+      const tds = rows[i].querySelectorAll(".color-according"); // Get all <td> elements with class "color-according" within the row
+      const current = parseInt(tds[3].textContent); // Index 3 for "dash-current"
+      const capacity = parseInt(tds[2].textContent); // Index 2 for "dash-capacity"
+
+      if ((current - capacity) > 10) {
+        for (let j = 0; j < tds.length; j++) {
+          tds[j].classList.add("tbl-color-dashboard-red");
         }
+      } else if ((current - capacity) >= 0) {
+        alertFlag = 1;
+        for (let j = 0; j < tds.length; j++) {
+          tds[j].classList.add("tbl-color-dashboard-orange");
+        }
+      } else {
+        for (let j = 0; j < tds.length; j++) {
+          tds[j].classList.add("tbl-color-dashboard");
+        }
+      }
     }
     
-    
- 
+    function insertContent() {
+      if (alertFlag === 1) {
+        // Insert the h4 tags into the specified location
+        const h4Container = document.getElementById('h4Container');
+        h4Container.innerHTML = `
+              <div>
+                  <h4>הודעת מערכת</h4>
+              </div>
+              <div>
+                  <h4> עומס קל במחלקת דימות </h4>
+              </div>
+              <div>
+                  <h4> 9:30</h4>
+              </div>
+          `;
+
+        // Fetch the JSON data
+        
+        fetch("data/messages.json")
+          .then(response => response.json())
+          .then(data => {
+            // Get the messages array from the JSON data
+            const messages = data.data;
+
+            // Create a string containing the messages as separate paragraphs
+            const messagesHTML = messages.map(message => `<p>${message}</p>`).join('');
+
+            // Insert the messages into the modal body
+            const modalBody = document.getElementById('dashboard-modal-body');
+            modalBody.innerHTML = messagesHTML;
+          })
+          .catch(error => console.error("Error fetching JSON:", error));
+      }
+    }
+
+    // Call the function to insert the content
+    insertContent();
+
 
 
   } else if (window.location.pathname.includes("/addUsers.php")) {
