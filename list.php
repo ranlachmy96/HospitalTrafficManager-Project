@@ -1,7 +1,7 @@
 <?php
 include "db.php";
 include "config.php"
-?>
+  ?>
 
 <?php
 session_start();
@@ -64,7 +64,7 @@ if ($result1) {
   <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>List</title>
 </head>
 
 <body>
@@ -134,7 +134,7 @@ if ($result1) {
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
             <?php
-            if ($_SESSION["user_type"] == "admin") {  
+            if ($_SESSION["user_type"] == "admin") {
               echo '<li><a class="dropdown-item" href="addUsers.php">הוספת משתמש</a></li>';
             }
             ?>
@@ -248,6 +248,17 @@ if ($result1) {
           </thead>
           <tbody>
             <?php
+            $query = "SELECT * FROM tbl_213_patients ORDER BY 
+            CASE urgency
+              WHEN 'קשה' THEN 1
+              WHEN 'בינוני' THEN 2
+              WHEN 'קל' THEN 3
+              ELSE 4  -- Handles any other urgency value that may exist
+            END DESC,
+            STR_TO_DATE(date, '%Y-%m-%d') ASC";
+
+            $result = mysqli_query($connection, $query);
+
             while ($row = mysqli_fetch_assoc($result)) {
               echo '<tr>';
               echo '<td class="list-icons">
