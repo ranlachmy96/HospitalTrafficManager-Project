@@ -994,10 +994,18 @@ table.dataTable>tbody>tr {
     flex-flow: column;
 
 }
-
 #appointment-modal-check {
     color: #6CFC95;
     font-size: 35px;
+}
+#appointment-modal-error{
+    color: #bd3b3b;
+    font-size: 35px;
+}
+#appointment-error-message{
+    display: flex;
+    flex-flow: column-reverse;
+    
 }
 
 #appointment-modal-calendar {
@@ -1308,7 +1316,7 @@ table.dataTable>tbody>tr {
 
     .nav-fill .nav-item,
     .nav-fill>.nav-link {
-        flex: 50%;
+        /* flex: 50%; */
         text-align: center;
     }
 

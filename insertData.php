@@ -3,8 +3,26 @@ include "db.php";
 
 if (isset($_GET["insert_data"])) {
     mysqli_set_charset($connection, "utf8mb4");
-    $newPatientId = 'D' . rand(10, 99);
+    function generatePatientId() {
+        return 'D' . rand(10, 99);
+    }
+    // Generate a new unique patient ID
+    do {
+        $newPatientId = generatePatientId();
+        $existingIdQuery = "SELECT COUNT(*) as count FROM tbl_213_patients WHERE `id_number` = '$newPatientId'";
+        $count = mysqli_fetch_assoc(mysqli_query($connection, $existingIdQuery))['count'];
+    } while ($count > 0);
 
+    $id = $_GET["id_number"];
+
+    // Check if $id already exists in the database
+    $existingIdQuery = "SELECT COUNT(*) as count FROM tbl_213_patients WHERE `id` = '$id'";
+    $count = mysqli_fetch_assoc(mysqli_query($connection, $existingIdQuery))['count'];
+
+    if ($count > 0) {
+        header('location:appointment.php?failure=true');
+        exit; // Stop further execution of the script
+    }
     $id = $_GET["id_number"];
     $pnm = $_GET["first_name"];
     $lnm = $_GET["last_name"];

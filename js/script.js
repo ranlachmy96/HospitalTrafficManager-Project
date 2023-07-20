@@ -29,6 +29,7 @@ window.onload = function () {
       option.textContent = i;
       ageSelect.appendChild(option);
     }
+    document.getElementById("dateInput").min = new Date().toISOString().split("T")[0];
 
     const submitButton = document.getElementById("submit-button");
     const inputs = Array.from(document.getElementsByClassName("written"));
@@ -44,18 +45,33 @@ window.onload = function () {
 
     const urlParams = new URLSearchParams(window.location.search);
     const success = urlParams.get('success');
+    const failure = urlParams.get('failure'); 
     const date = urlParams.get('date');
     const time = urlParams.get('time');
 
-    if (success === 'true') {
-      $(document).ready(function () {
-        $('#successModal').modal('show');
+    $(document).ready(function () {
+      if (success === 'true') {
+        $('#appointment-modal-error').hide();
+        $('#appointment-error-message').hide(); // Hide the error elements
+        $('#appointment-modal-check').show(); // Show the success elements
+        $('.appointment-divider-line').show()
+        $('#appointment-modal-body-second-part').show();
+        $('#appointment-modal-body-third-part').show();
+        $('#appointment-success-message').show();
         $('#appointment-modal-calendar').after('<span>' + date + '</span>');
         $('#appointment-modal-clock').after('<span>' + time + '</span>');
-      });
-    }
-
-
+        $('#successModal').modal('show');
+      } else if (failure === 'true') {
+        $('#appointment-modal-error').show(); // Show the error elements
+        $('#appointment-error-message').show(); 
+        $('#appointment-success-message').hide();
+        $('#appointment-modal-check').hide(); // Hide the success elements
+        $('#appointment-modal-body-second-part').hide();
+        $('#appointment-modal-body-third-part').hide();
+        $('.appointment-divider-line').hide();
+        $('#successModal').modal('show'); // Add the id of the failure modal here
+      }
+    });
   } else if (window.location.pathname.includes('/patientProfile.php')) {
     //check
     const saveButton = document.getElementById('save-info-profile-changes');
@@ -74,26 +90,26 @@ window.onload = function () {
         messageOverlay.style.display = "none";
       }, 2000);
     });
-    
+
     fetch("data/medicalHistory.json")
-    .then(response => response.json())
-    .then(data => {
+      .then(response => response.json())
+      .then(data => {
         var ulElement = document.querySelector("#medical-history-tab-pane ul");
         var desiredId = document.querySelector('[data-title="תעודת זהות"]').textContent;
-        
+
         for (var i = 0; i < data.patients.length; i++) {
-            if (data.patients[i].id === desiredId) {
-                for (var prop in data.patients[i]) {
-                    if (prop !== "id") {
-                        var liEvent = document.createElement("li");
-                        liEvent.textContent = prop + ": " + data.patients[i][prop];
-                        ulElement.appendChild(liEvent);
-                    }
-                }
-                break;
+          if (data.patients[i].id === desiredId) {
+            for (var prop in data.patients[i]) {
+              if (prop !== "id") {
+                var liEvent = document.createElement("li");
+                liEvent.textContent = prop + ": " + data.patients[i][prop];
+                ulElement.appendChild(liEvent);
+              }
             }
+            break;
+          }
         }
-    });
+      });
 
   } else if (window.location.pathname.includes("/list.php")) {
     new DataTable('#example', {
@@ -183,10 +199,10 @@ window.onload = function () {
       },
       options: {
         responsive: true,
-        maintainAspectRatio:false,
-        resizeDelay:0.5,
-        
-       
+        maintainAspectRatio: false,
+        resizeDelay: 0.5,
+
+
       },
     });
 
@@ -204,9 +220,9 @@ window.onload = function () {
       },
       options: {
         responsive: true,
-        maintainAspectRatio:false,
-        resizeDelay:0.5,
-     
+        maintainAspectRatio: false,
+        resizeDelay: 0.5,
+
       },
     });
 
@@ -237,9 +253,9 @@ window.onload = function () {
       },
       options: {
         responsive: true,
-        maintainAspectRatio:false,
-        resizeDelay:0.5,
-    
+        maintainAspectRatio: false,
+        resizeDelay: 0.5,
+
       },
     });
 
@@ -362,8 +378,8 @@ window.onload = function () {
 
   } else if (window.location.pathname.includes("/addUsers.php")) {
 
-     // Example starter JavaScript for disabling form submissions if there are invalid fields
-     (() => {
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
       "use strict";
       // Fetch all the forms we want to apply custom Bootstrap validation styles to
       const forms = document.querySelectorAll(".needs-validation");
