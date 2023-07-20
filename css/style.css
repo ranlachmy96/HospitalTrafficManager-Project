@@ -216,26 +216,29 @@ a.nav-link.active {
     }
 
     .mobile-menu {
-        display: flex;
+        /* display: flex;
         justify-content: start;
         flex-direction: column;
         align-items: center;
-        position: fixed;
+        position: fixed; */
+        position: absolute;
+        display: block;
         list-style: none;
         direction: rtl;
         top: 0;
         right: -300px;
-
-        height: 100%;
-
+        height: 100vh;
         transition: 0.3s;
-
         background-color: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-        /* z-index: 999; */
+        z-index: 1;
 
     }
 
+    .img-menu-aside {
+
+        width: 50%;
+    }
 
 
     .mobile-menu li {
@@ -243,16 +246,16 @@ a.nav-link.active {
 
     }
 
-    .mobile-menu li:nth-child(11) {
+    /* .mobile-menu li:nth-child(11) {
         background-color: #fff;
         display: flex;
-        justify-content: center;
-    }
+        /* justify-content: center; */
+    /* } */
 
     .mobile-menu li a {
         display: block;
         color: #115A83;
-        padding: 20px;
+        padding: 15px;
         font-size: 16px;
         line-height: 1;
         transition: 0.3s;
@@ -283,7 +286,7 @@ a.nav-link.active {
     #mobile-menu-header {
 
         color: #115A83;
-        padding-bottom: 19%;
+        /* padding-bottom: 19%; */
         font-weight: bold;
         font-size: 16px;
 
@@ -332,8 +335,8 @@ a.nav-link.active {
 
     .divider-item-space {
         border-bottom: 1px solid gray;
-        margin-bottom: 10px;
-        margin-top: 30%;
+        /* margin-bottom: 10px; */
+        margin-top: 8%;
     }
 
 }
@@ -797,6 +800,9 @@ table.dataTable>tbody>tr {
         position: relative;
         /* z-index: -1; */
     }
+    #example {
+        z-index: -1; /* or any other desired value */
+      }
 
 
 }
@@ -994,18 +1000,21 @@ table.dataTable>tbody>tr {
     flex-flow: column;
 
 }
+
 #appointment-modal-check {
     color: #6CFC95;
     font-size: 35px;
 }
-#appointment-modal-error{
+
+#appointment-modal-error {
     color: #bd3b3b;
     font-size: 35px;
 }
-#appointment-error-message{
+
+#appointment-error-message {
     display: flex;
     flex-flow: column-reverse;
-    
+
 }
 
 #appointment-modal-calendar {
@@ -1731,6 +1740,7 @@ table.dataTable>tbody>tr {
     .dashboard-mobile {
         display: block;
         padding: 20px;
+        z-index: -1;
     }
 
     .dashboard-mobile-Container {
@@ -1762,11 +1772,12 @@ table.dataTable>tbody>tr {
     .dashboard-mobile-h4 h4 {
         font-size: 0.8em;
     }
-.dashboard-mobile-divider{
-    width: 100%;
-    height: 1%;
-    background-color: #575555;
-}
+
+    .dashboard-mobile-divider {
+        width: 100%;
+        height: 1%;
+        background-color: #575555;
+    }
 
 
 
@@ -1781,6 +1792,7 @@ table.dataTable>tbody>tr {
         width: 100%;
         justify-items: center;
         justify-content: center;
+
 
     }
 
@@ -1826,13 +1838,7 @@ table.dataTable>tbody>tr {
         padding: 0px;
     }
 
-    /* #example-table-dashboard{
-        text-align: center;
-        width: 20%;
-    }
-    #example-table-dashboard td,th{
-        font-size: 0.5em;
-    } */
+
 
 
 
@@ -1907,22 +1913,24 @@ table.dataTable>tbody>tr {
 /*----------------------------------- responsive-index--login -----------------------------------------*/
 
 @media (max-width: 992px) {
+    .index-form-box {
+        width: 65%;
+        height: 50%;
+    }
 
-    /* #frm {
-        direction: rtl;
+    .header-index {
         display: flex;
-        height: 100%;
-        flex-flow: column;
-        justify-content: space-evenly;
-        flex-direction: column;
-    } */
-    /* .form-control::placeholder {
-        text-align: center;
-        background-repeat: no-repeat, no-repeat;
-        background-position: left center, right center;
-        padding-left: 30px;
-    } */
+        justify-content: center;
+        align-items: center;
+    }
 
+    #logo-mobile {
+        display: block;
+        width: 117px;
+        height: 34px;
+        background: url(../images/mobile_logo.png);
+        background-repeat: no-repeat;
+    }
 }
 
 
@@ -1952,7 +1960,6 @@ table.dataTable>tbody>tr {
     gap: 40px;
 
 }
-
 
 
 .editProfile-Container {
@@ -2012,6 +2019,30 @@ table.dataTable>tbody>tr {
     background-color: #5BC0DE;
     width: 20%;
     border-radius: 20px;
+}
+
+
+/*-----------------------------------  responsive editProfile-Container -----------------------------------------*/
+@media (max-width: 992px) {
+    .editProfile-img img {
+        height: 40%;
+        width: 40%;
+    }
+
+
+    .editProfile-col1-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    #editProfile-submit-button {
+        background-color: #5BC0DE;
+        width: 30%;
+        border-radius: 20px;
+    }
+
 }
 
 

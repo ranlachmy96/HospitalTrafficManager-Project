@@ -118,8 +118,8 @@ window.onload = function () {
       language: {
         searchPlaceholder: "חיפוש",
         search: "",
-        processing: "<i class='fas fa-search'></i>" // Change 'fa-solid' to 'fas' for Font Awesome 6
-      }
+      },
+       // or any other desired value
     });
     // Get all delete buttons
     var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
@@ -367,7 +367,32 @@ window.onload = function () {
       deleteButton.addEventListener("click", deleteTask);
     }
 
-    // new DataTable('#example-table-dashboard');
+
+//////save button alert
+   //check
+   const saveButton = document.getElementById('dashboard-box-mobile-savebutton');
+   const messageOverlay = document.getElementById('message-overlay');
+   const messageText = document.getElementById('message-text');
+
+   saveButton.addEventListener("click", function () {
+     // Show the message overlay
+     messageOverlay.style.display = "block";
+
+     // Set the message text
+     messageText.textContent = "ההתראה נשלחה בהצלחה";
+
+     // Hide the message overlay after a delay (e.g., 3 seconds)
+     setTimeout(function () {
+       messageOverlay.style.display = "none";
+     }, 2000);
+   });
+
+
+
+
+
+
+
 
     const rows = document.querySelectorAll(".colored-row");
     for (let i = 0; i < rows.length; i++) {

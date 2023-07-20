@@ -79,34 +79,41 @@ if ($result1) {
       <a href="index.php" id="logo-mobile"></a>
     </section>
     <nav>
-      <section>
+         <!-- mobile -->
+         <section>
+                <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
+                <div class="hamburger"></div>
+                <ul class="mobile-menu">
+                    
+                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
+                       <li class="divider-item-space"></li>
+                    <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
+                    <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
+                    <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
+                    </li>
+                    <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
+                            מטופלים</a></li>
+                    <!-- <li class="divider-item-space"></li> -->
+                    <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
+                    
+                                
+                    <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
+                    <?php
+                    if ($_SESSION["user_type"] == "admin") {
+                        echo '<li><a href="addUsers.php"><i class="fa-solid fa-address-card"></i>&nbsp; הוספת משתמש</a></li>';
+                    }
+                    ?>
+                    <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
 
-        <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
-        <div class="hamburger"></div>
 
+                    <!-- <li class="white-color-divide"></li>
+                    <li>
+                        <a href="index.php" id="second-logo-mobile"></a>
+                    </li> -->
 
-        <ul class="mobile-menu">
-          <li class="divider-item" id="mobile-menu-header">תפריט</li>
-          <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
-          <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
-          <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
-          </li>
-          <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
-          </li>
-          <li class="divider-item-space"></li>
-          <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
-          <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-          <li class="divider-item"><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
-          </li>
-          <!-- <li class="white-color-divide"></li>
-
-          <li>
-            <a href="index.php" id="second-logo-mobile"></a>
-          </li>
-        </ul> -->
-
-
-      </section>
+                </ul>
+            </section>
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link" href="#">לוגיסטיקה</a>
