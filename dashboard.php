@@ -269,17 +269,17 @@ if ($result1) {
                         <tbody class="table-dashboard">
                             <?php
                             for ($i = 0; $i < 5 && $row = mysqli_fetch_assoc($result); $i++) {
-                                echo '<tr>';
-                                echo '<td class="tbl-color-dashboard"></td>';
-                                echo '<td class="tbl-color-dashboard" data-title="שם מחלקה">' . $row["name_department"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="קיבולת מטופלים">' . $row["capacity"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="כמות מטופלים כרגע">' . $row["Number_of_patients_currently"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title=" מצב קשה">' . $row["severe"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="מצב בינוני">' . $row["medium"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="מצב קל">' . $row["easy"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="כמות צוות רפואי">' . $row["quantity_of_medical_staff"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="אחראי מחלקה">' . $row["responsible_manager"] . '</td>';
-                                echo '<td class="tbl-color-dashboard" data-title="תפקיד">' . $row["type_responsible_manager"] . '</td>';
+                                echo '<tr class="colored-row">';
+                                echo '<td class="color-according"></td>';
+                                echo '<td class="color-according" data-title="שם מחלקה">' . $row["name_department"] . '</td>';
+                                echo '<td class="color-according dash-capacity" data-title="קיבולת מטופלים">' . $row["capacity"] . '</td>';
+                                echo '<td class="color-according dash-current" data-title="כמות מטופלים כרגע">' . $row["Number_of_patients_currently"] . '</td>';
+                                echo '<td class="color-according" data-title=" מצב קשה">' . $row["severe"] . '</td>';
+                                echo '<td class="color-according" data-title="מצב בינוני">' . $row["medium"] . '</td>';
+                                echo '<td class="color-according" data-title="מצב קל">' . $row["easy"] . '</td>';
+                                echo '<td class="color-according" data-title="כמות צוות רפואי">' . $row["quantity_of_medical_staff"] . '</td>';
+                                echo '<td  class="color-according" data-title="אחראי מחלקה">' . $row["responsible_manager"] . '</td>';
+                                echo '<td class="color-according"  data-title="תפקיד">' . $row["type_responsible_manager"] . '</td>';
                                 echo '<i class="bi bi-chevron-left"></i></a></td>';
                                 echo '</tr>';
                             }
@@ -296,12 +296,12 @@ if ($result1) {
         <div class="dashboard-mobile">
             <div class="dashboard-mobile-Container">
                 <div class="dashboard-mobile-h3">
-            <div class="dashboard-flex-h4">
-                    <h4>הודעות אחרונות</h4>
-                    <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                    <div class="dashboard-flex-h4">
+                        <h4>הודעות אחרונות</h4>
+                        <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                    </div>
                 </div>
-                </div>
-              
+
                 <div class="dashboard-mobile-divider"></div>
                 <div class="dashboard-mobile-h4">
                     <div>
@@ -316,37 +316,37 @@ if ($result1) {
                 </div>
             </div>
 
-        
 
 
 
 
-        <div class="dashboard-mobile-grid">
-            <div class="dashboard-box-mobile">
-                <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
 
-                <a class="nav-wrapper" href="list.php">
-                    <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
-                </a>
+            <div class="dashboard-mobile-grid">
+                <div class="dashboard-box-mobile">
+                    <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
+
+                    <a class="nav-wrapper" href="list.php">
+                        <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
+                    </a>
+                </div>
+                <div class="dashboard-box-mobile">
+                    <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
+
+                    <a class="nav-wrapper" href="#">
+                        <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
+                    </a>
+
+                </div>
+                <div class="dashboard-box-mobile">
+
+                    <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
+
+                    <a class="nav-wrapper" href="logout.php">
+                        <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
+                    </a>
+
+                </div>
             </div>
-            <div class="dashboard-box-mobile">
-                <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
-
-                <a class="nav-wrapper" href="#">
-                    <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
-                </a>
-
-            </div>
-            <div class="dashboard-box-mobile">
-
-                <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
-
-                <a class="nav-wrapper" href="logout.php">
-                    <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
-                </a>
-
-            </div>
-        </div>
 
         </div>
 

@@ -1556,6 +1556,22 @@ table.dataTable>tbody>tr {
 .table-dashboard th.tbl-color-dashboard {
     background-color: #5ab3ce;
 }
+/* .table-dashboard-body{
+
+} */
+.table-dashboard td.tbl-color-dashboard-red  {
+    background-color: red ;
+}
+
+/* Orange background for rows where 0 <= (current - capacity) <= 10 */
+.table-dashboard td.tbl-color-dashboard-orange {
+    background-color: orange;
+}
+
+/* Blue background for rows where (current - capacity) < 0 */
+.table-dashboard td.tbl-color-dashboard-blue {
+    background-color: blue;
+}
 
 
 /* calender */

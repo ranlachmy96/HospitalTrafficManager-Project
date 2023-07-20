@@ -45,7 +45,7 @@ window.onload = function () {
 
     const urlParams = new URLSearchParams(window.location.search);
     const success = urlParams.get('success');
-    const failure = urlParams.get('failure'); 
+    const failure = urlParams.get('failure');
     const date = urlParams.get('date');
     const time = urlParams.get('time');
 
@@ -63,7 +63,7 @@ window.onload = function () {
         $('#successModal').modal('show');
       } else if (failure === 'true') {
         $('#appointment-modal-error').show(); // Show the error elements
-        $('#appointment-error-message').show(); 
+        $('#appointment-error-message').show();
         $('#appointment-success-message').hide();
         $('#appointment-modal-check').hide(); // Hide the success elements
         $('#appointment-modal-body-second-part').hide();
@@ -165,9 +165,6 @@ window.onload = function () {
 
     // dashboard page
   } else if (window.location.pathname.includes("/dashboard.php")) {
-
-
-   
 
     // chart!
     const ctx = document.getElementById("myChart");
@@ -372,8 +369,29 @@ window.onload = function () {
 
     // new DataTable('#example-table-dashboard');
 
-
-
+    const rows = document.querySelectorAll(".colored-row");
+    for (let i = 0; i < rows.length; i++) {
+        const tds = rows[i].querySelectorAll(".color-according"); // Get all <td> elements with class "color-according" within the row
+        const current = parseInt(tds[3].textContent); // Index 3 for "dash-current"
+        const capacity = parseInt(tds[2].textContent); // Index 2 for "dash-capacity"
+    
+        if ((current - capacity) > 10) {
+            for (let j = 0; j < tds.length; j++) {
+                tds[j].classList.add("tbl-color-dashboard-red");
+            }
+        } else if ((current - capacity) >= 0) {
+            for (let j = 0; j < tds.length; j++) {
+                tds[j].classList.add("tbl-color-dashboard-orange");
+            }
+        } else {
+            for (let j = 0; j < tds.length; j++) {
+                tds[j].classList.add("tbl-color-dashboard");
+            }
+        }
+    }
+    
+    
+ 
 
 
   } else if (window.location.pathname.includes("/addUsers.php")) {

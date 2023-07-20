@@ -6,7 +6,6 @@ include "config.php"
 <?php
 session_start();
 if (!$_SESSION["user_id"]) {
-    echo "no user id";
     header('Location:' . URL . 'index.php');
 }
 
