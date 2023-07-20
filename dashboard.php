@@ -329,12 +329,18 @@ if ($result1) {
                     <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
                 </a>
             </div>
-            <div class="dashboard-box-mobile">
+            <div class="dashboard-box-mobile" id="dashboard-box-mobile-savebutton">
                 <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
 
                 <a class="nav-wrapper" href="#">
                     <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
                 </a>
+                <div id="message-overlay">
+            <div id="message-box">
+              <span id="message-text"></span>
+              <i class="bi bi-check-lg"></i>
+            </div>
+          </div>
 
             </div>
             <div class="dashboard-box-mobile">

@@ -1810,13 +1810,7 @@ table.dataTable>tbody>tr {
         padding: 0px;
     }
 
-    /* #example-table-dashboard{
-        text-align: center;
-        width: 20%;
-    }
-    #example-table-dashboard td,th{
-        font-size: 0.5em;
-    } */
+   
 
 
 
@@ -1906,6 +1900,23 @@ table.dataTable>tbody>tr {
         background-position: left center, right center;
         padding-left: 30px;
     } */
+
+    .index-form-box {
+        width: 65%;
+        height: 50%;
+    }
+    .header-index {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo-mobile {
+        display: block;
+        width: 117px;
+        height: 34px;
+        background: url(../images/mobile_logo.png);
+        background-repeat: no-repeat;
+    }
 
 }
 
