@@ -71,7 +71,7 @@ if ($result1) {
   <header>
     <section id="mobile-profile-picture">
       <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-      <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
+      <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> -->
 
     </section>
     <section class="logo-con">
@@ -79,33 +79,42 @@ if ($result1) {
       <a href="index.php" id="logo-mobile"></a>
     </section>
     <nav>
+      <!-- mobile -->
       <section>
         <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
         <div class="hamburger"></div>
         <ul class="mobile-menu">
-          <li class="divider-item" id="mobile-menu-header">תפריט</li>
 
+          <li id="mobile-menu-header">
+            <?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?>
+          </li>
+          <li class="divider-item-space"></li>
           <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
           <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
           <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
           </li>
-          <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת מטופלים</a>
-          </li>
-
-          <li class="divider-item-space"></li>
+          <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
+              מטופלים</a></li>
+          <!-- <li class="divider-item-space"></li> -->
           <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
           <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-          <li class="divider-item"><a href="logout.php"><i
-                class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a>
-          </li>
+
+
+          <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
+          <?php
+          if ($_SESSION["user_type"] == "admin") {
+            echo '<li><a href="addUsers.php"><i class="fa-solid fa-address-card"></i>&nbsp; הוספת משתמש</a></li>';
+          }
+          ?>
+          <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+
+
           <!-- <li class="white-color-divide"></li>
+                    <li>
+                        <a href="index.php" id="second-logo-mobile"></a>
+                    </li> -->
 
-          <li>
-            <a href="index.php" id="second-logo-mobile"></a>
-          </li> -->
         </ul>
-
-
       </section>
       <ul class="nav nav-tabs">
 
@@ -145,6 +154,7 @@ if ($result1) {
       </ul>
     </nav>
   </header>
+
 
   <main>
     <section id="listWrapper">
@@ -289,6 +299,8 @@ if ($result1) {
       mysqli_free_result($result);
       ?>
     </section>
+
+    
     <!-- Modal-Delete-Data -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
       <div class="modal-dialog">

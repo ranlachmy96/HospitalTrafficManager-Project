@@ -71,7 +71,7 @@ if ($result1) {
     <header>
         <section id="mobile-profile-picture">
             <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
+            <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> -->
 
         </section>
         <section class="logo-con">
@@ -84,22 +84,34 @@ if ($result1) {
                 <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
-                    <li class="divider-item" id="mobile-menu-header">תפריט</li>
+                    
+                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
+                       <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
                     <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
                             מטופלים</a></li>
-                    <li class="divider-item-space"></li>
+                    <!-- <li class="divider-item-space"></li> -->
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    <li class="divider-item"><a href="logout.php"><i
-                                class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+                    
+                                
+                    <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
+                    <?php
+                    if ($_SESSION["user_type"] == "admin") {
+                        echo '<li><a href="addUsers.php"><i class="fa-solid fa-address-card"></i>&nbsp; הוספת משתמש</a></li>';
+                    }
+                    ?>
+                    <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
+
+
                     <!-- <li class="white-color-divide"></li>
                     <li>
                         <a href="index.php" id="second-logo-mobile"></a>
                     </li> -->
+
                 </ul>
             </section>
             <!-- web -->
@@ -296,12 +308,12 @@ if ($result1) {
         <div class="dashboard-mobile">
             <div class="dashboard-mobile-Container">
                 <div class="dashboard-mobile-h3">
-            <div class="dashboard-flex-h4">
-                    <h4>הודעות אחרונות</h4>
-                    <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                    <div class="dashboard-flex-h4">
+                        <h4>הודעות אחרונות</h4>
+                        <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                    </div>
                 </div>
-                </div>
-              
+
                 <div class="dashboard-mobile-divider"></div>
                 <div class="dashboard-mobile-h4">
                     <div>
@@ -316,54 +328,40 @@ if ($result1) {
                 </div>
             </div>
 
-        
+            <div class="dashboard-mobile-grid">
+                <div class="dashboard-box-mobile">
+                    <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
 
+                    <a class="nav-wrapper" href="list.php">
+                        <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
+                    </a>
+                </div>
+                <div class="dashboard-box-mobile" id="dashboard-box-mobile-savebutton">
+                    <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
 
+                    <a class="nav-wrapper" href="#">
+                        <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
+                    </a>
+                    <div id="message-overlay">
+                        <div id="message-box">
+                            <span id="message-text"></span>
+                            <i class="bi bi-check-lg"></i>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="dashboard-box-mobile">
 
-        <div class="dashboard-mobile-grid">
-            <div class="dashboard-box-mobile">
-                <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
+                    <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
 
-                <a class="nav-wrapper" href="list.php">
-                    <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
-                </a>
+                    <a class="nav-wrapper" href="logout.php">
+                        <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
+                    </a>
+
+                </div>
             </div>
-            <div class="dashboard-box-mobile" id="dashboard-box-mobile-savebutton">
-                <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
-
-                <a class="nav-wrapper" href="#">
-                    <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
-                </a>
-                <div id="message-overlay">
-            <div id="message-box">
-              <span id="message-text"></span>
-              <i class="bi bi-check-lg"></i>
-            </div>
-          </div>
-
-            </div>
-            <div class="dashboard-box-mobile">
-
-                <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
-
-                <a class="nav-wrapper" href="logout.php">
-                    <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
-                </a>
-
-            </div>
-        </div>
 
         </div>
-
-
-
-
-
-
-
-
-
 
 
     </main>

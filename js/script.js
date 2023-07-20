@@ -118,8 +118,8 @@ window.onload = function () {
       language: {
         searchPlaceholder: "חיפוש",
         search: "",
-        processing: "<i class='fas fa-search'></i>" // Change 'fa-solid' to 'fas' for Font Awesome 6
-      }
+      },
+       // or any other desired value
     });
     // Get all delete buttons
     var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
