@@ -166,6 +166,9 @@ window.onload = function () {
     // dashboard page
   } else if (window.location.pathname.includes("/dashboard.php")) {
 
+
+   
+
     // chart!
     const ctx = document.getElementById("myChart");
     const chartcol = document.getElementById("chart-col");
@@ -367,13 +370,7 @@ window.onload = function () {
       deleteButton.addEventListener("click", deleteTask);
     }
 
-
-
-
-
-
-
-
+    // new DataTable('#example-table-dashboard');
 
 
 
