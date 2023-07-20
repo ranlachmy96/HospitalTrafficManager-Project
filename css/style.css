@@ -206,7 +206,7 @@ a.nav-link.active {
     #logo-mobile {
         width: 117px;
         height: 34px;
-        background: url("../images/mobile_logo.png");
+        background: url("../images/h.t.m-logo-mobile.png");
         background-repeat: no-repeat;
     }
 
@@ -301,7 +301,7 @@ a.nav-link.active {
 
     #second-logo-mobile {
         display: block;
-        background: url("../images/menu_mobile_logo.png");
+        background: url("../images/h.t.m-logo-mobile.png");
         background-repeat: no-repeat;
         width: 127px;
         height: 104px;
@@ -1927,8 +1927,8 @@ table.dataTable>tbody>tr {
     #logo-mobile {
         display: block;
         width: 117px;
-        height: 34px;
-        background: url(../images/mobile_logo.png);
+        height: 43px;
+        background: url(../images/h.t.m-logo-mobile.png);
         background-repeat: no-repeat;
     }
 }
