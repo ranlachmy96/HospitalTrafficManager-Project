@@ -61,6 +61,9 @@ if ($result1) {
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
     <title>dashboard</title>
 </head>
 
@@ -291,38 +294,64 @@ if ($result1) {
             </div>
         </div>
         <div class="dashboard-mobile">
-
-            <div class="dashboard-mobile-grid">
-                <div class="dashboard-box-mobile">
-                    <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
-                  
-                    <a class="nav-wrapper" href="list.php">
-                        <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
-                    </a>
+            <div class="dashboard-mobile-Container">
+                <div class="dashboard-mobile-h3">
+            <div class="dashboard-flex-h4">
+                    <h4>הודעות אחרונות</h4>
+                    <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
                 </div>
-                <div class="dashboard-box-mobile">
+                </div>
+              
+                <div class="dashboard-mobile-divider"></div>
+                <div class="dashboard-mobile-h4">
+                    <div>
+                        <h4>הודעת מערכת</h4>
+                    </div>
+                    <div>
+                        <h4> עומס קל בבדיקה ראשונית</h4>
+                    </div>
+                    <div>
+                        <h4> 9:30</h4>
+                    </div>
+                </div>
+            </div>
+
+        
+
+
+
+
+        <div class="dashboard-mobile-grid">
+            <div class="dashboard-box-mobile">
+                <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
+
+                <a class="nav-wrapper" href="list.php">
+                    <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
+                </a>
+            </div>
+            <div class="dashboard-box-mobile">
                 <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
-                  
-                  <a class="nav-wrapper" href="#">
-                  <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
-                  </a>
 
-                </div>
-                <div class="dashboard-box-mobile">
+                <a class="nav-wrapper" href="#">
+                    <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
+                </a>
+
+            </div>
+            <div class="dashboard-box-mobile">
 
                 <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
-                  
-                  <a class="nav-wrapper" href="logout.php">
-                  <i class="fa-solid fa-arrow-right-from-bracket"id="size-mobile-icon3"></i>
+
+                <a class="nav-wrapper" href="logout.php">
+                    <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
                 </a>
-                </div>
-                
-
-
-
 
             </div>
         </div>
+
+        </div>
+
+
+
 
 
 
