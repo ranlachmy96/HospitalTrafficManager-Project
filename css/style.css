@@ -1938,6 +1938,15 @@ table.dataTable>tbody>tr {
         background: url(../images/h.t.m-logo-mobile.png);
         background-repeat: no-repeat;
     }
+
+    .index-backgorund-img {
+        background: url("../images/login-img-background-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+
+
 }
 
 
@@ -2103,7 +2112,7 @@ table.dataTable>tbody>tr {
 
 #addUser-submit-button {
     background-color: #5BC0DE;
-    width: 20%;
+    width: 25%;
     border-radius: 20px;
     margin-top: 5%;
     color: #fff;
