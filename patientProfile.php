@@ -44,8 +44,6 @@ if (mysqli_stmt_fetch($stmt)) {
 mysqli_stmt_close($stmt);
 ?>
 
-
-
 <?php
 $user = $_SESSION["user_id"];
 mysqli_set_charset($connection, "utf8");
@@ -105,9 +103,6 @@ mysqli_stmt_close($stmt);
 <body id="body-patientProfile">
   <header>
     <section id="mobile-profile-picture">
-      <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-      <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">' ; ?> -->
-
     </section>
     <section class="logo-con">
       <a href="index.php" id="logo"></a>
@@ -128,11 +123,8 @@ mysqli_stmt_close($stmt);
                     </li>
                     <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
                             מטופלים</a></li>
-                    <!-- <li class="divider-item-space"></li> -->
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    
-                                
                     <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
                     <?php
                     if ($_SESSION["user_type"] == "admin") {
@@ -140,13 +132,6 @@ mysqli_stmt_close($stmt);
                     }
                     ?>
                     <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-
-
-                    <!-- <li class="white-color-divide"></li>
-                    <li>
-                        <a href="index.php" id="second-logo-mobile"></a>
-                    </li> -->
-
                 </ul>
             </section>
       <ul class="nav nav-tabs">
@@ -167,7 +152,6 @@ mysqli_stmt_close($stmt);
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-            <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
             <?php echo '<img src="' . $row1["img_user_menu"] . '">' ; ?>
 
           </a>
