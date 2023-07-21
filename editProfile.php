@@ -31,19 +31,36 @@ if (isset($_GET["update-profile_data"])) {
         echo '<script>alert("Data Not Saved");</script>';
     }
 }
+?>
+<?php
+$user = $_SESSION["user_id"];
 mysqli_set_charset($connection, "utf8");
-$idNumber = $_SESSION["user_id"];
-$query = "SELECT * FROM tbl_213_users WHERE id = ?";
-$stmt = mysqli_prepare($connection, $query);
-mysqli_stmt_bind_param($stmt, "s", $idNumber);
+$query1 = "SELECT * FROM tbl_213_users WHERE id = ?";
+$stmt = mysqli_prepare($connection, $query1);
+mysqli_stmt_bind_param($stmt, "i", $user);
 mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-if ($result) {
-    $row = mysqli_fetch_assoc($result);
+mysqli_stmt_bind_result($stmt, $id, $name, $last_name, $email, $password, $register_date, $user_type, $id_departement, $name_department, $img_user, $img_user_menu, $img_user_menu_mobile);
+
+if (mysqli_stmt_fetch($stmt)) {
+    $row1 = array(
+        'id' => $id,
+        'name' => $name,
+        'last_name' => $last_name,
+        'email' => $email,
+        'password' => $password,
+        'register_date' => $register_date,
+        'user_type' => $user_type,
+        'id_departement' => $id_departement,
+        'name_department' => $name_department,
+        'img_user' => $img_user,
+        'img_user_menu' => $img_user_menu,
+        'img_user_menu_mobile' => $img_user_menu_mobile,
+    );
 } else {
-    die("DB query failed.");
+    die("DB query failed: " . mysqli_error($connection));
 }
 
+mysqli_stmt_close($stmt);
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +91,7 @@ if ($result) {
     <header>
         <section id="mobile-profile-picture">
             <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <!-- <?php echo '<img src="' . $row["img_user_menu_mobile"] . '">'; ?> -->
+            <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> -->
 
         </section>
         <section class="logo-con">
@@ -88,7 +105,7 @@ if ($result) {
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
                     
-                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
+                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
                        <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
@@ -139,7 +156,7 @@ if ($result) {
                         aria-expanded="false">
                         <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
 
-                        <?php echo '<img src="' . $row["img_user_menu"] . '">'; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -166,7 +183,7 @@ if ($result) {
         <div class="editProfile-Container-out">
             <div class="editProfile-img">
                 <!-- <img src="images/hanna-profile-edit.png"> -->
-                <?php echo '<img src="' . $row["img_user"] . '">'; ?>
+                <?php echo '<img src="' . $row1["img_user"] . '">'; ?>
             </div>
             <div class="editProfile-Container">
                 <div class="editProfile-Container-inner">
@@ -176,12 +193,12 @@ if ($result) {
                             <div class="editProfile-col1">
                                 <label class="form-label">ת"ז</label>
                                 <input type="number" class="form-control written" name="id_number" min="0"
-                                    max="9999999999" <?php echo 'placeholder="' . $row["id"] . '" value="' . $row["id"] . '"'; ?> disabled>
+                                    max="9999999999" <?php echo 'placeholder="' . $row1["id"] . '" value="' . $row1["id"] . '"'; ?> disabled>
                                 <label class="form-label">שם פרטי</label>
-                                <input type="text" class="form-control written" name="first_name" <?php echo 'placeholder="' . $row["name"] . '" value="' . $row["name"] . '" '; ?>
+                                <input type="text" class="form-control written" name="first_name" <?php echo 'placeholder="' . $row1["name"] . '" value="' . $row1["name"] . '" '; ?>
                                     pattern="[A-Za-z\u0590-\u05FF]+">
                                 <label class="form-label"> מחלקה</label>
-                                <select name="name-department" class="form-select" id="name-department-select" <?php echo 'placeholder="' . $row["name_department"] . '"'; ?> required>
+                                <select name="name-department" class="form-select" id="name-department-select" <?php echo 'placeholder="' . $row1["name_department"] . '"'; ?> required>
                                     <option value=""></option>
                                     <option value="דימות" selected>דימות</option>
                                     <option value=""></option>
@@ -191,12 +208,12 @@ if ($result) {
                             <div class="editProfile-col2">
                                 <label>אימייל</label>
                                 <input type="email" class="form-control written" name="mail"
-                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" <?php echo 'placeholder="' . $row["email"] . '" value="' . $row["email"] . '" '; ?>>
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" <?php echo 'placeholder="' . $row1["email"] . '" value="' . $row1["email"] . '" '; ?>>
                                 <label class="form-label">שם משפחה</label>
                                 <input type="text" class="form-control written" name="last_name"
-                                    pattern="[A-Za-z\u0590-\u05FF]+" <?php echo 'placeholder="' . $row["last_name"] . '" value="' . $row["last_name"] . '"'; ?>>
+                                    pattern="[A-Za-z\u0590-\u05FF]+" <?php echo 'placeholder="' . $row1["last_name"] . '" value="' . $row1["last_name"] . '"'; ?>>
                                 <label class="form-label"> סיסמא</label>
-                                <input type="password" class="form-control" name="password" <?php echo 'placeholder="' . $row["password"] . '" value="' . $row["password"] . '"'; ?>>
+                                <input type="password" class="form-control" name="password" <?php echo 'placeholder="' . $row1["password"] . '" value="' . $row1["password"] . '"'; ?>>
                             </div>
                         </div>
                         <div class="editProfile-col3">

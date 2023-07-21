@@ -1,9 +1,10 @@
 <?php
-session_start();
-?>
-<?php
 include 'db.php';
 include "config.php";
+
+?>
+<?php 
+session_start();
 if (!empty($_POST["id_user"])) {
     $query = "SELECT * FROM tbl_213_users WHERE id='" . $_POST["id_user"]
         . "' and password ='"
@@ -15,7 +16,7 @@ if (!empty($_POST["id_user"])) {
     if (is_array($row)) {
         $_SESSION["user_id"] = $row['id'];
         $_SESSION["user_type"] = $row['user_type'];
-        header('Location:' . URL . 'dashboard.php');
+        header('Location:' . URL .'dashboard.php');
     } else {
         $message = "סיסמא או תעודת זהות לא נכונים";
     }
