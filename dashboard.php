@@ -73,10 +73,6 @@ mysqli_stmt_close($stmt);
 
 <body>
     <header>
-        <section id="mobile-profile-picture">
-            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
-
-        </section>
         <section class="logo-con">
             <a href="index.php" id="logo"></a>
             <a href="index.php" id="logo-mobile"></a>
@@ -89,7 +85,7 @@ mysqli_stmt_close($stmt);
                 <ul class="mobile-menu">
 
                     <li id="mobile-menu-header">
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '" class="img-menu-aside" alt="profile-picture" title="profile-picture">'; ?>
                     </li>
                     <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
@@ -131,7 +127,7 @@ mysqli_stmt_close($stmt);
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '" alt="profile-picture" title="profile-picture">'; ?>
 
                     </a>
                     <ul class="dropdown-menu">
@@ -200,7 +196,7 @@ mysqli_stmt_close($stmt);
             <div class="box box-messages">
                 <div class="dashboard-flex-h4">
                     <h4>הודעות אחרונות</h4>
-                    <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                    <i class="fa-regular fa-envelope dashborad-icon"></i>
                 </div>
                 <div class="dashboard-divider-gray"></div>
                 <div class="dashboard-flex-table">
@@ -247,16 +243,9 @@ mysqli_stmt_close($stmt);
         <div class="dashbord-list-Patients">
             <div class="box box-list">
                 <!-- list patients -->
-            
+
                 <section class="list-Wrapper-table">
                     <h4 class="dashboard-h4">רשימת תורים במחלקות ביה"ח</h4>
-                    <?php
-                    if ($_SESSION["user_type"] == "admin") {
-                        echo '<h4><a href="superUser.php">הרשאות על</a></h4>';
-                    }
-                    ?>
-
-                   
                     <table class="table">
                         <thead class="table-dashboard">
                             <tr>
@@ -295,7 +284,7 @@ mysqli_stmt_close($stmt);
                 <?php
                 mysqli_free_result($result);
                 ?>
-                </section>
+
             </div>
         </div>
         <div class="dashboard-mobile">
@@ -305,7 +294,7 @@ mysqli_stmt_close($stmt);
                         <h4>הודעות אחרונות</h4>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#successModal">
-                            <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                            <i class="fa-regular fa-envelope dashborad-icon"></i>
                             <span class="new-message-icon"></span>
                         </button>
                     </div>
@@ -341,7 +330,7 @@ mysqli_stmt_close($stmt);
                 </div>
             </div>
         </div>
-        <!-- Modal-Success-Message -->
+        <!-- Modal--Message -->
         <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -354,7 +343,7 @@ mysqli_stmt_close($stmt);
                 </div>
             </div>
         </div>
-        <!-- Modal-Success-Message -->
+        <!-- Modal--Message -->
     </main>
     <script src="js/script.js"></script>
 </body>

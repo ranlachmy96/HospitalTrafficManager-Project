@@ -83,7 +83,7 @@ mysqli_stmt_close($stmt);
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/2a6eac1b83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>appointment</title>
+    <title>editProfile</title>
 </head>
 
 <body>
@@ -176,7 +176,7 @@ mysqli_stmt_close($stmt);
                             <div class="editProfile-col1">
                                 <label class="form-label">ת"ז</label>
                                 <input type="number" class="form-control written" name="id_number" min="0"
-                                    max="9999999999" <?php echo 'placeholder="' . $row1["id"] . '" value="' . $row1["id"] . '"'; ?> disabled>
+                                    max="9999999999" <?php echo 'placeholder="' . $row1["id"] . '" value="' . $row1["id"] . '"'; ?> readonly>
                                 <label class="form-label">שם פרטי</label>
                                 <input type="text" class="form-control written" name="first_name" <?php echo 'placeholder="' . $row1["name"] . '" value="' . $row1["name"] . '" '; ?>
                                     pattern="[A-Za-z\u0590-\u05FF]+">

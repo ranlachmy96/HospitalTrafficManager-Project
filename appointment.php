@@ -80,7 +80,7 @@ mysqli_stmt_close($stmt);
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
                     <li id="mobile-menu-header">
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '" class="img-menu-aside" alt="profile-picture">'; ?>
                     </li>
                     <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
@@ -119,7 +119,7 @@ mysqli_stmt_close($stmt);
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '" alt="profile-picture">'; ?>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -205,7 +205,7 @@ mysqli_stmt_close($stmt);
                                     <br>
                                     <label>מגדר</label>
                                     <select name="gender" class="form-select" id="gender-select" required>
-                                        <option value="" disabled selected></option>
+                                        <option value="" disabled selected>-</option>
                                         <option value="נקבה">נקבה</option>
                                         <option value="זכר">זכר</option>
                                         <option value="אחר">אחר</option>
@@ -236,8 +236,11 @@ mysqli_stmt_close($stmt);
                         </div>
                     </div>
                     <div id="appointment-submit-wrapper">
-                        <input type="submit" id="submit-button" class="btn btn-primary" value="שמור" name="insert_data"
-                            disabled>
+                        <?php if ($_SESSION["user_type"] == "admin") {
+                            echo '<input type="submit" id="submit-button" class="btn btn-primary" value="שמור" name="insert_data"
+                            disabled>';
+                        } ?>
+                        
                     </div>
                 </form>
             </section>

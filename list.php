@@ -260,13 +260,19 @@ mysqli_stmt_close($stmt);
             $result = mysqli_query($connection, $query);
 
             while ($row = mysqli_fetch_assoc($result)) {
-              echo '<tr>';
-              echo '<td class="list-icons">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-person-id="' . $row["id_number"] . '">
-              <i class="bi bi-x-circle-fill"></i></button></td>';
-              echo '<td class="list-icons">
-              <button type="button" class="btn btn-primary editbtn" data-bs-toggle="modal" data-bs-target="#updateModal" data-person-id="' . $row["id_number"] . '">
-              <i class="bi bi-pencil"></i></button></td>';
+              echo '<tr>';       
+                if ($_SESSION["user_type"] == "admin") {
+                  echo '<td class="list-icons">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-person-id="' . $row["id_number"] . '">
+                  <i class="bi bi-x-circle-fill"></i></button></td>';
+                  echo '<td class="list-icons">
+                  <button type="button" class="btn btn-primary editbtn" data-bs-toggle="modal" data-bs-target="#updateModal" data-person-id="' . $row["id_number"] . '">
+                  <i class="bi bi-pencil"></i></button></td>';
+                    }
+                    else{
+                      echo '<td class="list-icons"></td>';
+                      echo '<td class="list-icons"></td>';
+                    }     
               echo '<td data-title="מספר">' . $row["id_number"] . '</td>';
               echo '<td data-title="שם פרטי">' . $row["first_name"] . '</td>';
               echo '<td data-title="שם משפחה">' . $row["last_name"] . '</td>';
