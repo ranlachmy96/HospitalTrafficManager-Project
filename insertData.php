@@ -6,7 +6,6 @@ if (isset($_GET["insert_data"])) {
     function generatePatientId() {
         return 'D' . rand(10, 99);
     }
-    // Generate a new unique patient ID
     do {
         $newPatientId = generatePatientId();
         $existingIdQuery = "SELECT COUNT(*) as count FROM tbl_213_patients WHERE `id_number` = '$newPatientId'";
@@ -14,14 +13,12 @@ if (isset($_GET["insert_data"])) {
     } while ($count > 0);
 
     $id = $_GET["id_number"];
-
-    // Check if $id already exists in the database
     $existingIdQuery = "SELECT COUNT(*) as count FROM tbl_213_patients WHERE `id` = '$id'";
     $count = mysqli_fetch_assoc(mysqli_query($connection, $existingIdQuery))['count'];
 
     if ($count > 0) {
         header('location:appointment.php?failure=true');
-        exit; // Stop further execution of the script
+        exit; 
     }
     $id = $_GET["id_number"];
     $pnm = $_GET["first_name"];

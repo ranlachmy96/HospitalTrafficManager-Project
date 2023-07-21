@@ -42,12 +42,9 @@ if (!empty($_POST["id_user"])) {
 
 <header class="header-index">
     <div class="index-logo">
-
         <a href="index.php" id="logo"></a>
         <a href="index.php" id="logo-mobile"></a>
-
     </div>
-
 </header>
 
 <body>
@@ -72,10 +69,8 @@ if (!empty($_POST["id_user"])) {
                         } ?>
                     </div>
                 </form>
-
             </div>
         </div>
-
     </div>
 </body>
 

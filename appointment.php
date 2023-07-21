@@ -68,34 +68,29 @@ mysqli_stmt_close($stmt);
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> -->
-
         </section>
         <section class="logo-con">
             <a href="index.php" id="logo"></a>
             <a href="index.php" id="logo-mobile"></a>
         </section>
         <nav>
-             <!-- mobile -->
-             <section>
+            <!-- mobile -->
+            <section>
                 <input type="checkbox" id="menu-toggle" class="mobile-toggle-menu">
                 <div class="hamburger"></div>
                 <ul class="mobile-menu">
-                    
-                    <li  id="mobile-menu-header"><?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?></li>
-                       <li class="divider-item-space"></li>
+                    <li id="mobile-menu-header">
+                        <?php echo '<img src="' . $row1["img_user_menu"] . '"class="img-menu-aside">'; ?>
+                    </li>
+                    <li class="divider-item-space"></li>
                     <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>&nbsp;לוח בקרה</a></li>
                     <li><a href="#"><i class="fa-solid fa-temperature-half"></i>&nbsp; מכסה מטופלים</a></li>
                     <li><a href="appointment.php"><i class="fa-regular fa-calendar-check"></i>&nbsp;זימון תורים</a>
                     </li>
                     <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
                             מטופלים</a></li>
-                    <!-- <li class="divider-item-space"></li> -->
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
-                    
-                                
                     <li><a href="editProfile.php"> <i class="fa-solid fa-pen"></i>&nbsp;עריכת פרופיל</a></li>
                     <?php
                     if ($_SESSION["user_type"] == "admin") {
@@ -103,13 +98,6 @@ mysqli_stmt_close($stmt);
                     }
                     ?>
                     <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-
-
-                    <!-- <li class="white-color-divide"></li>
-                    <li>
-                        <a href="index.php" id="second-logo-mobile"></a>
-                    </li> -->
-
                 </ul>
             </section>
             <ul class="nav nav-tabs">
@@ -131,9 +119,7 @@ mysqli_stmt_close($stmt);
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
                         <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
-
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="editProfile.php">עריכת פרופיל</a></li>
@@ -209,7 +195,8 @@ mysqli_stmt_close($stmt);
                                     </select>
                                     <br>
                                     <label class="form-label"> תאריך</label>
-                                    <input type="date" class="form-control written" name="date" id="dateInput" value="" min="">
+                                    <input type="date" class="form-control written" name="date" id="dateInput" value=""
+                                        min="">
                                 </div>
                                 <div id="appointment-second-wrapper">
                                     <label class="form-label">שם משפחה</label>
@@ -264,8 +251,9 @@ mysqli_stmt_close($stmt);
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body" id="appointment-modal-body">
-                        <span id="appointment-error-message"><i class="fa-solid fa-xmark" id="appointment-modal-error"></i>
-                            אחד מהנתונים שהוזנו קיימים כבר במערכת</span>
+                            <span id="appointment-error-message"><i class="fa-solid fa-xmark"
+                                    id="appointment-modal-error"></i>
+                                אחד מהנתונים שהוזנו קיימים כבר במערכת</span>
                             <i class="fa-solid fa-check" id="appointment-modal-check"></i>
                             <span id="appointment-success-message">התור נקבע <br> בהצלחה</span>
                             <div class="appointment-divider-line"></div>
@@ -277,7 +265,6 @@ mysqli_stmt_close($stmt);
                                 <i class="fa-solid fa-clock" id="appointment-modal-clock"></i>
                             </section>
                         </div>
-
                     </div>
                 </div>
             </div>

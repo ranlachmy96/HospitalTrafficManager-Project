@@ -1,8 +1,8 @@
 <?php
 include "db.php";
 include "config.php";
-
 ?>
+
 <?php
 session_start();
 if (!$_SESSION["user_id"]) {
@@ -49,14 +49,9 @@ if (mysqli_stmt_fetch($stmt)) {
 
 mysqli_stmt_close($stmt);
 ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,8 +74,7 @@ mysqli_stmt_close($stmt);
 <body>
     <header>
         <section id="mobile-profile-picture">
-            <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> 
+            <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?>
 
         </section>
         <section class="logo-con">
@@ -104,7 +98,6 @@ mysqli_stmt_close($stmt);
                     </li>
                     <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
                             מטופלים</a></li>
-                    <!-- <li class="divider-item-space"></li> -->
                     <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
                     <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
 
@@ -116,13 +109,6 @@ mysqli_stmt_close($stmt);
                     }
                     ?>
                     <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-
-
-                    <!-- <li class="white-color-divide"></li>
-                    <li>
-                        <a href="index.php" id="second-logo-mobile"></a>
-                    </li> -->
-
                 </ul>
             </section>
             <!-- web -->
@@ -145,7 +131,6 @@ mysqli_stmt_close($stmt);
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false">
-                        <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
                         <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
 
                     </a>
@@ -164,10 +149,7 @@ mysqli_stmt_close($stmt);
         </nav>
     </header>
     <main>
-
         <!-- chart -->
-
-
         <div class="graphbox">
 
             <div class="box">
@@ -200,11 +182,7 @@ mysqli_stmt_close($stmt);
                     </div>
                 </div>
             </div>
-
-
-
             <!-- row2 -->
-
             <div class="box box-task-manager">
                 <div class="task-manager">
                     <h4>הוספת משימה</h4>
@@ -265,7 +243,6 @@ mysqli_stmt_close($stmt);
                 </div>
             </div>
         </div>
-
         <!-- row 3 -->
         <div class="dashbord-list-Patients">
             <div class="box box-list">
@@ -293,7 +270,6 @@ mysqli_stmt_close($stmt);
                                 <th class="tbl-color-dashboard" scope="col">כמות צוות רפואי</th>
                                 <th class="tbl-color-dashboard" scope="col"> אחראי מחלקה</th>
                                 <th class="tbl-color-dashboard" scope="col">תפקיד</th>
-
                             </tr>
                         </thead>
                         <tbody class="table-dashboard">
@@ -327,9 +303,10 @@ mysqli_stmt_close($stmt);
                 <div class="dashboard-mobile-h3">
                     <div class="dashboard-flex-h4">
                         <h4>הודעות אחרונות</h4>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successModal">
-                        <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
-                        <span class="new-message-icon"></span>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#successModal">
+                            <i class="fa-regular fa-envelope" id="dashborad-icon"></i>
+                            <span class="new-message-icon"></span>
                         </button>
                     </div>
                 </div>
@@ -337,18 +314,15 @@ mysqli_stmt_close($stmt);
                 <div class="dashboard-mobile-h4" id="h4Container">
                 </div>
             </div>
-
             <div class="dashboard-mobile-grid">
                 <div class="dashboard-box-mobile">
                     <h3><a class="nav-link" href="list.php">רשימת מטופלים</a></h3>
-
                     <a class="nav-wrapper" href="list.php">
                         <i class="fa-solid fa-clipboard-list" id="size-mobile-icon1"></i>
                     </a>
                 </div>
                 <div class="dashboard-box-mobile" id="dashboard-box-mobile-savebutton">
                     <h3><a class="nav-link" href="#"> לחצן מצוקה</a></h3>
-
                     <a class="nav-wrapper" href="#">
                         <i class="fa-solid fa-bell" id="size-mobile-icon2"></i>
                     </a>
@@ -358,11 +332,9 @@ mysqli_stmt_close($stmt);
                             <i class="bi bi-check-lg"></i>
                         </div>
                     </div>
-
                 </div>
                 <div class="dashboard-box-mobile">
                     <h3><a class="nav-link" href="logout.php"> התנתקות</a></h3>
-
                     <a class="nav-wrapper" href="logout.php">
                         <i class="fa-solid fa-arrow-right-from-bracket" id="size-mobile-icon3"></i>
                     </a>
@@ -379,7 +351,6 @@ mysqli_stmt_close($stmt);
                     </div>
                     <div class="modal-body" id="dashboard-modal-body">
                     </div>
-
                 </div>
             </div>
         </div>

@@ -1,11 +1,8 @@
 window.onload = function () {
   if (window.location.pathname.includes("appointment.php")) {
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
     (() => {
       "use strict";
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
       const forms = document.querySelectorAll(".needs-validation");
-      // Loop over them and prevent submission
       Array.from(forms).forEach((form) => {
         form.addEventListener(
           "submit",
@@ -52,8 +49,8 @@ window.onload = function () {
     $(document).ready(function () {
       if (success === 'true') {
         $('#appointment-modal-error').hide();
-        $('#appointment-error-message').hide(); // Hide the error elements
-        $('#appointment-modal-check').show(); // Show the success elements
+        $('#appointment-error-message').hide(); 
+        $('#appointment-modal-check').show(); 
         $('.appointment-divider-line').show()
         $('#appointment-modal-body-second-part').show();
         $('#appointment-modal-body-third-part').show();
@@ -62,30 +59,25 @@ window.onload = function () {
         $('#appointment-modal-clock').after('<span>' + time + '</span>');
         $('#successModal').modal('show');
       } else if (failure === 'true') {
-        $('#appointment-modal-error').show(); // Show the error elements
+        $('#appointment-modal-error').show(); 
         $('#appointment-error-message').show();
         $('#appointment-success-message').hide();
-        $('#appointment-modal-check').hide(); // Hide the success elements
+        $('#appointment-modal-check').hide(); 
         $('#appointment-modal-body-second-part').hide();
         $('#appointment-modal-body-third-part').hide();
         $('.appointment-divider-line').hide();
-        $('#successModal').modal('show'); // Add the id of the failure modal here
+        $('#successModal').modal('show'); 
       }
     });
   } else if (window.location.pathname.includes('/patientProfile.php')) {
-    //check
+    
     const saveButton = document.getElementById('save-info-profile-changes');
     const messageOverlay = document.getElementById('message-overlay');
     const messageText = document.getElementById('message-text');
 
     saveButton.addEventListener("click", function () {
-      // Show the message overlay
       messageOverlay.style.display = "block";
-
-      // Set the message text
       messageText.textContent = "נשמר בהצלחה";
-
-      // Hide the message overlay after a delay (e.g., 3 seconds)
       setTimeout(function () {
         messageOverlay.style.display = "none";
       }, 2000);
@@ -119,19 +111,14 @@ window.onload = function () {
         searchPlaceholder: "חיפוש",
         search: "",
       },
-      // or any other desired value
     });
-    // Get all delete buttons
     var deleteButtons = document.querySelectorAll('button[data-bs-target="#deleteModal"]');
-
-    // Attach onclick event handler to each delete button
     deleteButtons.forEach(function (button) {
       button.onclick = function () {
         var deleteId = this.getAttribute("data-person-id");
         document.getElementById("delete_id").value = deleteId;
       };
     });
-    // edit button
     $(document).ready(function () {
       $('.editbtn').on('click', function () {
 
@@ -161,12 +148,8 @@ window.onload = function () {
 
 
 
-
-
-    // dashboard page
   } else if (window.location.pathname.includes("/dashboard.php")) {
 
-    // chart!
     const ctx = document.getElementById("myChart");
     const chartcol = document.getElementById("chart-col");
 
@@ -255,36 +238,22 @@ window.onload = function () {
 
       },
     });
-
-    ///
-
-
-    //////////////////////////////////
-    //calander
     function generateCalendarDays(year, month) {
       const daysContainer = document.getElementById("calendar-days");
       const currentMonthElement = document.getElementById("current-month");
 
       const firstDayOfMonth = new Date(year, month, 1).getDay();
       const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
-
-      // Clear the previous days
       daysContainer.innerHTML = "";
-
-      // Update the current month in the title
       currentMonthElement.textContent = new Date(year, month).toLocaleString(
         "default",
         { month: "long", year: "numeric" }
       );
-
-      // Create empty cells for days of the week before the first day of the month
       for (let i = 0; i < firstDayOfMonth; i++) {
         const emptyCell = document.createElement("div");
         emptyCell.classList.add("empty-cell");
         daysContainer.appendChild(emptyCell);
       }
-
-      // Create cells for each day of the month
       for (let day = 1; day <= totalDaysInMonth; day++) {
         const dayCell = document.createElement("div");
         dayCell.textContent = day;
@@ -292,19 +261,12 @@ window.onload = function () {
         daysContainer.appendChild(dayCell);
       }
     }
-
-    // Example: Generate calendar for the current month
     const currentDate = new Date();
     generateCalendarDays(currentDate.getFullYear(), currentDate.getMonth());
-
-    // Navigation buttons to switch between months
     document.getElementById("prevBtn").addEventListener("click", () => {
       const currentMonth = currentDate.getMonth();
       const currentYear = currentDate.getFullYear();
-
       currentDate.setMonth(currentMonth - 1);
-
-      // Check if we need to switch years
       if (currentMonth === 0) {
         currentDate.setFullYear(currentYear - 1);
       }
@@ -325,19 +287,16 @@ window.onload = function () {
 
       generateCalendarDays(currentDate.getFullYear(), currentDate.getMonth());
     });
-
-//// add to calender
 function updateCurrentDayCell(year, month) {
   const daysContainer = document.getElementById("calendar-days");
   const dayCells = daysContainer.getElementsByClassName("day-cell");
 
-  // Get the current date
+
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth();
   const currentDay = currentDate.getDate();
 
-  // Loop through all day cells and add/remove the "current-day" class based on the date
   for (let i = 0; i < dayCells.length; i++) {
     const dayCell = dayCells[i];
     const cellYear = year;
@@ -359,23 +318,19 @@ function generateCalendarDays(year, month) {
   const firstDayOfMonth = new Date(year, month, 1).getDay();
   const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
 
-  // Clear the previous days
   daysContainer.innerHTML = "";
 
-  // Update the current month in the title
   currentMonthElement.textContent = new Date(year, month).toLocaleString(
     "default",
     { month: "long", year: "numeric" }
   );
 
-  // Create empty cells for days of the week before the first day of the month
   for (let i = 0; i < firstDayOfMonth; i++) {
     const emptyCell = document.createElement("div");
     emptyCell.classList.add("empty-cell");
     daysContainer.appendChild(emptyCell);
   }
 
-  // Create cells for each day of the month
   for (let day = 1; day <= totalDaysInMonth; day++) {
     const dayCell = document.createElement("div");
     dayCell.textContent = day;
@@ -383,26 +338,14 @@ function generateCalendarDays(year, month) {
     daysContainer.appendChild(dayCell);
   }
 
-  // Update the current day cell within the right month
   updateCurrentDayCell(year, month);
 }
 
-
-
-
-
-
-
-
-
-
-    // task
 
     const taskInput = document.getElementById("taskInput");
     const addButton = document.getElementById("addButton");
     const taskList = document.getElementById("taskList");
 
-    // Add event listener to the button
     addButton.addEventListener("click", addTask);
 
     function addTask() {
@@ -435,21 +378,16 @@ function generateCalendarDays(year, month) {
       deleteButton.addEventListener("click", deleteTask);
     }
 
-
-    //////save button alert
-    //check
     const saveButton = document.getElementById('dashboard-box-mobile-savebutton');
     const messageOverlay = document.getElementById('message-overlay');
     const messageText = document.getElementById('message-text');
 
     saveButton.addEventListener("click", function () {
-      // Show the message overlay
+
       messageOverlay.style.display = "block";
 
-      // Set the message text
       messageText.textContent = "ההתראה נשלחה בהצלחה";
 
-      // Hide the message overlay after a delay (e.g., 3 seconds)
       setTimeout(function () {
         messageOverlay.style.display = "none";
       }, 2000);
@@ -457,15 +395,12 @@ function generateCalendarDays(year, month) {
 
 
 
-
-
-
     let alertFlag = 0;
     const rows = document.querySelectorAll(".colored-row");
     for (let i = 0; i < rows.length; i++) {
-      const tds = rows[i].querySelectorAll(".color-according"); // Get all <td> elements with class "color-according" within the row
-      const current = parseInt(tds[3].textContent); // Index 3 for "dash-current"
-      const capacity = parseInt(tds[2].textContent); // Index 2 for "dash-capacity"
+      const tds = rows[i].querySelectorAll(".color-according"); 
+      const current = parseInt(tds[3].textContent); 
+      const capacity = parseInt(tds[2].textContent); 
 
       if ((current - capacity) > 10) {
         for (let j = 0; j < tds.length; j++) {
@@ -485,7 +420,6 @@ function generateCalendarDays(year, month) {
     
     function insertContent() {
       if (alertFlag === 1) {
-        // Insert the h4 tags into the specified location
         const h4Container = document.getElementById('h4Container');
         h4Container.innerHTML = `
               <div>
@@ -499,18 +433,14 @@ function generateCalendarDays(year, month) {
               </div>
           `;
 
-        // Fetch the JSON data
         
         fetch("data/messages.json")
           .then(response => response.json())
           .then(data => {
-            // Get the messages array from the JSON data
             const messages = data.data;
 
-            // Create a string containing the messages as separate paragraphs
             const messagesHTML = messages.map(message => `<p>${message}</p>`).join('');
 
-            // Insert the messages into the modal body
             const modalBody = document.getElementById('dashboard-modal-body');
             modalBody.innerHTML = messagesHTML;
           })
@@ -518,19 +448,16 @@ function generateCalendarDays(year, month) {
       }
     }
 
-    // Call the function to insert the content
     insertContent();
 
 
 
   } else if (window.location.pathname.includes("/addUsers.php")) {
 
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
     (() => {
       "use strict";
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
       const forms = document.querySelectorAll(".needs-validation");
-      // Loop over them and prevent submission
+
       Array.from(forms).forEach((form) => {
         form.addEventListener(
           "submit",

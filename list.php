@@ -85,9 +85,6 @@ mysqli_stmt_close($stmt);
 <body>
   <header>
     <section id="mobile-profile-picture">
-      <!-- <img src="images/hanna_persona_mobile_profile.png" alt="mobile profile photo" title="mobile profile photo"> -->
-      <!-- <?php echo '<img src="' . $row1["img_user_menu_mobile"] . '">'; ?> -->
-
     </section>
     <section class="logo-con">
       <a href="index.php" id="logo"></a>
@@ -110,7 +107,6 @@ mysqli_stmt_close($stmt);
           </li>
           <li class="divider-item"><a href="list.php"><i class="fa-solid fa-table-list"></i>&nbsp;רשימת
               מטופלים</a></li>
-          <!-- <li class="divider-item-space"></li> -->
           <li><a href="#"><i class="fa-solid fa-box"></i>&nbsp;לוגיסטיקה</a></li>
           <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;הגדרות</a></li>
 
@@ -122,13 +118,6 @@ mysqli_stmt_close($stmt);
           }
           ?>
           <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;התנתקות</a></li>
-
-
-          <!-- <li class="white-color-divide"></li>
-                    <li>
-                        <a href="index.php" id="second-logo-mobile"></a>
-                    </li> -->
-
         </ul>
       </section>
       <ul class="nav nav-tabs">
@@ -151,7 +140,6 @@ mysqli_stmt_close($stmt);
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-            <!-- <img src="images/hanna-persona-profile.png" alt="profile picture" title="profile picture"> -->
             <?php echo '<img src="' . $row1["img_user_menu"] . '">'; ?>
 
           </a>
@@ -169,8 +157,6 @@ mysqli_stmt_close($stmt);
       </ul>
     </nav>
   </header>
-
-
   <main>
     <section id="listWrapper">
       <section id="view_real_time">
@@ -230,17 +216,6 @@ mysqli_stmt_close($stmt);
       </section>
       <!-- form search -->
       <section class="container-list">
-        <!-- <section class="center-form-search">
-          <section class="form_container">
-            <form id="search-list">
-              <div class="form-control-wrapper">
-                <label class="form-label">
-                </label>
-                <input type="search" id="form-control-list" class="form-control" placeholder="חיפוש">
-              </div>
-            </form>
-          </section>
-        </section> -->
         <section class="search-wrapper-pluse">
           <section class="plus">
             <a href="appointment.php">
@@ -278,7 +253,7 @@ mysqli_stmt_close($stmt);
               WHEN 'קשה' THEN 1
               WHEN 'בינוני' THEN 2
               WHEN 'קל' THEN 3
-              ELSE 4  -- Handles any other urgency value that may exist
+              ELSE 4  
             END DESC,
             STR_TO_DATE(date, '%Y-%m-%d') ASC";
 
@@ -315,7 +290,6 @@ mysqli_stmt_close($stmt);
       ?>
     </section>
 
-    
     <!-- Modal-Delete-Data -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
       <div class="modal-dialog">
