@@ -17,6 +17,7 @@ if (isset($_POST["updatedata"])) {
 
 
     $query = "UPDATE tbl_213_patients SET first_name='$pnm', last_name='$lnm', age='$age',gender='$ge',urgency='$ur',type='$im',time='$ti',date='$dt' WHERE id_number='$id'";
+    echo $query;
     $query_run = mysqli_query($connection, $query);
 
     if ($query_run) {

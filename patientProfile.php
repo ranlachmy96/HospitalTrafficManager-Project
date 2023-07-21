@@ -14,17 +14,37 @@ if (!$_SESSION["user_id"]) {
 <?php
 mysqli_set_charset($connection, "utf8");
 $patientID = $_GET["patientId"];
-$query = "SELECT * FROM tbl_213_patients WHERE id_number = ?";
+$query = "SELECT id, id_number, first_name, last_name, age, gender, urgency, type, time, date, id_department, email, comment FROM tbl_213_patients WHERE id_number = ?";
 $stmt = mysqli_prepare($connection, $query);
 mysqli_stmt_bind_param($stmt, "s", $patientID);
 mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-if ($result) {
-  $row = mysqli_fetch_assoc($result);
+mysqli_stmt_bind_result($stmt, $id, $id_number, $first_name, $last_name, $age, $gender, $urgency, $type, $time, $date, $id_department, $email, $comment);
+
+if (mysqli_stmt_fetch($stmt)) {
+    // Access the fetched data
+    $row = array(
+        'id' => $id,
+        'id_number' => $id_number,
+        'first_name' => $first_name,
+        'last_name' => $last_name,
+        'age' => $age,
+        'gender' => $gender,
+        'urgency' => $urgency,
+        'type' => $type,
+        'time' => $time,
+        'date' => $date,
+        'id_department' => $id_department,
+        'email' => $email,
+        'comment' => $comment,
+    );
 } else {
-  die("DB query failed.");
+    die("DB query failed.");
 }
+
+mysqli_stmt_close($stmt);
 ?>
+
+
 
 <?php
 $user = $_SESSION["user_id"];
@@ -33,13 +53,28 @@ $query1 = "SELECT * FROM tbl_213_users WHERE id = ?";
 $stmt = mysqli_prepare($connection, $query1);
 mysqli_stmt_bind_param($stmt, "i", $user);
 mysqli_stmt_execute($stmt);
-$result1 = mysqli_stmt_get_result($stmt);
+mysqli_stmt_bind_result($stmt, $id, $name, $last_name, $email, $password, $register_date, $user_type, $id_departement, $name_department, $img_user, $img_user_menu, $img_user_menu_mobile);
 
-if ($result1) {
-    $row1 = mysqli_fetch_assoc($result1);
+if (mysqli_stmt_fetch($stmt)) {
+    $row1 = array(
+        'id' => $id,
+        'name' => $name,
+        'last_name' => $last_name,
+        'email' => $email,
+        'password' => $password,
+        'register_date' => $register_date,
+        'user_type' => $user_type,
+        'id_departement' => $id_departement,
+        'name_department' => $name_department,
+        'img_user' => $img_user,
+        'img_user_menu' => $img_user_menu,
+        'img_user_menu_mobile' => $img_user_menu_mobile,
+    );
 } else {
-    die("DB query failed.");
+    die("DB query failed: " . mysqli_error($connection));
 }
+
+mysqli_stmt_close($stmt);
 ?>
 
 
