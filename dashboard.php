@@ -266,13 +266,20 @@ mysqli_stmt_close($stmt);
             </div>
         </div>
 
-
         <!-- row 3 -->
         <div class="dashbord-list-Patients">
             <div class="box box-list">
                 <!-- list patients -->
+            
                 <section class="list-Wrapper-table">
                     <h4 class="dashboard-h4">רשימת תורים במחלקות ביה"ח</h4>
+                    <?php
+                    if ($_SESSION["user_type"] == "admin") {
+                        echo '<h4><a href="superUser.php">הרשאות על</a></h4>';
+                    }
+                    ?>
+
+                   
                     <table class="table">
                         <thead class="table-dashboard">
                             <tr>
@@ -303,7 +310,6 @@ mysqli_stmt_close($stmt);
                                 echo '<td class="color-according" data-title="כמות צוות רפואי">' . $row["quantity_of_medical_staff"] . '</td>';
                                 echo '<td  class="color-according" data-title="אחראי מחלקה">' . $row["responsible_manager"] . '</td>';
                                 echo '<td class="color-according"  data-title="תפקיד">' . $row["type_responsible_manager"] . '</td>';
-                                echo '<i class="bi bi-chevron-left"></i></a></td>';
                                 echo '</tr>';
                             }
                             ?>
